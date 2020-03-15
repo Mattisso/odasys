@@ -57,7 +57,7 @@
   "main": "karma.conf.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Mattisso/odasys.git"
+    "url": "https://github.com/Mattisso/odasys.git"
   },
   "author": "Mensah Attisso",
   "license": "ISC",
