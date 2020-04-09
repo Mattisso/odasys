@@ -1,0 +1,3176 @@
+
+
+var ocompterefencedata = [{
+  "CompteNumber": "2811",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblAmortImmo",
+  "AreaShortName": "AmortImmo",
+  "RefCode": "AE",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "2812",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblAmortImmo",
+  "AreaShortName": "AmortImmo",
+  "RefCode": "AF",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "2813",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblAmortImmo",
+  "AreaShortName": "AmortImmo",
+  "RefCode": "AF",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "2814",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblAmortImmo",
+  "AreaShortName": "AmortImmo",
+  "RefCode": "AF",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "2815",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblAmortImmo",
+  "AreaShortName": "AmortImmo",
+  "RefCode": "AG",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "2816",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblAmortImmo",
+  "AreaShortName": "AmortImmo",
+  "RefCode": "AG",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "2817",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblAmortImmo",
+  "AreaShortName": "AmortImmo",
+  "RefCode": "AH",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "2818",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblAmortImmo",
+  "AreaShortName": "AmortImmo",
+  "RefCode": "AH",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "282",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblAmortImmo",
+  "AreaShortName": "AmortImmo",
+  "RefCode": "AJ",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "2831",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblAmortImmo",
+  "AreaShortName": "AmortImmo",
+  "RefCode": "AK",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "2832",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblAmortImmo",
+  "AreaShortName": "AmortImmo",
+  "RefCode": "AK",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "2833",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblAmortImmo",
+  "AreaShortName": "AmortImmo",
+  "RefCode": "AK",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "2837",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblAmortImmo",
+  "AreaShortName": "AmortImmo",
+  "RefCode": "AK",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "283",
+  "Exception": 1,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblAmortImmo",
+  "AreaShortName": "AmortImmo",
+  "RefCode": "AL",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "284",
+  "Exception": 1,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblAmortImmo",
+  "AreaShortName": "AmortImmo",
+  "RefCode": "AM",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "2845",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblAmortImmo",
+  "AreaShortName": "AmortImmo",
+  "RefCode": "AN",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "485",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "ActifCircul",
+  "RefCode": "BA",
+  "LevelCode": "C",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "486",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "ActifCircul",
+  "RefCode": "BA",
+  "LevelCode": "C",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "488",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "ActifCircul",
+  "RefCode": "BA",
+  "LevelCode": "C",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "25",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "AvanceAcpteImmo",
+  "RefCode": "AP",
+  "LevelCode": "C",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "206",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "ChargesImmo",
+  "RefCode": "AC",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "201",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "ChargesImmo",
+  "RefCode": "AX",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "202",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "ChargesImmo",
+  "RefCode": "AY",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "409",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "CreancEmploi",
+  "RefCode": "BH",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "41",
+  "Exception": 1,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "CreancEmploi",
+  "RefCode": "BI",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "45",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "CreancEmploi",
+  "RefCode": "BJ",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "46",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "CreancEmploi",
+  "RefCode": "BJ",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "421",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "CreancEmploi",
+  "RefCode": "BJ",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "445",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "CreancEmploi",
+  "RefCode": "BJ",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "449",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "CreancEmploi",
+  "RefCode": "BJ",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "475",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "CreancEmploi",
+  "RefCode": "BJ",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "476",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "CreancEmploi",
+  "RefCode": "BJ",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "4287",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "CreancEmploi",
+  "RefCode": "BJ",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "4387",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "CreancEmploi",
+  "RefCode": "BJ",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "4449",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "CreancEmploi",
+  "RefCode": "BJ",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "4487",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "CreancEmploi",
+  "RefCode": "BJ",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "4711",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "CreancEmploi",
+  "RefCode": "BJ",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "478",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "EcartConvActif",
+  "RefCode": "BU",
+  "LevelCode": "C",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "22",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "ImmoCorpo",
+  "RefCode": "AJ",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "231",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "ImmoCorpo",
+  "RefCode": "AK",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "232",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "ImmoCorpo",
+  "RefCode": "AK",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "233",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "ImmoCorpo",
+  "RefCode": "AK",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "237",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "ImmoCorpo",
+  "RefCode": "AK",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "239",
+  "Exception": 1,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "ImmoCorpo",
+  "RefCode": "AK",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "234",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "ImmoCorpo",
+  "RefCode": "AL",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "235",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "ImmoCorpo",
+  "RefCode": "AL",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "238",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "ImmoCorpo",
+  "RefCode": "AL",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "239",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "ImmoCorpo",
+  "RefCode": "AL",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "24",
+  "Exception": 1,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "ImmoCorpo",
+  "RefCode": "AM",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "249",
+  "Exception": 1,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "ImmoCorpo",
+  "RefCode": "AM",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "245",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "ImmoCorpo",
+  "RefCode": "AN",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "2495",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "ImmoCorpo",
+  "RefCode": "AN",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "26",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "ImmoFinan",
+  "RefCode": "AR",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "27",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "ImmoFinan",
+  "RefCode": "AS",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "000",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "ImmoFinan",
+  "RefCode": "UNK",
+  "LevelCode": "Z",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "000",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "ImmoFinan",
+  "RefCode": "AW",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "000",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "ImmoFinan",
+  "RefCode": "BZ",
+  "LevelCode": "Z",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "000",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "ImmoFinan",
+  "RefCode": "DZ",
+  "LevelCode": "Z",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "000",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "ImmoFinan",
+  "RefCode": "ST",
+  "LevelCode": "Z",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "000",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "ImmoFinan",
+  "RefCode": "UT",
+  "LevelCode": "Z",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "000",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "ImmoFinan",
+  "RefCode": "AZ",
+  "LevelCode": "Z",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "000",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "ImmoFinan",
+  "RefCode": "BK",
+  "LevelCode": "Z",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "000",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "ImmoFinan",
+  "RefCode": "DG",
+  "LevelCode": "Z",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "000",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "ImmoFinan",
+  "RefCode": "DP",
+  "LevelCode": "Z",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "000",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "ImmoFinan",
+  "RefCode": "SH",
+  "LevelCode": "Z",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "000",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "ImmoFinan",
+  "RefCode": "SO",
+  "LevelCode": "Z",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "000",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "ImmoFinan",
+  "RefCode": "UH",
+  "LevelCode": "Z",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "000",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "ImmoFinan",
+  "RefCode": "AA",
+  "LevelCode": "Z",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "000",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "ImmoFinan",
+  "RefCode": "AD",
+  "LevelCode": "Z",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "000",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "ImmoFinan",
+  "RefCode": "AI",
+  "LevelCode": "Z",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "000",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "ImmoFinan",
+  "RefCode": "AQ",
+  "LevelCode": "Z",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "000",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "ImmoFinan",
+  "RefCode": "BB",
+  "LevelCode": "Z",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "000",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "ImmoFinan",
+  "RefCode": "BG",
+  "LevelCode": "Z",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "000",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "ImmoFinan",
+  "RefCode": "BT",
+  "LevelCode": "Z",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "000",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "ImmoFinan",
+  "RefCode": "CP",
+  "LevelCode": "Z",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "000",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "ImmoFinan",
+  "RefCode": "DF",
+  "LevelCode": "Z",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "000",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "ImmoFinan",
+  "RefCode": "DT",
+  "LevelCode": "Z",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "101",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblPassif",
+  "StableauName": "tblBilanPassif",
+  "AreaShortName": "Capital",
+  "RefCode": "CA",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "102",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblPassif",
+  "StableauName": "tblBilanPassif",
+  "AreaShortName": "Capital",
+  "RefCode": "CA",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "000",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "ImmoFinan",
+  "RefCode": "RW",
+  "LevelCode": "Z",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "000",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "ImmoFinan",
+  "RefCode": "SF",
+  "LevelCode": "Z",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "000",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "ImmoFinan",
+  "RefCode": "SS",
+  "LevelCode": "Z",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "000",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "ImmoFinan",
+  "RefCode": "TW",
+  "LevelCode": "Z",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "000",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "ImmoFinan",
+  "RefCode": "UF",
+  "LevelCode": "Z",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "000",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "ImmoFinan",
+  "RefCode": "UO",
+  "LevelCode": "Z",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "000",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "ImmoFinan",
+  "RefCode": "CC",
+  "LevelCode": "Z",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "000",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "ImmoFinan",
+  "RefCode": "CK",
+  "LevelCode": "Z",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "000",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "ImmoFinan",
+  "RefCode": "DE",
+  "LevelCode": "Z",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "000",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "ImmoFinan",
+  "RefCode": "RQ",
+  "LevelCode": "Z",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "000",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "ImmoFinan",
+  "RefCode": "TI",
+  "LevelCode": "Z",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "000",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "ImmoFinan",
+  "RefCode": "TJ",
+  "LevelCode": "Z",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "000",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "ImmoFinan",
+  "RefCode": "UJ",
+  "LevelCode": "Z",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "211",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "ImmoIncorp",
+  "RefCode": "AE",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "2191",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "ImmoIncorp",
+  "RefCode": "AE",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "212",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "ImmoIncorp",
+  "RefCode": "AF",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "213",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "ImmoIncorp",
+  "RefCode": "AF",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "214",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "ImmoIncorp",
+  "RefCode": "AF",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "2193",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "ImmoIncorp",
+  "RefCode": "AF",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "215",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "ImmoIncorp",
+  "RefCode": "AG",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "216",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "ImmoIncorp",
+  "RefCode": "AG",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "217",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "ImmoIncorp",
+  "RefCode": "AH",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "218",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "ImmoIncorp",
+  "RefCode": "AH",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "2198",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "ImmoIncorp",
+  "RefCode": "AH",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "31",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "Stocks",
+  "RefCode": "BC",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "381",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "Stocks",
+  "RefCode": "BC",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "387",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "Stocks",
+  "RefCode": "BC",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "387",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "Stocks",
+  "RefCode": "BF",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "32",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "Stocks",
+  "RefCode": "BD",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "33",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "Stocks",
+  "RefCode": "BD",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "382",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "Stocks",
+  "RefCode": "BD",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "383",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "Stocks",
+  "RefCode": "BD",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "388",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "Stocks",
+  "RefCode": "BD",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "34",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "Stocks",
+  "RefCode": "BE",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "35",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "Stocks",
+  "RefCode": "BE",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "36",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "Stocks",
+  "RefCode": "BF",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "37",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "Stocks",
+  "RefCode": "BF",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "386",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "Stocks",
+  "RefCode": "BF",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "50",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "TresorActif",
+  "RefCode": "BQ",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "51",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "TresorActif",
+  "RefCode": "BR",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "52",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "TresorActif",
+  "RefCode": "BS",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "53",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "TresorActif",
+  "RefCode": "BS",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "54",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "TresorActif",
+  "RefCode": "BS",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "57",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "TresorActif",
+  "RefCode": "BS",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "581",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "TresorActif",
+  "RefCode": "BS",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "582",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "TresorActif",
+  "RefCode": "BS",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "2919",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblProvision",
+  "AreaShortName": "Provis",
+  "RefCode": "AE",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "2919",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblProvision",
+  "AreaShortName": "Provis",
+  "RefCode": "AF",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "2919",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblProvision",
+  "AreaShortName": "Provis",
+  "RefCode": "AH",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "2912",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblProvision",
+  "AreaShortName": "Provis",
+  "RefCode": "AF",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "2913",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblProvision",
+  "AreaShortName": "Provis",
+  "RefCode": "AF",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "2914",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblProvision",
+  "AreaShortName": "Provis",
+  "RefCode": "AF",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "2915",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblProvision",
+  "AreaShortName": "Provis",
+  "RefCode": "AG",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "2916",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblProvision",
+  "AreaShortName": "Provis",
+  "RefCode": "AG",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "2917",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblProvision",
+  "AreaShortName": "Provis",
+  "RefCode": "AH",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "2918",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblProvision",
+  "AreaShortName": "Provis",
+  "RefCode": "AH",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "292",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblProvision",
+  "AreaShortName": "Provis",
+  "RefCode": "AJ",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "2931",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblProvision",
+  "AreaShortName": "Provis",
+  "RefCode": "AK",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "2932",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblProvision",
+  "AreaShortName": "Provis",
+  "RefCode": "AK",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "2933",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblProvision",
+  "AreaShortName": "Provis",
+  "RefCode": "AK",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "2937",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblProvision",
+  "AreaShortName": "Provis",
+  "RefCode": "AK",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "2939",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblProvision",
+  "AreaShortName": "Provis",
+  "RefCode": "AK",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "2939",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblProvision",
+  "AreaShortName": "Provis",
+  "RefCode": "AL",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "294",
+  "Exception": 1,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblProvision",
+  "AreaShortName": "Provis",
+  "RefCode": "AM",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "2949",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblProvision",
+  "AreaShortName": "Provis",
+  "RefCode": "AM",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "2949",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblProvision",
+  "AreaShortName": "Provis",
+  "RefCode": "AN",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "2945",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblProvision",
+  "AreaShortName": "Provis",
+  "RefCode": "AN",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "295",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblProvision",
+  "AreaShortName": "Provis",
+  "RefCode": "AP",
+  "LevelCode": "C",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "296",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblProvision",
+  "AreaShortName": "Provis",
+  "RefCode": "AR",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "297",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblProvision",
+  "AreaShortName": "Provis",
+  "RefCode": "AS",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "498",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblProvision",
+  "AreaShortName": "Provis",
+  "RefCode": "BA",
+  "LevelCode": "C",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "391",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblProvision",
+  "AreaShortName": "Provis",
+  "RefCode": "BC",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "3981",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblProvision",
+  "AreaShortName": "Provis",
+  "RefCode": "BC",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "392",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblProvision",
+  "AreaShortName": "Provis",
+  "RefCode": "BD",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "393",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblProvision",
+  "AreaShortName": "Provis",
+  "RefCode": "BD",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "398",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblProvision",
+  "AreaShortName": "Provis",
+  "RefCode": "BD",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "398",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblProvision",
+  "AreaShortName": "Provis",
+  "RefCode": "BF",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "394",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblProvision",
+  "AreaShortName": "Provis",
+  "RefCode": "BE",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "395",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblProvision",
+  "AreaShortName": "Provis",
+  "RefCode": "BE",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "396",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblProvision",
+  "AreaShortName": "Provis",
+  "RefCode": "BF",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "397",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblProvision",
+  "AreaShortName": "Provis",
+  "RefCode": "BF",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "490",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblProvision",
+  "AreaShortName": "Provis",
+  "RefCode": "BH",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "491",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblProvision",
+  "AreaShortName": "Provis",
+  "RefCode": "BI",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "492",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblProvision",
+  "AreaShortName": "Provis",
+  "RefCode": "BJ",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "493",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblProvision",
+  "AreaShortName": "Provis",
+  "RefCode": "BJ",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "495",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblProvision",
+  "AreaShortName": "Provis",
+  "RefCode": "BJ",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "496",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblProvision",
+  "AreaShortName": "Provis",
+  "RefCode": "BJ",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "497",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblProvision",
+  "AreaShortName": "Provis",
+  "RefCode": "BJ",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "590",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblProvision",
+  "AreaShortName": "Provis",
+  "RefCode": "BQ",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "591",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblProvision",
+  "AreaShortName": "Provis",
+  "RefCode": "BR",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "592",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblProvision",
+  "AreaShortName": "Provis",
+  "RefCode": "BS",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "593",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblProvision",
+  "AreaShortName": "Provis",
+  "RefCode": "BS",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "594",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblProvision",
+  "AreaShortName": "Provis",
+  "RefCode": "BS",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "67",
+  "Exception": 1,
+  "Taux": 1,
+  "TableauName": "tblCharges",
+  "StableauName": "tblResultChrges",
+  "AreaShortName": "ChrgeFinanc",
+  "RefCode": "SA",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "676",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblCharges",
+  "StableauName": "tblResultChrges",
+  "AreaShortName": "ChrgeFinanc",
+  "RefCode": "SC",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "687",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblCharges",
+  "StableauName": "tblResultChrges",
+  "AreaShortName": "ChrgeFinanc",
+  "RefCode": "SD",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "697",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblCharges",
+  "StableauName": "tblResultChrges",
+  "AreaShortName": "ChrgeFinanc",
+  "RefCode": "SD",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "66",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblCharges",
+  "StableauName": "tblResultChrges",
+  "AreaShortName": "ChrgePerso",
+  "RefCode": "RP",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "81",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblCharges",
+  "StableauName": "tblResultChrges",
+  "AreaShortName": "ChrgesHAO",
+  "RefCode": "SK",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "83",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblCharges",
+  "StableauName": "tblResultChrges",
+  "AreaShortName": "ChrgesHAO",
+  "RefCode": "SL",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "85",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblCharges",
+  "StableauName": "tblResultChrges",
+  "AreaShortName": "ChrgesHAO",
+  "RefCode": "SM",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "601",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblCharges",
+  "StableauName": "tblResultChrges",
+  "AreaShortName": "ChrgesMBrutMarch",
+  "RefCode": "RA",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "6031",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblCharges",
+  "StableauName": "tblResultChrges",
+  "AreaShortName": "ChrgesMBrutMarch",
+  "RefCode": "RB",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "602",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblCharges",
+  "StableauName": "tblResultChrges",
+  "AreaShortName": "ChrgesMBrutMatier",
+  "RefCode": "RC",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "6032",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblCharges",
+  "StableauName": "tblResultChrges",
+  "AreaShortName": "ChrgesMBrutMatier",
+  "RefCode": "RD",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "604",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblCharges",
+  "StableauName": "tblResultChrges",
+  "AreaShortName": "ChrgesValAjout",
+  "RefCode": "RE",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "605",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblCharges",
+  "StableauName": "tblResultChrges",
+  "AreaShortName": "ChrgesValAjout",
+  "RefCode": "RE",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "608",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblCharges",
+  "StableauName": "tblResultChrges",
+  "AreaShortName": "ChrgesValAjout",
+  "RefCode": "RE",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "6033",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblCharges",
+  "StableauName": "tblResultChrges",
+  "AreaShortName": "ChrgesValAjout",
+  "RefCode": "RH",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "61",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblCharges",
+  "StableauName": "tblResultChrges",
+  "AreaShortName": "ChrgesValAjout",
+  "RefCode": "RI",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "62",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblCharges",
+  "StableauName": "tblResultChrges",
+  "AreaShortName": "ChrgesValAjout",
+  "RefCode": "RJ",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "63",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblCharges",
+  "StableauName": "tblResultChrges",
+  "AreaShortName": "ChrgesValAjout",
+  "RefCode": "RJ",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "64",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblCharges",
+  "StableauName": "tblResultChrges",
+  "AreaShortName": "ChrgesValAjout",
+  "RefCode": "RK",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "65",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblCharges",
+  "StableauName": "tblResultChrges",
+  "AreaShortName": "ChrgesValAjout",
+  "RefCode": "RL",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "681",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblCharges",
+  "StableauName": "tblResultChrges",
+  "AreaShortName": "DotatAmortProv",
+  "RefCode": "RS",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "691",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblCharges",
+  "StableauName": "tblResultChrges",
+  "AreaShortName": "DotatAmortProv",
+  "RefCode": "RS",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "87",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblCharges",
+  "StableauName": "tblResultChrges",
+  "AreaShortName": "ParticImpot",
+  "RefCode": "SQ",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "89",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblCharges",
+  "StableauName": "tblResultChrges",
+  "AreaShortName": "ParticImpot",
+  "RefCode": "SR",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "701",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblChifAffair",
+  "StableauName": "tblChifAffair",
+  "AreaShortName": "ProdMBrutMarch",
+  "RefCode": "TA",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "701",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblProduidts",
+  "StableauName": "tblResultPrdts",
+  "AreaShortName": "ProdMBrutMarch",
+  "RefCode": "TA",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "702",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblChifAffair",
+  "StableauName": "tblChifAffair",
+  "AreaShortName": "ProdMBrutMatier",
+  "RefCode": "TC",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "702",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblProduidts",
+  "StableauName": "tblResultPrdts",
+  "AreaShortName": "ProdMBrutMatier",
+  "RefCode": "TC",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "703",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblChifAffair",
+  "StableauName": "tblChifAffair",
+  "AreaShortName": "ProdMBrutMatier",
+  "RefCode": "TC",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "703",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblProduidts",
+  "StableauName": "tblResultPrdts",
+  "AreaShortName": "ProdMBrutMatier",
+  "RefCode": "TC",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "704",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblChifAffair",
+  "StableauName": "tblChifAffair",
+  "AreaShortName": "ProdMBrutMatier",
+  "RefCode": "TC",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "704",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblProduidts",
+  "StableauName": "tblResultPrdts",
+  "AreaShortName": "ProdMBrutMatier",
+  "RefCode": "TC",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "705",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblChifAffair",
+  "StableauName": "tblChifAffair",
+  "AreaShortName": "ProdMBrutMatier",
+  "RefCode": "TD",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "705",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblProduidts",
+  "StableauName": "tblResultPrdts",
+  "AreaShortName": "ProdMBrutMatier",
+  "RefCode": "TD",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "706",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblChifAffair",
+  "StableauName": "tblChifAffair",
+  "AreaShortName": "ProdMBrutMatier",
+  "RefCode": "TD",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "706",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblProduidts",
+  "StableauName": "tblResultPrdts",
+  "AreaShortName": "ProdMBrutMatier",
+  "RefCode": "TD",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "707",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblChifAffair",
+  "StableauName": "tblChifAffair",
+  "AreaShortName": "ProdValAjout",
+  "RefCode": "TH",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "707",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblProduidts",
+  "StableauName": "tblResultPrdts",
+  "AreaShortName": "ProdValAjout",
+  "RefCode": "TH",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "14",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblPassif",
+  "StableauName": "tblBilanPassif",
+  "AreaShortName": "AutrCapiPro",
+  "RefCode": "CL",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "15",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblPassif",
+  "StableauName": "tblBilanPassif",
+  "AreaShortName": "AutrCapiPro",
+  "RefCode": "CM",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "101",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblPassif",
+  "StableauName": "tblBilanPassif",
+  "AreaShortName": "Capital",
+  "RefCode": "CA",
+  "LevelCode": "C",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "102",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblPassif",
+  "StableauName": "tblBilanPassif",
+  "AreaShortName": "Capital",
+  "RefCode": "CA",
+  "LevelCode": "C",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "103",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblPassif",
+  "StableauName": "tblBilanPassif",
+  "AreaShortName": "Capital",
+  "RefCode": "CA",
+  "LevelCode": "C",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "104",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblPassif",
+  "StableauName": "tblBilanPassif",
+  "AreaShortName": "Capital",
+  "RefCode": "CA",
+  "LevelCode": "C",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "109",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblPassif",
+  "StableauName": "tblBilanPassif",
+  "AreaShortName": "Capital",
+  "RefCode": "CB",
+  "LevelCode": "C",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "161",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblPassif",
+  "StableauName": "tblBilanPassif",
+  "AreaShortName": "DetteFin",
+  "RefCode": "DA",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "162",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblPassif",
+  "StableauName": "tblBilanPassif",
+  "AreaShortName": "DetteFin",
+  "RefCode": "DA",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "1661",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblPassif",
+  "StableauName": "tblBilanPassif",
+  "AreaShortName": "DetteFin",
+  "RefCode": "DA",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "1662",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblPassif",
+  "StableauName": "tblBilanPassif",
+  "AreaShortName": "DetteFin",
+  "RefCode": "DA",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "17",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblPassif",
+  "StableauName": "tblBilanPassif",
+  "AreaShortName": "DetteFin",
+  "RefCode": "DB",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "163",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblPassif",
+  "StableauName": "tblBilanPassif",
+  "AreaShortName": "DetteFin",
+  "RefCode": "DC",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "164",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblPassif",
+  "StableauName": "tblBilanPassif",
+  "AreaShortName": "DetteFin",
+  "RefCode": "DC",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "165",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblPassif",
+  "StableauName": "tblBilanPassif",
+  "AreaShortName": "DetteFin",
+  "RefCode": "DC",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "166",
+  "Exception": 1,
+  "Taux": 1,
+  "TableauName": "tblPassif",
+  "StableauName": "tblBilanPassif",
+  "AreaShortName": "DetteFin",
+  "RefCode": "DC",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "167",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblPassif",
+  "StableauName": "tblBilanPassif",
+  "AreaShortName": "DetteFin",
+  "RefCode": "DC",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "168",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblPassif",
+  "StableauName": "tblBilanPassif",
+  "AreaShortName": "DetteFin",
+  "RefCode": "DC",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "181",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblPassif",
+  "StableauName": "tblBilanPassif",
+  "AreaShortName": "DetteFin",
+  "RefCode": "DC",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "182",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblPassif",
+  "StableauName": "tblBilanPassif",
+  "AreaShortName": "DetteFin",
+  "RefCode": "DC",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "183",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblPassif",
+  "StableauName": "tblBilanPassif",
+  "AreaShortName": "DetteFin",
+  "RefCode": "DC",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "184",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblPassif",
+  "StableauName": "tblBilanPassif",
+  "AreaShortName": "DetteFin",
+  "RefCode": "DC",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "479",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblPassif",
+  "StableauName": "tblBilanPassif",
+  "AreaShortName": "EcartConvPassif",
+  "RefCode": "DV",
+  "LevelCode": "B",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "481",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblPassif",
+  "StableauName": "tblBilanPassif",
+  "AreaShortName": "PassiCircul",
+  "RefCode": "DH",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "482",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblPassif",
+  "StableauName": "tblBilanPassif",
+  "AreaShortName": "PassiCircul",
+  "RefCode": "DH",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "483",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblPassif",
+  "StableauName": "tblBilanPassif",
+  "AreaShortName": "PassiCircul",
+  "RefCode": "DH",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "484",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblPassif",
+  "StableauName": "tblBilanPassif",
+  "AreaShortName": "PassiCircul",
+  "RefCode": "DH",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "4998",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblPassif",
+  "StableauName": "tblBilanPassif",
+  "AreaShortName": "PassiCircul",
+  "RefCode": "DH",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "419",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblPassif",
+  "StableauName": "tblBilanPassif",
+  "AreaShortName": "PassiCircul",
+  "RefCode": "DI",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "401",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblPassif",
+  "StableauName": "tblBilanPassif",
+  "AreaShortName": "PassiCircul",
+  "RefCode": "DJ",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "402",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblPassif",
+  "StableauName": "tblBilanPassif",
+  "AreaShortName": "PassiCircul",
+  "RefCode": "DJ",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "408",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblPassif",
+  "StableauName": "tblBilanPassif",
+  "AreaShortName": "PassiCircul",
+  "RefCode": "DJ",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "441",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblPassif",
+  "StableauName": "tblBilanPassif",
+  "AreaShortName": "PassiCircul",
+  "RefCode": "DK",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "442",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblPassif",
+  "StableauName": "tblBilanPassif",
+  "AreaShortName": "PassiCircul",
+  "RefCode": "DK",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "443",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblPassif",
+  "StableauName": "tblBilanPassif",
+  "AreaShortName": "PassiCircul",
+  "RefCode": "DK",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "446",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblPassif",
+  "StableauName": "tblBilanPassif",
+  "AreaShortName": "PassiCircul",
+  "RefCode": "DK",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "447",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblPassif",
+  "StableauName": "tblBilanPassif",
+  "AreaShortName": "PassiCircul",
+  "RefCode": "DK",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "4441",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblPassif",
+  "StableauName": "tblBilanPassif",
+  "AreaShortName": "PassiCircul",
+  "RefCode": "DK",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "4486",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblPassif",
+  "StableauName": "tblBilanPassif",
+  "AreaShortName": "PassiCircul",
+  "RefCode": "DK",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "4499",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblPassif",
+  "StableauName": "tblBilanPassif",
+  "AreaShortName": "PassiCircul",
+  "RefCode": "DK",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "42",
+  "Exception": 1,
+  "Taux": 1,
+  "TableauName": "tblPassif",
+  "StableauName": "tblBilanPassif",
+  "AreaShortName": "PassiCircul",
+  "RefCode": "DL",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "43",
+  "Exception": 1,
+  "Taux": 1,
+  "TableauName": "tblPassif",
+  "StableauName": "tblBilanPassif",
+  "AreaShortName": "PassiCircul",
+  "RefCode": "DL",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "185",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblPassif",
+  "StableauName": "tblBilanPassif",
+  "AreaShortName": "PassiCircul",
+  "RefCode": "DM",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "472",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblPassif",
+  "StableauName": "tblBilanPassif",
+  "AreaShortName": "PassiCircul",
+  "RefCode": "DM",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "477",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblPassif",
+  "StableauName": "tblBilanPassif",
+  "AreaShortName": "PassiCircul",
+  "RefCode": "DM",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "4712",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblPassif",
+  "StableauName": "tblBilanPassif",
+  "AreaShortName": "PassiCircul",
+  "RefCode": "DM",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "499",
+  "Exception": 1,
+  "Taux": 1,
+  "TableauName": "tblPassif",
+  "StableauName": "tblBilanPassif",
+  "AreaShortName": "PassiCircul",
+  "RefCode": "DN",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "599",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblPassif",
+  "StableauName": "tblBilanPassif",
+  "AreaShortName": "PassiCircul",
+  "RefCode": "DN",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "105",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblPassif",
+  "StableauName": "tblBilanPassif",
+  "AreaShortName": "PrimeReserv",
+  "RefCode": "CD",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "106",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblPassif",
+  "StableauName": "tblBilanPassif",
+  "AreaShortName": "PrimeReserv",
+  "RefCode": "CE",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "111",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblPassif",
+  "StableauName": "tblBilanPassif",
+  "AreaShortName": "PrimeReserv",
+  "RefCode": "CF",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "112",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblPassif",
+  "StableauName": "tblBilanPassif",
+  "AreaShortName": "PrimeReserv",
+  "RefCode": "CF",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "113",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblPassif",
+  "StableauName": "tblBilanPassif",
+  "AreaShortName": "PrimeReserv",
+  "RefCode": "CF",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "118",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblPassif",
+  "StableauName": "tblBilanPassif",
+  "AreaShortName": "PrimeReserv",
+  "RefCode": "CG",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "12",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblPassif",
+  "StableauName": "tblBilanPassif",
+  "AreaShortName": "PrimeReserv",
+  "RefCode": "CH",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "19",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblPassif",
+  "StableauName": "tblBilanPassif",
+  "AreaShortName": "ProviFin_Prov",
+  "RefCode": "DD",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "131",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblPassif",
+  "StableauName": "tblBilanPassif",
+  "AreaShortName": "ResultExerc",
+  "RefCode": "CI",
+  "LevelCode": "C",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "131",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblPassif",
+  "StableauName": "tblBilanPassif",
+  "AreaShortName": "ResultExerc",
+  "RefCode": "CI",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "139",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblPassif",
+  "StableauName": "tblBilanPassif",
+  "AreaShortName": "ResultExerc",
+  "RefCode": "CI",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "131",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblResultat",
+  "StableauName": "tblResultat",
+  "AreaShortName": "tblResultNet",
+  "RefCode": "UZ",
+  "LevelCode": "G",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "139",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblPassif",
+  "StableauName": "tblBilanPassif",
+  "AreaShortName": "ResultExerc",
+  "RefCode": "CI",
+  "LevelCode": "C",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "564",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblPassif",
+  "StableauName": "tblBilanPassif",
+  "AreaShortName": "TresorPassi",
+  "RefCode": "DQ",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "565",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblPassif",
+  "StableauName": "tblBilanPassif",
+  "AreaShortName": "TresorPassi",
+  "RefCode": "DQ",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "561",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblPassif",
+  "StableauName": "tblBilanPassif",
+  "AreaShortName": "TresorPassi",
+  "RefCode": "DR",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "566",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblPassif",
+  "StableauName": "tblBilanPassif",
+  "AreaShortName": "TresorPassi",
+  "RefCode": "DR",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "73",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblProduidts",
+  "StableauName": "tblResultPrdts",
+  "AreaShortName": "ProdMBrutMatier",
+  "RefCode": "TE",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "72",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblProduidts",
+  "StableauName": "tblResultPrdts",
+  "AreaShortName": "ProdMBrutMatier",
+  "RefCode": "TF",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "77",
+  "Exception": 1,
+  "Taux": 1,
+  "TableauName": "tblProduidts",
+  "StableauName": "tblResultPrdts",
+  "AreaShortName": "ProdtFinanc",
+  "RefCode": "UA",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "776",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblProduidts",
+  "StableauName": "tblResultPrdts",
+  "AreaShortName": "ProdtFinanc",
+  "RefCode": "UC",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "797",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblProduidts",
+  "StableauName": "tblResultPrdts",
+  "AreaShortName": "ProdtFinanc",
+  "RefCode": "UD",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "787",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblProduidts",
+  "StableauName": "tblResultPrdts",
+  "AreaShortName": "ProdtFinanc",
+  "RefCode": "UE",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "82",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblProduidts",
+  "StableauName": "tblResultPrdts",
+  "AreaShortName": "ProdtHAO",
+  "RefCode": "UK",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "84",
+  "Exception": 1,
+  "Taux": 1,
+  "TableauName": "tblProduidts",
+  "StableauName": "tblResultPrdts",
+  "AreaShortName": "ProdtHAO",
+  "RefCode": "UL",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "88",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblProduidts",
+  "StableauName": "tblResultPrdts",
+  "AreaShortName": "ProdtHAO",
+  "RefCode": "UL",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "86",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblProduidts",
+  "StableauName": "tblResultPrdts",
+  "AreaShortName": "ProdtHAO",
+  "RefCode": "UM",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "848",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblProduidts",
+  "StableauName": "tblResultPrdts",
+  "AreaShortName": "ProdtHAO",
+  "RefCode": "UN",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "71",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblProduidts",
+  "StableauName": "tblResultPrdts",
+  "AreaShortName": "ProdValAjout",
+  "RefCode": "TK",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "75",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblProduidts",
+  "StableauName": "tblResultPrdts",
+  "AreaShortName": "ProdValAjout",
+  "RefCode": "TL",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "791",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblProduidts",
+  "StableauName": "tblResultPrdts",
+  "AreaShortName": "RepriProv",
+  "RefCode": "TS",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "798",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblProduidts",
+  "StableauName": "tblResultPrdts",
+  "AreaShortName": "RepriProv",
+  "RefCode": "TS",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "781",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblProduidts",
+  "StableauName": "tblResultPrdts",
+  "AreaShortName": "TransfChrge",
+  "RefCode": "TT",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "137",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblResultat",
+  "StableauName": "tblResultat",
+  "AreaShortName": "tblResultActOrd",
+  "RefCode": "UI",
+  "LevelCode": "G",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "134",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblResultat",
+  "StableauName": "tblResultat",
+  "AreaShortName": "tblResultExBruExpl",
+  "RefCode": "TQ",
+  "LevelCode": "G",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "135",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblResultat",
+  "StableauName": "tblResultat",
+  "AreaShortName": "tblResultExpl",
+  "RefCode": "TX",
+  "LevelCode": "G",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "136",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblResultat",
+  "StableauName": "tblResultat",
+  "AreaShortName": "tblResultFinanc",
+  "RefCode": "UG",
+  "LevelCode": "G",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "138",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblResultat",
+  "StableauName": "tblResultat",
+  "AreaShortName": "tblResultHOA",
+  "RefCode": "UP",
+  "LevelCode": "G",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "1321",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblResultat",
+  "StableauName": "tblResultat",
+  "AreaShortName": "tblResultMBrutMarch",
+  "RefCode": "TB",
+  "LevelCode": "G",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "1322",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblResultat",
+  "StableauName": "tblResultat",
+  "AreaShortName": "tblResultMBrutMatier",
+  "RefCode": "TG",
+  "LevelCode": "G",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "133",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblResultat",
+  "StableauName": "tblResultat",
+  "AreaShortName": "tblResultValAjout",
+  "RefCode": "TN",
+  "LevelCode": "G",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "104",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblPassif",
+  "StableauName": "tblBilanPassif",
+  "AreaShortName": "Capital",
+  "RefCode": "CA",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "103",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblPassif",
+  "StableauName": "tblBilanPassif",
+  "AreaShortName": "Capital",
+  "RefCode": "CA",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "478",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "EcartConvActif",
+  "RefCode": "BU",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "479",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblPassif",
+  "StableauName": "tblBilanPassif",
+  "AreaShortName": "EcartConvPassif",
+  "RefCode": "DV",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "485",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "ActifCircul",
+  "RefCode": "BA",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "486",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "ActifCircul",
+  "RefCode": "BA",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "498",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblProvision",
+  "AreaShortName": "Provis",
+  "RefCode": "BA",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "488",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "ActifCircul",
+  "RefCode": "BA",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "109",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblPassif",
+  "StableauName": "tblBilanPassif",
+  "AreaShortName": "Capital",
+  "RefCode": "CB",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "25",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "AvanceAcpteImmo",
+  "RefCode": "AP",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "295",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblProvision",
+  "AreaShortName": "Provis",
+  "RefCode": "AP",
+  "LevelCode": "R",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "478",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblActif",
+  "StableauName": "tblBilanActif",
+  "AreaShortName": "EcartConvActif",
+  "RefCode": "BU",
+  "LevelCode": "B",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "73",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblChifAffair",
+  "StableauName": "tblChifAffair",
+  "AreaShortName": "ProdMBrutMatier",
+  "RefCode": "TE",
+  "LevelCode": "T",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "72",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblChifAffair",
+  "StableauName": "tblChifAffair",
+  "AreaShortName": "ProdMBrutMatier",
+  "RefCode": "TF",
+  "LevelCode": "T",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "71",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblChifAffair",
+  "StableauName": "tblChifAffair",
+  "AreaShortName": "ProdValAjout",
+  "RefCode": "TK",
+  "LevelCode": "T",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "75",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblChifAffair",
+  "StableauName": "tblChifAffair",
+  "AreaShortName": "ProdValAjout",
+  "RefCode": "TL",
+  "LevelCode": "T",
+  "SortOrder": 0
+}, {
+  "CompteNumber": "52",
+  "Exception": 0,
+  "Taux": 1,
+  "TableauName": "tblPassif",
+  "StableauName": "tblBilanPassif",
+  "AreaShortName": "TresorPassi",
+  "RefCode": "DS",
+  "LevelCode": "R",
+  "SortOrder": 0
+},
+
+];
+module.exports = ocompterefencedata;
