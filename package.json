@@ -3,11 +3,23 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
     "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
+    "lint": "ng lint --type-check",
+    "e2e": "ng e2e",
+    "build": "ng build --prod",
+    "watch:client": "ng serve --proxy-config proxy.conf.json --open",
+    "prestart": "node src/server/startMessage.js",
+    "start": "npm-run-all --parallel lint:watch  build start:server",
+    "start:server": "node src/server/server.js",
+    "predev": "tsc -p ./",
+    "dev": "concurrently  \"ng serve --proxy-config proxy.conf.json --open\" \"tsc -w -p ./\" \"nodemon src/server/server.js\"",
+    "prod": "concurrently  \"ng build --aot --prod && tsc -p src/server && node dist/src/server/server.js\"",
+    "sample": "node src/server/seed/load-seed/index.js",
+    "watch:server": "nodemon src/server/server.js",
+    "lints": " esw src/server --color",
+    "lint:watch": "npm run lints -- --watch",
+    "testbe": "tsc -p server && mocha dist/server/test --exit",
+    "stop-win": "Taskkill /IM node.exe /F"
   },
   "private": true,
   "dependencies": {
