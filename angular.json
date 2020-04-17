@@ -131,7 +131,7 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "odasys:src/serve"
+            "devServerTarget": "odasys:src/server"
           },
           "configurations": {
             "production": {
