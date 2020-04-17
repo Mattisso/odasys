@@ -8,7 +8,7 @@ const {togetotableauposte, getobjOtableauposte,toOtableauposte,toUpdateOstableau
 const {getodaindex$, odaindex,getodaByid$,getodaindexapi$,getodaApiByid$}=require('../../SharedKernel//odaservice/dataservices').toinit();
 const {svcodasave$,svcodaApiDel$,svcodaSearchBy}=require('../../SharedKernel/odaservice/odaservice').toinit();
 const {getsrdcomptebalances$} =require('../../sharedkernel/odarepository/sharedRepository').toinit();
-const {svctoInitializeInstance$,svctoUpdateInstance$, toInitCustomInstance,svctoInitCustomInstance$,svcapiupdate$}=require('../../sharedkernel/odainstance/index').toinit(); 
+const {svctoInitializeInstance$,svctoUpdateInstance$, toInitCustomInstance,svctoInitCustomInstance$,svcapiupdate$}=require('../../sharedkernel/odainstance/index').toinit();
 const { combineLatest, pipe } = require('rxjs');
 const { map } = require('rxjs/operators');
 
@@ -30,7 +30,7 @@ const otableauposteRepository = (function () {
   };
 
 const getapiByid$ = function (requestparamid) {
-  return getodaApiByid$(oTableauPoste, requestparamid, getobjOtableauposte); 
+  return getodaApiByid$(oTableauPoste, requestparamid, getobjOtableauposte);
  };
 const toCreateotableaupostedata$ = function (requestBody) {
 
@@ -39,7 +39,7 @@ const toCreateotableaupostedata$ = function (requestBody) {
 const insertotableauposte$ = function (arr) {
  return svcodasave$(arr);
 };
-const toUpdateotableaupostedata$ = function (requestBody,) {
+const toUpdateotableaupostedata$ = function (requestBody) {
  return svctoUpdateInstance$(requestBody, toUpdateOstableauposte);
 };
 
@@ -55,7 +55,7 @@ const Deleteotableauposte$ = function (requestparamid) {
 
   const _getotableaupostesNoChifAffair = pipe(
     map(function (n) {
-      return totableaupostesNoChifAffair(n);   
+      return totableaupostesNoChifAffair(n);
     })
   );
 
@@ -64,7 +64,7 @@ const Deleteotableauposte$ = function (requestparamid) {
    const DrpotableauPosteWithcomptebalances$ = combineLatest(getoapitableaupostes$(), getsrdcomptebalances$).pipe(
     //  tap(ev => console.log(ev)),
     map(function ([getoapitableaupostes,getcomptebalances]) {
-      return staticotableauPosteWithcomptebalances(getcomptebalances,getoapitableaupostes);   
+      return staticotableauPosteWithcomptebalances(getcomptebalances,getoapitableaupostes);
     })
   );
   function toinit() {

@@ -12,15 +12,15 @@ const staticUser = (function () {
     });
   }
 
-  
-let toCreateModel = null
+
+let toCreateModel = null;
 function BuildUser(model,body, fn) {
   let toacreateinstance=fn;
-  toCreateModel =toacreateinstance(model,body,toUser);    
+  toCreateModel =toacreateinstance(model,body,toUser);
   const arr = addItem(toCreateModel);
   return odareduceArray(arr);
-} 
-               
+}
+            
       function toInitUserInstance(model,body,fn) {
         const getCreatedModel = BuildUser(model,body,fn);
         return getCreatedModel.slice();

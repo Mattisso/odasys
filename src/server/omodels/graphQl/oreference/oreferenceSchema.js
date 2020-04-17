@@ -32,12 +32,12 @@ const oreferenceSchema= (function(){
   function toinit(){
     return {
       OreferenceType:OreferenceType
-    }
+    };
   }
   return {
     toinit:toinit
-  }
-})()
+  };
+})();
 module.exports={
   toinit:oreferenceSchema.toinit
-}
+};

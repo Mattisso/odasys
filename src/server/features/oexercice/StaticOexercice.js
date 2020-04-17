@@ -10,39 +10,39 @@ const StaticOexercice = (function () {
     const _getcurrentYear = _.maxBy(_.map(_.map(oexcomptadata, 'oExercComptaId'), _.ary(parseInt, 1)));
     const _getPreviousYear = (_.maxBy(_.map(_.map(oexcomptadata, 'oExercComptaId'), _.ary(parseInt, 1)))) - 1;
     let getcurrentObject = getobjOexercCompta(oexcomptadata, _.toString(_getcurrentYear)).odaObject();
-    let getPreviousYearObject = getobjOexercCompta(oexcomptadata, _.toString(_getPreviousYear)).odaObject()
-      let getDefaultYearObject = getobjOexercCompta(oexcomptadata, '1900').odaObject()
+    let getPreviousYearObject = getobjOexercCompta(oexcomptadata, _.toString(_getPreviousYear)).odaObject();
+      let getDefaultYearObject = getobjOexercCompta(oexcomptadata, '1900').odaObject();
       if (isValid(getPreviousYearObject) === false)
         getPreviousYearObject = getDefaultYearObject;
       const currentYearObj = {
       'oExerciceEncour': getcurrentObject.oExercComptaId,
       'OexercComptaEncourKey': getcurrentObject.id
-    }
+    };
     const PreviousYearObj = {
       'ExercicePrev': getPreviousYearObject.oExercComptaId,
       'OexercComptaPrevKey': getPreviousYearObject.id
-    }
-    const finalobj = _.assign({}, currentYearObj, PreviousYearObj)
+    };
+    const finalobj = _.assign({}, currentYearObj, PreviousYearObj);
       return finalobj;
-  
+
   };
-  
-  /* const toOexercice= function (o) {
+
+  const toOexercice= function (o) {
    return ({
     "oExerciceEncour": o.oExerciceEncour,
      "ExercicePrev":  o.ExercicePrev,
     "OexercComptaEncourKey":  o.OexercComptaEncourKey,
     "OexercComptaPrevKey":o.OexercComptaPrevKey
    });
-  }; */
+  }; 
 
-  let toCreateModel = null
+  let toCreateModel = null;
   function BuildOexercice(model,body, fn) {
     let toacreateinstance=fn;
-    toCreateModel =toacreateinstance(model,body,toOexercice);    
+    toCreateModel =toacreateinstance(model,body,toOexercice);
     const arr = addItem(toCreateModel);
     return odareduceArray(arr);
-  }            
+  }
         function toInitOexerciceInstance(model,body,fn) {
           const getCreatedModel = BuildOexercice(model,body,fn);
           return getCreatedModel.slice();

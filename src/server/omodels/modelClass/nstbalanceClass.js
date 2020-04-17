@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 const mongoose = require('mongoose'),
  ObjectId = mongoose.SchemaTypes.ObjectId;
 const nstbalanceClass=(function(){
@@ -19,14 +19,14 @@ const nstbalanceClass=(function(){
       type: ObjectId,
       ref: 'oCompte'
     }
-  }
-  
+  };
+
   class nstbalanceClass {
     constructor(OexercComptaKey, OtableauposteKey, OreferenceKey , NumCompte, IntitulCompte, SoldeCredit, SoldeDebit) {
       this._OexercComptaKey = OexercComptaKey;
       this._OtableauposteKey = OtableauposteKey;
       this._OreferenceKey = OreferenceKey;
-      this._OcompteKey = OcompteKey;
+     // this._OcompteKey = OcompteKey;
       this._IntitulCompte = IntitulCompte;
       this._NumCompte = NumCompte;
       this._SoldeDebit = SoldeDebit;
@@ -95,14 +95,14 @@ function toinit() {
   return {
 nstbalanceClass:nstbalanceClass,
 nstbalanceObject:nstbalanceObject
-  }
+  };
 
 
 }
 return {
   toinit:toinit
-}
-})()
+};
+})();
 module.exports={
 toinit:nstbalanceClass.toinit
-}
+};

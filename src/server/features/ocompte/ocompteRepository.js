@@ -6,7 +6,7 @@ const {ocomptedata} = require('../../seed/data-seed/index').toinit();
 const { concat } = require('rxjs');
 const {getodaindex$, odaindex,getodaByid$}=require('../../sharedkernel/odaservice/dataservices').toinit();
 const {svcodasave$, svcodaApiDel$,svcodaSearchBy,svcodaDel$}=require('../../sharedkernel/odaservice/odaservice').toinit();
-const {svctoInitializeInstance$,svctoUpdateInstance$, toInitCustomInstance,svctoInitCustomInstance$,svcapiupdate$}=require('../../sharedkernel/odainstance/index').toinit(); 
+const {svctoInitializeInstance$,svctoUpdateInstance$, toInitCustomInstance,svctoInitCustomInstance$,svcapiupdate$}=require('../../sharedkernel/odainstance/index').toinit();
 const ocompteRepository = (function () {
 
   const toInitializeFinalInstance = function (model, body) {
@@ -22,7 +22,7 @@ const ocompteRepository = (function () {
   const getByid$ = function (requestparamid) {
     return getodaByid$(oCompte, togetocompte, requestparamid, getobjOcompte);
   };
-  const toCreateOComptedata$ = function (requestBody,) {
+  const toCreateOComptedata$ = function (requestBody) {
     return svctoInitCustomInstance$(oCompte, requestBody,toInitializeFinalInstance);
   };
   const insertOCompte$ = function (arr) {
@@ -51,7 +51,7 @@ const ocompteRepository = (function () {
       editOCompte$: editOCompte$,
       odasearchBy: odasearchBy,
       deleteOCompte$: deleteOCompte$
-    
+
 
     };
   }

@@ -14,7 +14,7 @@ const getrootqueries=  {
   getoreference:getoreference,
   getoreferences:getoreferences
 
-}
+};
 
 
 function toinit(){
@@ -22,12 +22,12 @@ function toinit(){
     getrootqueries:getrootqueries
    // getmutation:getmutation
 
-  }
+  };
 }
 return {
   toinit:toinit
-}
-})()
+};
+})();
 module.exports={
   toinit:queryTypes.toinit
-}
+};

@@ -1,4 +1,5 @@
 
+const {GraphQLObjectType, GraphQLString, GraphQLID,  GraphQLInt} = require('graphql');
 
 const nstbalanceinputSchema=(function(){
   const nstBalanceInputType = new GraphQLObjectType({
@@ -28,14 +29,14 @@ const nstbalanceinputSchema=(function(){
     return {
       nstBalanceInputType:nstBalanceInputType
 
-    }
+    };
   }
   return {
     toinit:toinit
-  }
-})()
+  };
+})();
 module.exports={
   toinit:nstbalanceinputSchema.toinit
-}
+};
 
 

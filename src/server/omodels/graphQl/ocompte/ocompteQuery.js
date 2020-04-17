@@ -1,6 +1,6 @@
 const graphql = require('graphql');
 const {Ocompte} = require('../../modelsSchema/index').toinit();
-const {OcompteType}=require('./ocompteSchema').toinit()
+const {OcompteType}=require('./ocompteSchema').toinit();
 const { GraphQLObjectType,  GraphQLID,  GraphQLList} = graphql;
 
 const ocompteQuery = (function () {
@@ -19,7 +19,7 @@ const ocompteQuery = (function () {
         //this will return the book with id passed in argument by the user
         return Ocompte.findById(args.id);
     }
-}
+};
 const getocomptes= {
   type: new GraphQLList(OcompteType),
   //argument passed by the user while making the query
@@ -27,7 +27,7 @@ const getocomptes= {
 
       return Ocompte.find({});
   }
-}/*
+};/*
   const ocompteRootQuery = new GraphQLObjectType({
     name: 'RootQueryType',
     fields: {
@@ -62,12 +62,12 @@ const getocomptes= {
       getocompte:getocompte,
       getocomptes:getocomptes
 
-    }
+    };
   }
   return {
 toinit:toinit
-  }
-})()
+  };
+})();
 module.exports={
 toinit:ocompteQuery.toinit
-}
+};

@@ -18,14 +18,14 @@ const staticNttcomptebalance = (function () {
       });
     }
   };
-  let toCreateModel = null
+  let toCreateModel = null;
   function BuildNttcomptebalancedetail(model,body, fn) {
     let toacreateinstance=fn;
-    toCreateModel =toacreateinstance(model,body,toCompteBalanceDetail);    
+    toCreateModel =toacreateinstance(model,body,toCompteBalanceDetail);
     const arr = addItem(toCreateModel);
     return odareduceArray(arr);
-  } 
-       
+  }
+
         function toInitNttcomptebalancedetailInstance(model,body,fn) {
           const getCreatedModel = BuildNttcomptebalancedetail(model,body,fn);
 
@@ -60,7 +60,7 @@ const staticNttcomptebalance = (function () {
     }
     return selector;
   }
- 
+
   const toLoadCompteBalanceDetail = function (obj) {
     let isvalid = queryselector(obj);
     if (isvalid === true  && (replaceNullToZero(obj.SoldeDebit))!==0

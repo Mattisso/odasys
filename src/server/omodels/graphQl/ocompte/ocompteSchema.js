@@ -28,15 +28,15 @@ const ocompteSchema = (function () {
 
     return{
       OcompteType:OcompteType
-    }  // userresolver
-  };
+    };  // userresolver
+  }
   return {
     toinit: toinit
-  }
-})()
+  };
+})();
 module.exports = {
   toinit: ocompteSchema.toinit
-}
+};
 //type Query { ... }
 //type Mutation { ... }
 // type Subscription { ... }

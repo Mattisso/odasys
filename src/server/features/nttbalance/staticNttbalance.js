@@ -22,18 +22,18 @@ const staticNttbalance = (function () {
   }
   };
 
-  let balanceinputs = null
+  let balanceinputs = null;
   function BuildNttbalance(model,body, fn) {
     let toacreateinstance=fn;
-    balanceinputs =toacreateinstance(model,body,tonttbalance);    
+    balanceinputs =toacreateinstance(model,body,tonttbalance);
     const arr = addItem(balanceinputs);
     return odareduceArray(arr);
-  }       
+  }
     function toInitNttbalanceInstance(model,body,fn) {
     const getCreatedModel = BuildNttbalance(model,body,fn);
     return odaremoveDupnumcompte(getCreatedModel.slice());
     }
-    
+
   const togetnttbalance = function (argOne) {
     let initObj,
     odauditobj;
@@ -53,7 +53,7 @@ const staticNttbalance = (function () {
       return assign({}, initObj, odauditobj);
     });
   };
-  
+
   const getobjnttBalance = function (arr, value) {
     if (isValid(value) === true) {
       const validate = find(arr, function (o) {

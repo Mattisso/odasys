@@ -18,21 +18,11 @@ require('../../config/ohadb').connectserver();
 
 //const {Loadnstbalanceinput$} = require('./index').toinit();
 const {insert$,update$,Delete$,getByid$,index$} = require('./index').toinit();
-const {toCreateOComptedata$}=require('../ocompte/ocompteRepository').toinit()
+const {toCreateOComptedata$}=require('../ocompte/ocompteRepository').toinit();
 const  obj ={
   "CompteNumber": '485'
 };
 
-const objupdate={
-  "_id" : "5e6c1d38f83ac10fd8de514d",
-  "CompteNumber" : "81288",
-  "id": '5e6c1d38f83ac10fd8de514d',
-    "CompteNumber": '9898',
-    "CreatedOn": '2020-03-13T23:54:32.844Z',
-    "ModifiedOn": '2020-03-24T23:54:32.844Z',
-    "CreatedBy": 'Admin',
-    "ModifiedBy": 'Admin'
-};
 
 //console.log(nstbalanceinputInsert$(obj));
 //Update$(objupdate,'5e6c1d38f83ac10fd8de514d');

@@ -10,15 +10,15 @@ const schema=(function(){
       mutation:RootMutation,
       subscription:RootSubscrition
      //   mutation:Mutation.createUserMutation
-    } )
+    } );
 
 function toinit(){
-    return myresolver
+    return myresolver;
 }
 return {
     toinit:toinit
-}
-})()
+};
+})();
 module.exports={
     toinit:schema.toinit
-}
+};

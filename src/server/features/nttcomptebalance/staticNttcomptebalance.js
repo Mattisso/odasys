@@ -7,7 +7,7 @@ const { getodafilter,odaByarg } = require('../../SharedKernel/odaFiltered').toin
 const {queryselector, getSoldeDebit,getSoldeCredit}=require('./objQryParams').toinit();
 
 const staticNttcomptebalance = (function () {
-  
+
   const tonttcomptebalance = function (obj) {
     let nttcomptebalancedetails=[];
     let odaisvalid=queryselector(obj);
@@ -27,34 +27,34 @@ const staticNttcomptebalance = (function () {
     }
   };
 
-  let toCreateModel = null
+  let toCreateModel = null;
 function BuildnttCompteBalance(model,body, fn) {
   let toacreateinstance=fn,
-    toCreateModel =toacreateinstance(model,body);  
+    toCreateModel =toacreateinstance(model,body);
     forEach(body.nttcomptebalancedetails,function(entry){
       return toCreateModel.addBalanceDetail(entry);
-    })
+    });
 // console.log(body.ntttoCreateModeldetails)  ;
-/* forEach(body.ntttoCreateModeldetails,function (entry) { 
-  return   toCreateModel.addBalanceDetail(entry)    
+/* forEach(body.ntttoCreateModeldetails,function (entry) {
+  return   toCreateModel.addBalanceDetail(entry)
     }); */
    // toCreateModel.getTotalSoldedebit;
-  //  toCreateModel.getTotalSoldecredit;    
+  //  toCreateModel.getTotalSoldecredit;
 //console.log(toCreateModel)
         return toCreateModel;
-      } 
-            
-   
+      }
+
+
       function toInitComptebalanceInstance(model,body,fn) {
         const getCreatedModel = BuildnttCompteBalance(model,body,fn);
   //      console.log(getCreatedModel)
   //    return   getCreatedModel;
-  return           getCreatedModel.getData()
+  return           getCreatedModel.getData();
 
      /*    return {
          balance: getCreatedModel,
           getData: getCreatedModel.getData()
-        }; 
+        };
      */
       }
 
@@ -62,7 +62,7 @@ function BuildnttCompteBalance(model,body, fn) {
         return fn(model, requestBody,toapicreateinstance)
       };
  */
-      
+
   const _togetcomptebalance = function (obj) {
     let initObj, odauditobj;
       initObj = {
@@ -156,13 +156,13 @@ const objoexercompta = getobjOexercCompta(oexerccompta,obj.OexercComptaKey).filt
       const objoreference = getobjOreference(oreferences, obj.OreferenceKey).filteredObject();
       const objotableauposte = getobjOtableauposte(otableaupostes,obj.OtableauposteKey).filteredObject();
       const objoexercompta = getobjOexercCompta(oexerccompta,obj.OexercComptaKey).filteredObject();
-      return assign({}, obj, objoreference,objotableauposte,objoexercompta); 
+      return assign({}, obj, objoreference,objotableauposte,objoexercompta);
       // return  obj;
     });
     return odareduceArray(finalObj);
   };
 
- 
+
   const toapinttcomptebalance = function (obj) {
     if(isValid(obj.OreferenceKey)===true && isValid(obj.OtableauposteKey)===true && isValid(obj.OexercComptaKey)===true ){
       const odasum =getodaAggreateData(obj.nttcomptebalancedetails);

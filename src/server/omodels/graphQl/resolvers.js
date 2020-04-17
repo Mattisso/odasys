@@ -13,7 +13,7 @@ const graphQlResolvers=(function(){
 return getrootqueries;
       }
 
-    })
+    });
 
     const RootSubscrition = new GraphQLObjectType({
       name: 'subscription',
@@ -21,14 +21,14 @@ return getrootqueries;
   return getRootSubscriptions;
         }
 
-      })
+      });
 
     const RootMutation = new GraphQLObjectType({
       name: 'Mutation',
       fields: () => {
         return togetRootMutation;
       }
-    })
+    });
 
 function toinit(){
   return {
@@ -36,12 +36,12 @@ function toinit(){
     RootMutation:RootMutation,
     RootSubscrition:RootSubscrition
 
-  }
+  };
 }
 return {
   toinit:toinit
-}
-})()
+};
+})();
 module.exports={
   toinit:graphQlResolvers.toinit
-}
+};

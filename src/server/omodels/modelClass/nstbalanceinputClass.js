@@ -1,18 +1,21 @@
-"use strict"
+/* eslint-disable getter-return */
+"use strict";
+    // eslint-disable-next-line getter-return
+
 const {replaceString}= require('../helpers/utils').toinit();
 const {getTotalCount, getTotalSoldedebit, getTotalSoldecredit}=require('../../SharedKernel/odaStats').toinit();
 const {odaremoveDupnumcompte} = require('../../Sharedkernel/odaUtility').toinit();
 
 const nstbalanceinputClass =(function(){
   let arrbalanceinputs =[];
- 
+
   class nstbalanceinputClass {
 
     constructor(NumCompte, IntitulCompte, SoldeCredit, SoldeDebit) {
       this._NumCompte = NumCompte;
       this._IntitulCompte = IntitulCompte;
       this._SoldeCredit = SoldeCredit;
-      this._SoldeDebit = SoldeDebit;   
+      this._SoldeDebit = SoldeDebit;
     }
     get numcompte() {
       this._NumCompte;
@@ -48,12 +51,12 @@ const nstbalanceinputClass =(function(){
     set soldedebit(SoldeDebit) {
       this._SoldeDebit = SoldeDebit;
       return this;
-    }  
-    
+    }
+
     get  CompteNumber() {
       return  replaceString(this.NumCompte);
-    }   
-    set CompteNumber(v)  {    
+    }
+    set CompteNumber(v)  {
       this._comptenumber =replaceString(v);
       return this;
     }
@@ -66,17 +69,17 @@ const nstbalanceinputClass =(function(){
         "SoldeCredit": this.soldedebit,
         "CompteNumber":this.CompteNumber
     }
-  } */ 
-} 
+  } */
+}
 function toinit(){
   return {
     nstbalanceinputClass: nstbalanceinputClass
-  }
+  };
 }
 return {
   toinit:toinit
-}
-})()
+};
+})();
 module.exports={
   toinit:nstbalanceinputClass.toinit
-}
+};
