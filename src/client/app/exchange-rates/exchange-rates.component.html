@@ -4,8 +4,8 @@
 <div *ngIf="error">
   Error :(
 </div>
-<div *ngIf="rates">
-  <div *ngFor="let rate of rates">
-    <p>{{rate.currency}}: {{rate.rate}}</p>
+<div *ngIf="getoexerccomptas">
+  <div *ngFor="let rate of getoexerccomptas">
+    <p>{{rate.oExercComptaId}}: {{rate.Cloture}}</p>
   </div>
 </div>

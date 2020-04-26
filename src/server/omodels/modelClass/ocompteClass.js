@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 const ocompteClass = (function () {
   class OcompteClass {
     constructor(CompteNumber) {
@@ -15,7 +15,7 @@ const ocompteClass = (function () {
   }
   const ocompteObj = {
     CompteNumber: String
-  }
+  };
 
   function toinit() {
     return {

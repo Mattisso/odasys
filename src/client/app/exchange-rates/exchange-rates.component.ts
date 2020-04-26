@@ -3,7 +3,7 @@ import {Apollo} from 'apollo-angular';
 import gql from 'graphql-tag';
 import { Observable } from 'rxjs';
 import { shareReplay, map } from 'rxjs/operators';
-import {Irate} from './rates';
+import {Irate, IOexccompta} from './rates';
 
 @Component({
   selector: 'app-exchange-rates',
@@ -11,17 +11,18 @@ import {Irate} from './rates';
   styleUrls: ['./exchange-rates.component.css']
 })
  export class ExchangeRatesComponent implements OnInit {
-  rates: any[];
+  getoexerccomptas: IOexccompta[];
+    rates: any[];
   loading = true;
   error: any;
   myqyer = gql`
   {
-    rates(currency: "USD") {
-      currency
-      rate
+    getoexerccomptas {
+      oExercComptaId
+      Cloture
     }
   }`;
-  key = 'rates';
+  key = 'getoexerccomptas';
 
   constructor(private apollo: Apollo) { }
 
@@ -31,7 +32,7 @@ import {Irate} from './rates';
       query: this.myqyer
     })
     .valueChanges.subscribe(result => {
-      this.rates = result.data && result.data[this.key];
+      this.getoexerccomptas = result.data && result.data[this.key];
       this.loading = result.loading;
       this.error = result.errors;
     });

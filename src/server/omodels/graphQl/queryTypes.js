@@ -1,6 +1,8 @@
 const {getuser, getusers}=require('./user/userQuery').toinit();
 const {getoreference,getoreferences}=require('./oreference/oreferenceQuery').toinit();
 const {getocompte,getocomptes}=require('./ocompte/ocompteQuery').toinit();
+const {getoexerccompta,getoexerccomptas}=require('./oexerccompta/oexerccomptaQuery').toinit();
+
 // const {createOcompteMutation}=require('./ocompte/ocompteMutation').toinit();
 // const { GraphQLObjectType} =require('graphql');
 
@@ -12,7 +14,9 @@ const getrootqueries=  {
   getocompte:getocompte,
   getocomptes:getocomptes,
   getoreference:getoreference,
-  getoreferences:getoreferences
+  getoreferences:getoreferences,
+  getoexerccompta:getoexerccompta,
+  getoexerccomptas:getoexerccomptas
 
 };
 

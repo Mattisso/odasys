@@ -25,9 +25,7 @@ import { ExchangeRatesComponent } from './exchange-rates/exchange-rates.componen
     useFactory: (httpLink: HttpLink) => {
       return {
         cache: new InMemoryCache(),
-        link: httpLink.create({
-          uri: 'https://48p1r2roz4.sse.codesandbox.io'
-        })
+        link: httpLink.create({uri: ''})
       };
     },
     deps: [HttpLink]

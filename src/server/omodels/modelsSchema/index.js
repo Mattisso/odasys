@@ -4,7 +4,7 @@
 var index = (function () {
   function toinit() {
     return {
-      'oCompte': require('./ocompte').toinit().Ocompte,
+      'Ocompte': require('./ocompte').toinit().Ocompte,
       'oReference': require('./oreference').toinit().oReference,
       'nstBalance': require('./nstBalance').toinit().nstBalance,
       'nstBalanceInput': require('./nstbalanceinput').toinit().nstBalanceInput,

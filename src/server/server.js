@@ -2,22 +2,22 @@
 /*eslint no-undef: "error"*/
 const dotenv= require('dotenv');
 const express = require('express');
-const path = require('path');
+const _path = require('path');
 
-const graphqlHTTP = require('express-graphql');
+//const graphqlHTTP = require('express-graphql');
 const {ApolloServer}= require('apollo-server-express');
-// const path='';
+const path = '/graphql';
 const schema = require('../server/omodels/graphQl/schema').toinit();
 const app = express();
 var logger = require('morgan');
 var cors = require('cors');
 dotenv.config({path: '.env'});
-app.set('port', (process.env.PORT || 6000));
+app.set('port', (process.env.PORT || 3000));
 var bodyParser = require('body-parser');
 app.use(logger('combined'));
 app.use(logger('dev'));
 app.use(logger(':method :url :status :res[content-length] - :response-time ms'));
-const odaconnection = require('./config/ohadb').connectserver();
+require('./config/ohadb').connectserver();
 app.use(cors());
 // headers and content type
 app.use(function(req, res, next) {
@@ -32,9 +32,9 @@ app.use(function(req, res, next) {
   app.use(bodyParser.urlencoded({ extended: false }));
 
   // parse various different custom JSON types as JSON
-  app.use(express.static(path.resolve(__dirname, '../public')));
+  app.use(express.static(_path.resolve(__dirname, '../public')));
 const server = new ApolloServer({schema, cors:true, introspection:true});
-server.applyMiddleware({app});
+server.applyMiddleware({app, path});
 /* const extensions = ({
     document,
     variables,
@@ -51,25 +51,33 @@ server.applyMiddleware({app});
   app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, '../src/client/index.html'));
   });
-app.use('/', graphqlHTTP( Request=>{
-    return ({
-      odaconnection,
-        server,
+//app.get('/graphql', graphqlHTTP({
+
+  //   schema:schema,
+     //   server,
      //   schema: MyGraphQLSchema,
-        context: { startTime: Date.now() },
+     //   context: { startTime: Date.now() },
       //  extensions,
-        graphiql:true
-      });
+     //   graphiql: true // process.env.NODE_ENV=== 'development',
+//
     //directing express-graphql to use this schema to map out the graph
   //  server,
     //directing express-graphql to use graphiql when goto '/graphql' address in the browser
     //which provides an interface to make GraphQl queries
   //  graphiql:true
+//})
+//);
+/* app.post('/graphql', graphqlHTTP({
+  schema:schema,
+
+    graphiql: true // process.env.NODE_ENV=== 'development',
+
+
 })
-);
+); */
 if (!module.parent){
 app.listen(app.get('port'), () => {
-    console.log(`listening on port  ${app.get('port')}... ${server.graphqlPath}`);
+    console.log(`listening on port  ${app.get('port')}/${server.graphqlPath}`);
   });
 }
 

@@ -10,37 +10,37 @@ const userSchema = (function () {
       id: {
         type: GraphQLID,
         resolve: (root, args, context, info) => {
-          return root.id
+          return root.id;
         }
       },
       username: {
         type: new GraphQLNonNull (GraphQLString),
         resolve: (root, args, context, info) => {
-          return root.username
+          return root.username;
         }
       },
       role: {
         type: GraphQLString,
         resolve: (root, args, context, info) => {
-          return root.role
+          return root.role;
         }
       },
       password: {
         type: GraphQLString,
         resolve: (root, args, context, info) => {
-          return root.password
+          return root.password;
         }
       },
       loginAttempts: {
         type: GraphQLInt,
         resolve: (root, args, context, info) => {
-          return root.loginAttempts
+          return root.loginAttempts;
         }
       },
       lockUntil: {
         type: GraphQLInt,
         resolve: (root, args, context, info) => {
-          return root.lockUntil
+          return root.lockUntil;
         }
       }
     })
@@ -50,15 +50,15 @@ const userSchema = (function () {
 
     return{
       UserType:UserType
-    }  // userresolver
-  };
+    };  // userresolver
+  }
   return {
     toinit: toinit
-  }
-})()
+  };
+})();
 module.exports = {
   toinit: userSchema.toinit
-}
+};
 //type Query { ... }
 //type Mutation { ... }
 // type Subscription { ... }

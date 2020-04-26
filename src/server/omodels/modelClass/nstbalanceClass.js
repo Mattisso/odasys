@@ -17,7 +17,7 @@ const nstbalanceClass=(function(){
     },
     OcompteKey: {
       type: ObjectId,
-      ref: 'oCompte'
+      ref: 'Ocompte'
     }
   };
 
