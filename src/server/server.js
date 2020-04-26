@@ -5,7 +5,6 @@ const express = require('express');
 //const graphqlHTTP = require('express-graphql');
 const {ApolloServer}= require('apollo-server-express');
 const path = require('path');
-const _path= '/graphql';
 const schema = require('../server/omodels/graphQl/schema').toinit();
 const app = express();
 var logger = require('morgan');
@@ -28,7 +27,7 @@ app.use(function(req, res, next) {
   app.use(bodyParser.urlencoded({ extended: false }));
   app.use(express.static(path.resolve(__dirname, '../public')));
 const server = new ApolloServer({schema, cors:true, introspection:true});
-server.applyMiddleware({app, _path});
+server.applyMiddleware({app});
 
   app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, '../src/client/index.html'));

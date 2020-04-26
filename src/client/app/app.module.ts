@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 // import { HttpClientModule } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { HttpLinkModule, HttpLink } from 'apollo-angular-link-http';
+import {ApolloModule, APOLLO_OPTIONS, Apollo} from 'apollo-angular';
 
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
@@ -27,7 +29,5 @@ import {GraphqlModule}  from './graphql.module'
   bootstrap: [AppComponent]
 })
 export class AppModule {
-  constructor(router: Router) {
-    console.log('Routes: ', JSON.stringify(router.config, undefined, 2));
-  }
+ 
 }

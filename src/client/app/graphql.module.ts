@@ -4,7 +4,7 @@ import { HttpLinkModule, HttpLink } from 'apollo-angular-link-http';
 import {ApolloModule, APOLLO_OPTIONS, Apollo} from 'apollo-angular';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 
-const uri='http:localhost:3000/';
+const uri='http:localhost:3000';
 
 @NgModule({
   exports:[
@@ -12,30 +12,18 @@ HttpClientModule,
 ApolloModule,
 HttpLinkModule
   ],
-  providers:[]
+  providers:[
+
+  ]
 })
 export class GraphqlModule {
   constructor( apollo:Apollo, httpLink:HttpLink){
-      apollo.create({
-        link:httpLink.create({uri}),
-        cache: new InMemoryCache(),
+     apollo.create({
+        link:httpLink.create({uri:uri}),
+        cache: new InMemoryCache()
       }
 
       )
 
     }
 }
-
-/*
-
-providers: [{
-  provide: APOLLO_OPTIONS,
-  useFactory: (httpLink: HttpLink) => {
-    return {
-      cache: new InMemoryCache(),
-      link: httpLink.create({uri: ''})
-    };
-  },
-  deps: [HttpLink]
-}]
- */
