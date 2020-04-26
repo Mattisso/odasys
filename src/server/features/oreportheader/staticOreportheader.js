@@ -13,7 +13,7 @@ const staticOreportheader = (function () {
       });
   };
 
-  let balanceinputs = null
+  let balanceinputs = null;
   function BuildOreportheader(model,body, fn) {
     let toacreateinstance=fn;
     balanceinputs =toacreateinstance(model,body,toOreportheader);    

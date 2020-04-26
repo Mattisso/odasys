@@ -5,7 +5,7 @@ const {userdata} = require('../../seed/data-seed/index').toinit();
 const {togetuser,togetObjuser,toUpdateUser,toUser}=require('./staticUser').toinit();
 const {getodaindex$, odaindex,getodaByid$}=require('../../sharedkernel/odaservice/dataservices').toinit();
 const {svcodaseedUsersave$, svcodaApiDel$,svcodaSearchBy,svcodaDel$}=require('../../sharedkernel/odaservice/odaservice').toinit();
-const {toInitializeInstance, svctoInitializeInstance$,svctoUpdateInstance$,svcapiupdate$}=require('../../sharedkernel/odainstance/index').toinit();  
+const {toInitializeInstance, svctoInitializeInstance$,svctoUpdateInstance$,svcapiupdate$}=require('../../sharedkernel/odainstance/index').toinit();
 const { concat } = require('rxjs');
 /* const {toUpdateInstance,svctoUpdateInstance$} = require('../../sharedkernel/odainstance/toUpdateInstance').toinit();
 
@@ -28,7 +28,7 @@ const userRepository = (function () {
    };
    const insertuser$ = function (arr) {
     return svcodaseedUsersave$(User,arr);
-   };  
+   };
    const toUpdateuserdata$ = function (requestBody) {
     return svctoUpdateInstance$(requestBody, toUpdateUser);
    };
@@ -42,11 +42,11 @@ const userRepository = (function () {
    const Deleteuser$ = function (requestparamid) {
     return svcodaApiDel$(User, requestparamid);
    };
- 
+
   function toinit() {
     return {
       getusers$: index$(),
-      getAll: index,
+      index: index,
       getByid$:getByid$,
       insertuser$:insertuser$,
       toCreateuserdata$:toCreateuserdata$,
@@ -54,7 +54,7 @@ const userRepository = (function () {
       edituser$:edituser$,
       odasearchBy:odasearchBy,
       Deleteuser$:Deleteuser$
-     
+
     };
   }
 

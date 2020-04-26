@@ -1,5 +1,5 @@
 const graphql = require('graphql');
-const { GraphQLObjectType,  GraphQLString,  GraphQLID, GraphQLBoolean} = graphql;
+const { GraphQLObjectType,  GraphQLString,  GraphQLID, GraphQLBoolean, GraphQLInt} = graphql;
 //const {oReference} = require('../../modelsSchema/index').toinit();
 // const {OreferenceType}= require('../oreference/oreferenceSchema').toinit();
 

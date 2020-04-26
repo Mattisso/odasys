@@ -7,7 +7,6 @@ ObjectId = mongoose.SchemaTypes.ObjectId;
 const {replaceNullToZero, odaremoveDupnumcompte} = require('../../sharedkernel/odaUtility').toinit();
 const {getTotalCount, getTotalSoldedebit, getTotalSoldecredit}=require('../../sharedkernel/odaStats').toinit();
 
-let nttcomptebalancedetails=[];
 const nttcomptebalanceClass=(function(){
 	let getdetailsData=[];
 
@@ -47,7 +46,7 @@ const nttcomptebalanceClass=(function(){
 
 class nttcomptebalanceClass {
 
-	constructor(OexercComptaKey, OtableauposteKey, OreferenceKey, totalSoldeDebit = 0, totalSoldeCredit = 0, amntNet = 0) {
+	constructor(OexercComptaKey, OtableauposteKey, OreferenceKey, totalSoldeDebit = 0, totalSoldeCredit = 0, amntNet = 0,nttcomptebalancedetails=[]) {
 
 		this._OexercComptaKey = OexercComptaKey;
 		this._OtableauposteKey = OtableauposteKey;
@@ -149,12 +148,12 @@ hasitem (obj) {
   return this.nttcomptebalancedetails.indexOf(obj) !== -1;
 }
 
-removeItem (obj) {
+/* removeItem (obj) {
   var itemIndex = nttcomptebalancedetails.indexOf(obj);
   if (itemIndex !== -1) {
     return   nttcomptebalancedetails.splice(itemIndex, 1);
   }
-}
+}; */
 
 addcomptebalancedetail() {
 return   getdetailsData.push({

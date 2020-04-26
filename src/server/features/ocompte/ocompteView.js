@@ -13,7 +13,7 @@ const ocompteView = (function () {
  
  const getInfo = function (objdata) {
  let _newLine  =  newLine();
- const _arr= oarray(objdata.arrArg)
+ const _arr= oarray(objdata.arrArg);
  
        let underline = _newLine + line(28, "-") + _newLine;
 
@@ -37,7 +37,7 @@ const ocompteView = (function () {
      
     
  
-        infoString += "\n" + `CompteNumber  ${objdata.CompteNumber  }  has been created`       
+        infoString += "\n" + `CompteNumber  ${objdata.CompteNumber  }  has been created`       ;
         infoString += underline;
  
         infoString += box("Well done!", 14, "*");
@@ -66,7 +66,7 @@ const ocompteView = (function () {
 function toinit() {
     return {
         render: render
-    }
+    };
 }
 return {
   toinit:toinit

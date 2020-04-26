@@ -5,12 +5,6 @@ const {  isValid,  hasitem,  inArray} = require('../odaUtility').toinit();
 
 const toOdaInstance = (function () {
 
-  const  addItem = function(item)  {
-    let arr=[];
-    if (!hasitem(item, arr))
-    arr.push(item);
-    return arr;
-    }
   const tocreateObject = function (model, o, fn) {
     if (isValid(o) === true && isValid(fn) == true) {
       return new model(fn(o));
@@ -20,7 +14,7 @@ const toOdaInstance = (function () {
       return new Error(
 ` missing some arguments`);
     }
-  };  
+  };
   const tocreateObjFromArray = function (model, arr, f) {
     let newArray = [];
     forEach(arr, function (o) {
@@ -46,44 +40,8 @@ const toOdaInstance = (function () {
       return new Error(
 ` missing some arguments`);
     }
-  }
+  };
 
-  const tocreateChildObject = function (model, o, requestparamid, fn) {
-    if (isValid(o) === true && isValid(requestparamid) === true && isValid(fn) == true) {
-      return new model(fn(requestparamid, o));
-    } else if (isValid(o) === true && isValid(requestparamid) === true && isValid(fn) == false) {
-      return new model(requestparamid, o);
-    } else {
-      return new Error(
-` missing some arguments`);
-    }
-  };
-  const tocreateChildObjFromArray = function (model, arr, requestparamid, f) {
-    const newArray = [];
-    forEach(arr, function (o) {
-      const obj = tocreateChildObject(model, o, requestparamid, f);
-      if ((!hasitem(obj, newArray) === true))
-        newArray.push(obj);
-    });
-    return newArray;
-  };
-  
-  const toapicreateChildinstance = function (model, argone, requestparamid, fn) {
-    if (isValid(requestparamid) === true) {
-      return tocreatechildinstance(model, argone, requestparamid, fn);
-    } else {
-      return new Error(
-` missing some arguments`);
-    }
-  }
-  const tocreatechildinstance = function (model, argone, requestparamid, fn) {
-    if (inArray(argone) === false) {
-      return tocreateChildObject(model, argone, requestparamid, fn);
-    }
-    if (inArray(argone) === true) {
-      return tocreateChildObjFromArray(model, argone, requestparamid, fn);
-    }
-  };
 
   function toupdateObject(o, fn) {
     if (isValid(o) === true && isValid(fn) === true) {
@@ -110,7 +68,21 @@ const toOdaInstance = (function () {
       return toupdateObjFromArray(argone, f);
     }
   };
-  function toupdateChildObject(o, requestparamid, fn) {
+
+
+
+  const toapiUpdateInstance = function (argone, fn) {
+    if (isValid(argone) === true) {
+      return toupdateinstance(argone, fn);
+    } else {
+      return new Error(
+` missing some arguments`);
+    }
+  };
+
+
+/*
+ function toupdateChildObject(o, requestparamid, fn) {
     if (isValid(o) === true && isValid(fn) === true) {
       return fn(requestparamid, o);
     }
@@ -118,7 +90,7 @@ const toOdaInstance = (function () {
       return (requestparamid, o);
     }
   }
-  const toupdateChildObjFromArray = function (arr, requestparamid, f) {
+ const toupdateChildObjFromArray = function (arr, requestparamid, f) {
     let newArray = [];
     forEach(arr, function (o) {
       const obj = toupdateChildObject(o, requestparamid, f);
@@ -135,18 +107,6 @@ const toOdaInstance = (function () {
       return toupdateChildObjFromArray(argone, requestparamid, f);
     }
   };
- 
- 
-
-
-  const toapiUpdateInstance = function (argone, fn) {
-    if (isValid(argone) === true) {
-      return toupdateinstance(argone, fn);
-    } else {
-      return new Error(
-` missing some arguments`);
-    }
-  }
 
   const toapiUpdateChildInstance = function (argone, requestparamid, fn) {
     if (isValid(requestparamid) === true) {
@@ -155,13 +115,51 @@ const toOdaInstance = (function () {
       return new Error(
 ` missing some arguments`);
     }
-  }
+  };
+
+
+  const tocreateChildObject = function (model, o, requestparamid, fn) {
+    if (isValid(o) === true && isValid(requestparamid) === true && isValid(fn) == true) {
+      return new model(fn(requestparamid, o));
+    } else if (isValid(o) === true && isValid(requestparamid) === true && isValid(fn) == false) {
+      return new model(requestparamid, o);
+    } else {
+      return new Error(
+` missing some arguments`);
+    }
+  };
+  const tocreateChildObjFromArray = function (model, arr, requestparamid, f) {
+    const newArray = [];
+    forEach(arr, function (o) {
+      const obj = tocreateChildObject(model, o, requestparamid, f);
+      if ((!hasitem(obj, newArray) === true))
+        newArray.push(obj);
+    });
+    return newArray;
+  };
+
+  const toapicreateChildinstance = function (model, argone, requestparamid, fn) {
+    if (isValid(requestparamid) === true) {
+      return tocreatechildinstance(model, argone, requestparamid, fn);
+    } else {
+      return new Error(
+` missing some arguments`);
+    }
+  };
+  const tocreatechildinstance = function (model, argone, requestparamid, fn) {
+    if (inArray(argone) === false) {
+      return tocreateChildObject(model, argone, requestparamid, fn);
+    }
+    if (inArray(argone) === true) {
+      return tocreateChildObjFromArray(model, argone, requestparamid, fn);
+    }
+  };*/
   function toinit() {
     return {
       //  toupdateinstance: toupdateinstance,
       //  tocreateinstance: tocreateinstance,
-      toapicreateChildinstance: toapicreateChildinstance,
-      toapiUpdateChildInstance: toapiUpdateChildInstance,
+     // toapicreateChildinstance: toapicreateChildinstance,
+   //   toapiUpdateChildInstance: toapiUpdateChildInstance,
       toapicreateinstance: toapicreateinstance,
       toapiUpdateInstance: toapiUpdateInstance
     };

@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 const {forEach}=require('lodash');
 const odaiterator = (function () {
 
@@ -8,17 +8,17 @@ const odaiterator = (function () {
        // return {
          const   getItems = function(argone) {
                 return argone;
-              }
-    
+              };
+
           const   getCount = function(argone) {
                 return argone.length;
-              }
-                 
+              };
+
          const  addItem = function(item)  {
               const arr=[];
               arr.push(item);
               return arr;
-              }
+              };
 
                 let customIterator = function (argone) {
 
@@ -26,7 +26,7 @@ const odaiterator = (function () {
         current :function () {
                 return argone[location];
                 },
-    
+
      hasMoreItems :function() {
                     if (location < argone.length && argone[location] != null) {
                         return true;
@@ -34,23 +34,23 @@ const odaiterator = (function () {
                         return false;
                     }
                 },
-        hasNext :  function () {
+       /*  hasNext :  function () {
                     let element;
-                    if (!hasMoreItems()) {
+                    if (!hasMoreItems()){
                     return null;
                     }
                     element = argone[location];
                     location += 1;
                     return element;
-                    },
+                    }, */
 
             rewind : function() {
                         location =0;
                     return location= getCount()-1;
                     }
-       }
-   
-   }
+       };
+
+   };
     function reverseArrayIterator(array) {
         var index = array.length - 1;
         return {
@@ -62,7 +62,7 @@ const odaiterator = (function () {
              : {
                 done: true
             }
-        }
+        };
     }
 
 
@@ -70,7 +70,7 @@ const odaiterator = (function () {
         return {
             getCount:getCount,
             addItem:addItem,
-            getItems:getItems,           
+            getItems:getItems,
             customIterator:customIterator,
             reverseArrayIterator: reverseArrayIterator
         };

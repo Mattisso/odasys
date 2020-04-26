@@ -1,14 +1,14 @@
 
 "use strict";
 
-const { olevel, oReportDetail } = require('../../omodels/modelsSchema/index').toinit();
+const { Olevel, oReportDetail } = require('../../omodels/modelsSchema/index').toinit();
 const { odaByarg, getodafilter } = require('../../SharedKernel/index').toinit().filtered;
 const { getObjoreportdetail, togetoreportdetail, toOreportDetail, toUpdateoreportdetail , toInitOreportdetailInstance} = require('./staticOreportdetail').toinit();
 const { togetolevel, getobjolevel } = require('../olevel/staticOlevel').toinit();
 const { Observable } = require('rxjs');
 const { getodaindex$, odaindex, getodaByid$ } = require('../../SharedKernel/odaservice/dataservices').toinit();
-const { svcodasave, svcodaApiDel$, svcodaSearchBy } = require('../../SharedKernel/odaservice/odaservice').toinit();
-const {svctoInitializeInstance$,svctoUpdateInstance$, toInitCustomInstance,svctoInitCustomInstance$,svcapiupdate$}=require('../../sharedkernel/odainstance/index').toinit(); 
+const { svcodasave$, svcodaApiDel$, svcodaSearchBy } = require('../../SharedKernel/odaservice/odaservice').toinit();
+const {svctoUpdateInstance$, toInitCustomInstance,svctoInitCustomInstance$,svcapiupdate$}=require('../../sharedkernel/odainstance/index').toinit();
 const oreportdetailRepository = (function () {
 
   const toInitializeFinalInstance = function (model, body) {
@@ -16,7 +16,7 @@ const oreportdetailRepository = (function () {
     return data;
   };
   const getolevels = function (callback) {
-    return odaindex(olevel, togetolevel, callback);
+    return odaindex(Olevel, togetolevel, callback);
   };
 
   const index = function (callback) {
@@ -38,7 +38,7 @@ const oreportdetailRepository = (function () {
     return svcodasave$(arr);
   };
   const toUpdateoreportdetaildata$ = function (requestBody) {
-    return svctoUpdateInstance$(requestBody,requestparamid, toUpdateoreportdetail);
+    return svctoUpdateInstance$(requestBody, toUpdateoreportdetail);
   };
 
   const editoreportdetail$ = function (body, requestparamid) {

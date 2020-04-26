@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 const mongoose = require('mongoose'),
 ObjectId = mongoose.SchemaTypes.ObjectId;
 
@@ -11,7 +11,7 @@ const ocomptereferenceClass=(function(){
     OstblareaKey: {
       type: ObjectId,
       ref: 'oStblArea'
-  
+
     },
     OreferenceKey: {
       type: ObjectId,
@@ -35,9 +35,9 @@ const ocomptereferenceClass=(function(){
     default:
       1
     }
-  
-  }
-  
+
+  };
+
   class ocompteReferenceClass {
     constructor(OcompteKey, OstblareaKey, OreferenceKey, OtableauposteKey, OstableauposteKey, Exception=0, Taux=1) {
       this._OcompteKey = OcompteKey;
@@ -48,7 +48,7 @@ const ocomptereferenceClass=(function(){
       this._Exception = Exception;
       this._Taux = Taux;
     }
-  
+
     get ostableaupostekey() {
       return this._OstableauposteKey;
     }
@@ -56,7 +56,7 @@ const ocomptereferenceClass=(function(){
       this._OstableauposteKey = OstableauposteKey;
       return this;
     }
-  
+
     get ocomptekey() {
       return this._OcompteKey;
     }
@@ -64,7 +64,7 @@ const ocomptereferenceClass=(function(){
       this._OcompteKey = OcompteKey;
       return this;
     }
-  
+
     get ostblareakey() {
       return this._OstblareaKey;
     }
@@ -72,7 +72,7 @@ const ocomptereferenceClass=(function(){
       this._OstblareaKey = OstblareaKey;
       return this;
     }
-  
+
     get otableaupostekey() {
       return this._OtableauposteKey;
     }
@@ -80,7 +80,7 @@ const ocomptereferenceClass=(function(){
       this._OtableauposteKey = OtableauposteKey;
       return this;
     }
-  
+
     get exception() {
       return this._Exception;
     }
@@ -88,7 +88,7 @@ const ocomptereferenceClass=(function(){
       this._Exception = Exception;
       return this;
     }
-  
+
     get taux() {
       return this._Taux;
     }
@@ -96,19 +96,19 @@ const ocomptereferenceClass=(function(){
       this._Taux = Taux;
       return this;
     }
-  
+
   }
 function toinit(){
   return {
     modelObject:modelObject,
     ocompteReferenceClass:ocompteReferenceClass
-  }
+  };
 }
 
 return {
 toinit:toinit
-}
-})()
+};
+})();
 module.exports={
   toinit:ocomptereferenceClass.toinit
-}
+};

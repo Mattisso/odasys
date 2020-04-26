@@ -4,16 +4,20 @@ const async = require('async');
 const  {nstBalanceInput} = require('../../omodels/modelsSchema/index').toinit();
 const {togetnstbalanceinput, toBalanceinput,toUpdateBalanceinput, getobjBalanceinput,toInitNstBalanceinputInstance}=require('./staticNstbalanceinput').toinit();
 const {odaByarg,getodafilter} =require('../../SharedKernel/odaFiltered').toinit();
-const {svctoInitializeInstance,svctoapiUpdateInstance,svctoUpdateInstance,svcodasave$, svcodaApiDel$,svcodaSearchBy}=require('../../SharedKernel/odaservice/odaservice').toinit();
+const { svcodasave, svcodasave$, svcodaApiDel$,svcodaSearchBy,svcodaDelete, svcodaUpdate}=require('../../SharedKernel/odaservice/odaservice').toinit();
 const { Observable } = require('rxjs');
 const {getAllocomptes } = require('../ocompte/index').toinit();
-const {getodaindex$, odaindex,getodaByid$,toOdaUpdate$, toOdaCreate$}=require('../../SharedKernel/odaservice/dataservices').toinit();
-const {svctoInitializeInstance$,svctoUpdateInstance$, toInitCustomInstance,svctoInitCustomInstance$,svcapiupdate$}=require('../../sharedkernel/odainstance/index').toinit(); 
+const {getodaindex$, odaindex,getodaByid$}=require('../../SharedKernel/odaservice/dataservices').toinit();
+const {svctoUpdateInstance$, toInitCustomInstance,svctoInitCustomInstance$,svcapiupdate$, svctoInitCustomInstance, toUpdateCustomInstance,svctoUpdateCustomInstance}=require('../../sharedkernel/odainstance/index').toinit();
 
 const nstbalanceinputRepository = (function () {
 
   const toInitializeFinalInstance = function (model, body) {
     const data = toInitCustomInstance(model, body, toInitNstBalanceinputInstance);
+    return data;
+  };
+  const toUpdateFinalInstance = function (body) {
+    const data = toUpdateCustomInstance(body, toUpdateBalanceinput);
     return data;
   };
   const index = function (callback) {
@@ -28,15 +32,33 @@ const nstbalanceinputRepository = (function () {
   const toCreateBalanceinputdata$ = function (requestBody) {
     return svctoInitCustomInstance$(nstBalanceInput, requestBody, toInitializeFinalInstance);
   };
+
+  const toCreateBalanceinputdata = function (requestBody) {
+    return svctoInitCustomInstance(nstBalanceInput, requestBody, toInitializeFinalInstance);
+  };
   const insertBalanceInput = function (arr) {
     return svcodasave$(arr);
   };
+  const savebalanceInput = function (arr) {
+    return svcodasave(arr);
+  };
+
   const toUpdateBalanceinputdata$ = function (requestBody) {
     return svctoUpdateInstance$(requestBody, toUpdateBalanceinput);
   };
 
+  const toUpdateBalanceinputdata= function (requestBody) {
+    return svctoUpdateCustomInstance(requestBody, toUpdateBalanceinput,toUpdateFinalInstance);
+  };
+
+
   const editBalanceInput$ = function (body, requestparamid) {
     return svcapiupdate$(nstBalanceInput, body, requestparamid);
+  };
+
+
+  const editBalanceInput = function (body) {
+    return svcodaUpdate(nstBalanceInput, body);
   };
   const odasearchby = function (body) {
     return svcodaSearchBy(nstBalanceInput, body);
@@ -45,6 +67,9 @@ const nstbalanceinputRepository = (function () {
     return svcodaApiDel$(nstBalanceInput, requestparamid);
   };
 
+  const deleteBalanceInput = function (requestparamid) {
+    return svcodaDelete(nstBalanceInput, requestparamid);
+  };
   const getloadnstbalanceinputs = function (callback) {
     let _arr = [];
     return odaindex(nstBalanceInput, togetnstbalanceinput, function (err, nstbalanceinputs) {
@@ -110,11 +135,18 @@ const nstbalanceinputRepository = (function () {
       insertBalanceInput: insertBalanceInput,
       toCreateBalanceinputdata$: toCreateBalanceinputdata$,
       toUpdateBalanceinputdata$: toUpdateBalanceinputdata$,
+      toUpdateBalanceinputdata: toUpdateBalanceinputdata,
       editBalanceInput$: editBalanceInput$,
       deleteBalanceInput$: deleteBalanceInput$ ,
+      deleteBalanceInput:deleteBalanceInput,
       //    toDeleteBalanceinputdata$: toDeleteBalanceinputdata$,
       odasearchby: odasearchby,
-      
+      toCreateBalanceinputdata:toCreateBalanceinputdata,
+      savebalanceInput:savebalanceInput,
+      toUpdateFinalInstance:toUpdateFinalInstance,
+      editBalanceInput:editBalanceInput
+
+
     };
   }
   return {

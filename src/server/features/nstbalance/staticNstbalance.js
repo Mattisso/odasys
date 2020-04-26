@@ -17,21 +17,21 @@ const staticNstbalance = (function () {
 };
 
 
-  let balanceinputs = null
+  let balanceinputs = null;
   function BuildNstbalance(model,body, fn) {
     let toacreateinstance=fn;
-    balanceinputs =toacreateinstance(model,body,tonstbalance);    
+    balanceinputs =toacreateinstance(model,body,tonstbalance);
     const arr = addItem(balanceinputs);
     return odareduceArray(arr);
-  } 
-              
-       
+  }
+
+
         function toInitNstbalanceInstance(model,body,fn) {
           const getCreatedModel = BuildNstbalance(model,body,fn);
-return odaremoveDupnumcompte(getCreatedModel.slice()); 
+return odaremoveDupnumcompte(getCreatedModel.slice());
 
      }
-    
+
 
   const togetnstbalance = function (argOne) {
     let initObj,
@@ -52,7 +52,7 @@ return odaremoveDupnumcompte(getCreatedModel.slice());
       return assign({}, initObj, odauditobj);
     });
   };
-  
+
   function queryselector(obj) {
     let selector;
     if (isValid(obj.OreferenceKey) === true

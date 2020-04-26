@@ -10,7 +10,7 @@ const olevel = (function () {
 
   olevelSchema.loadClass(olevelClass);
   olevelSchema.plugin(auditEntityPlugin);
- 
+
   olevelSchema.index({
     olevelNum: 1
   });
@@ -20,22 +20,22 @@ const olevel = (function () {
     arrArg.push(
     {
       "olevelNum" : body.olevelNum,
-      "olevelDescption": body.olevelDescption 
-    });  
-     
-  DetailCount = arrArg.length;  
-  return {  
-  DetailCount: DetailCount,
-  arrArg:arrArg.slice()  
-  };
-  })
+      "olevelDescption": body.olevelDescption
+    });
 
-  let Olevel = mongoose.model('Olevel', olevelSchema)
+  DetailCount = arrArg.length;
+  return {
+  DetailCount: DetailCount,
+  arrArg:arrArg.slice()
+  };
+  });
+
+  let Olevel = mongoose.model('Olevel', olevelSchema);
   function toinit() {
     return {
       Olevel: Olevel
-    }
-  };
+    };
+  }
   return {
     toinit: toinit
   };

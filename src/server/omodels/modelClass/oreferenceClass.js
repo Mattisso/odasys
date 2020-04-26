@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 const mongoose = require('mongoose'),
  ObjectId = mongoose.SchemaTypes.ObjectId;
  const { find, map, toLower, toUpper, assign, uniqBy } = require('lodash');
@@ -11,11 +11,11 @@ const oreferenceClass=(function(){
   function otolowercase(v) {
     return toLower(v);
   }
-  
+
   function otoUppercase(v) {
     return toUpper(v);
   }
-  
+
   const initObjOreference  = {
     RefCode: {
       type: String,
@@ -36,7 +36,7 @@ const oreferenceClass=(function(){
 				ref: 'oCompte'
 			}
 		}]
-  }
+  };
   class oreferenceClass {
     constructor(RefCode, Description) {
       this._refcode = RefCode;
@@ -55,7 +55,7 @@ const oreferenceClass=(function(){
       return this._description;
     }
 
-    set refcode(Description) {
+    set description(Description) {
       this._description = Description;
       return this;
     }
@@ -74,14 +74,14 @@ function toinit(){
   return {
     initObjOreference:initObjOreference
     ,oreferenceClass:oreferenceClass
-  }
+  };
 }
 
 return {
 toinit:toinit
-}
-})()
+};
+})();
 module.exports={
   toinit:oreferenceClass.toinit
 
-}
+};

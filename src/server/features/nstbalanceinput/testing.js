@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /* eslint-disable  no-console */
 ///*eslint-disable no-unused-vars */
 
@@ -32,6 +33,7 @@ index(function(err,data){
 //      callback(JSON.stringify(nttcomptebalances));
 
 
+// eslint-disable-next-line no-undef
 fs.writeFile(callbackdirname, filename, function (err) {
 if (err) {
 return console.error(err);

@@ -1,7 +1,7 @@
 /* eslint-disable  no-console */
 /* eslint-disable no-unused-vars */
 
-const {getnstbalanceinputes$,getByid$,toCreateBalanceinputdata$,insertBalanceInput,editBalanceInput$,toUpdateBalanceinputdata$,deleteBalanceInput$,odasearchby,getloadnstbalanceinputs$,getloadnstbalanceinputs} = require('./nstbalanceinputRepository').toinit();
+const {getnstbalanceinputes$,getByid$,toCreateBalanceinputdata$,insertBalanceInput,editBalanceInput$,toUpdateBalanceinputdata$,deleteBalanceInput$,odasearchby,getloadnstbalanceinputs$,getloadnstbalanceinputs, toCreateBalanceinputdata, savebalanceInput, deleteBalanceInput, toUpdateBalanceinputdata, editBalanceInput} = require('./nstbalanceinputRepository').toinit();
 const { concatMap } = require('rxjs/operators');
 
 
@@ -28,23 +28,34 @@ const getbyid$=function(id){
     }));
   };
 
+  const insertnstbalanceinput = function(body) {
+    const inserteddata=toCreateBalanceinputdata(body);
+         return savebalanceInput(inserteddata);
+     };
   const updatenstbalanceinput$ = function(body,requestparamid) {
     return toUpdateBalanceinputdata$(body).pipe(concatMap(function (x) {
       return editBalanceInput$(x,requestparamid);
     }));
      };
 
-    /*  const deletenstbalanceinput$ = function(body) {
-      return toDeleteBalanceinputdata$(body).pipe(concatMap(function (x) {
-        return deleteBalanceInput$(x);
-      }));
-       }; */
+
+   const updatenstbalanceinput = function(body) {
+      const updatedata= toUpdateBalanceinputdata(body);
+        return editBalanceInput(updatedata);
+
+       }; 
+
 
        const deletenstbalanceinput$ = function(requestparamid) {
 return deleteBalanceInput$(requestparamid);
 
          };
 
+
+       const deletenstbalanceinput = function(requestparamid) {
+        return deleteBalanceInput(requestparamid);
+
+                 };
   function toinit() {
     return {
       index$:index$(),
@@ -54,7 +65,10 @@ return deleteBalanceInput$(requestparamid);
       delete$:deletenstbalanceinput$,
       odasearchby:odasearchBy,
       getloadnstBalanceinputs$:getloadnstBalanceinputs$(),
-      getloadnstBalanceinputs:getloadnstBalanceinputs
+      getloadnstBalanceinputs:getloadnstBalanceinputs,
+      toInsert:insertnstbalanceinput,
+      toDelete:deletenstbalanceinput,
+      toUpdate:updatenstbalanceinput
 
     };
   }

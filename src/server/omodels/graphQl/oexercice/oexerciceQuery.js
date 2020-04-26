@@ -1,6 +1,6 @@
 const graphql = require('graphql');
 const {oExercice} = require('../../modelsSchema/index').toinit();
-const {oExerciceType}=require('./oexerciceQuery').toinit();
+const {oExerciceType}=require('./oexerciceSchema').toinit();
 const { GraphQLObjectType,  GraphQLID,  GraphQLList} = graphql;
 
 const oexerciceQuery = (function () {

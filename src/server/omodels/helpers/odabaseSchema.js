@@ -10,24 +10,24 @@ const odabaseSchema = (function () {
  const currentDate = new Date();
 const extendSchema =  function(Schema, definition, options) {
 return new mongoose.Schema(Object.assign({}, Schema.obj, definition), options);
-}
+};
 const getauditentity = {
 CreatedOn: {type: Date, default: Date.now },
 CreatedBy: {type: String },
 ModifiedOn: {type: Date,default: Date.now },
 ModifiedBy: {type: String },
 isActive: {type: Boolean, default:true }
-}
-const getbaseBalancesheet={    
+};
+const getbaseBalancesheet={
         NumCompte: {type: String, required: true },
         IntitulCompte:{type: String, required: true },
         SoldeDebit: {type: Number, default:0},
         SoldeCredit: {type: Number, default:0 }
-}
+};
 const gettoObject = {toObject: {
 virtuals: true  },
 toJSON: { virtuals:true }
-    }
+    };
 
     const auditEntityPlugin = function (schema, options) {
         schema.set('toObject', {
@@ -49,7 +49,7 @@ toJSON: { virtuals:true }
             next();
         });
     };
-    
+
 
     const auditUserEntityPlugin = function (schema, options) {
         schema.set('toObject', {
@@ -70,21 +70,21 @@ toJSON: { virtuals:true }
             if (!this.ModifiedBy)
                 this.ModifiedBy = 'Admin';
             next();
-    
+
             // only hash the password if it has been modified (or is new)
             if (!user.isModified('password'))
                 return next();
-    
+
             // generate a salt
             bcrypt.genSalt(SALT_WORK_FACTOR, function (err, salt) {
                 if (err)
                     return next(err);
-    
+
                 // hash the password using our new salt
                 bcrypt.hash(user.password, salt, function (err, hash) {
                     if (err)
                         return next(err);
-    
+
                     // override the cleartext password with the hashed one
                     user.password = hash;
                     next();
@@ -92,7 +92,7 @@ toJSON: { virtuals:true }
             });
         }); */
     };
-    
+
 
 function toinit() {
 return {

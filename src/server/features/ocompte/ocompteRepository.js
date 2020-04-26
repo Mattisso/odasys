@@ -1,6 +1,6 @@
 
 "use strict";
-const  {oCompte} = require('../../omodels/modelsSchema/index').toinit();
+const  {Ocompte} = require('../../omodels/modelsSchema/index').toinit();
 const {togetocompte,toUpdateocompte,getobjOcompte,toOCompte, toInitOcompteInstance}=require('./StaticOcompte').toinit();
 const {ocomptedata} = require('../../seed/data-seed/index').toinit();
 const { concat } = require('rxjs');
@@ -14,16 +14,16 @@ const ocompteRepository = (function () {
     return data;
   };
   const index = function (callback) {
-    return odaindex(oCompte, togetocompte, callback);
+    return odaindex(Ocompte, togetocompte, callback);
   };
   const getocomptes$ = function () {
-    return getodaindex$(oCompte, togetocompte);
+    return getodaindex$(Ocompte, togetocompte);
   };
   const getByid$ = function (requestparamid) {
-    return getodaByid$(oCompte, togetocompte, requestparamid, getobjOcompte);
+    return getodaByid$(Ocompte, togetocompte, requestparamid, getobjOcompte);
   };
   const toCreateOComptedata$ = function (requestBody) {
-    return svctoInitCustomInstance$(oCompte, requestBody,toInitializeFinalInstance);
+    return svctoInitCustomInstance$(Ocompte, requestBody,toInitializeFinalInstance);
   };
   const insertOCompte$ = function (arr) {
     return svcodasave$(arr);
@@ -32,13 +32,13 @@ const ocompteRepository = (function () {
     return svctoUpdateInstance$(requestBody, toUpdateocompte);
   };
   const editOCompte$ = function (body,requestparamid) {
-    return svcapiupdate$(oCompte, body,requestparamid);
+    return svcapiupdate$(Ocompte, body,requestparamid);
   };
   const odasearchBy = function (body) {
-    return svcodaSearchBy(oCompte, body);
+    return svcodaSearchBy(Ocompte, body);
   };
   const deleteOCompte$ = function (requestparamid) {
-    return svcodaApiDel$(oCompte, requestparamid);
+    return svcodaApiDel$(Ocompte, requestparamid);
   };
   function toinit() {
     return {

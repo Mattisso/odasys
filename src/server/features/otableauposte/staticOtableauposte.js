@@ -1,6 +1,6 @@
 "use strict";
 const { find, map, assign, filter, forEach,uniqBy } = require('lodash');
-const { isValid, odauditObj, getStringValue, odareduceArray ,odaExclude} = require('../../SharedKernel/odaUtility').toinit();
+const { isValid, odauditObj, getStringValue, odareduceArray ,odaExclude, addItem} = require('../../SharedKernel/odaUtility').toinit();
 const { odaByarg} = require('../../SharedKernel/odaFiltered').toinit();
 
 const staticOtableauposte = (function () {
@@ -13,7 +13,7 @@ const staticOtableauposte = (function () {
     });
   };
 
-  let toCreateModel = null
+  let toCreateModel = null;
   function BuildOtableauposte(model,body, fn) {
     let toacreateinstance=fn;
     toCreateModel =toacreateinstance(model,body, toOtableauposte);    

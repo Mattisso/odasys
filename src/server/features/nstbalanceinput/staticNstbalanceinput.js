@@ -32,21 +32,21 @@ const staticNstbalanceinput = (function () {
       });
   }
 }
-  let balanceinputs = null
+  let balanceinputs = null;
   function BuildBalanceinput(model,body, fn) {
     let toacreateinstance=fn;
-    balanceinputs =toacreateinstance(model,body,toBalanceinput);    
+    balanceinputs =toacreateinstance(model,body,toBalanceinput);
     const arr = addItem(balanceinputs);
     return odareduceArray(arr);
-  } 
-              
-       
+  }
+
+
         function toInitNstBalanceinputInstance(model,body,fn) {
           const getCreatedModel = BuildBalanceinput(model,body,fn);
           return odaremoveDupnumcompte(getCreatedModel.slice());
 
      }
-    
+
 
     const togetnstbalanceinput = function (argOne) {
       let initObj, odauditobj;
@@ -84,8 +84,8 @@ const staticNstbalanceinput = (function () {
       }
 
     };
- 
-    
+
+
   function toUpdateBalanceinput(body) {
     let d = new Date(), result={};
     if (result) {

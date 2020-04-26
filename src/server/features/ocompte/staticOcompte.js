@@ -10,7 +10,7 @@ const StaticOcompte = (function () {
   };
 
   
-let toCreateModel = null
+let toCreateModel = null;
 function BuildOcompte(model,body, fn) {
   let toacreateinstance=fn;
   toCreateModel =toacreateinstance(model,body,toOCompte);    

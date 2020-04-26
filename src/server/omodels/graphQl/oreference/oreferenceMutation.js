@@ -1,34 +1,46 @@
 const graphql = require('graphql');
+const { GraphQLObjectType,  GraphQLString,   GraphQLNonNull} = graphql;
+
 const {oReference} = require('../../modelsSchema/index').toinit();
-const {OreferenceType} = require('../oreference/oreferenceSchema').toinit();
+const {oReferenceType} = require('../oreference/oreferenceSchema').toinit();
 
 
-const {GraphQLString,GraphQLNonNull} = graphql;
-
-const  oreferenceMutation =(function(){
- const  toCreateOreference ={
-    type:OreferenceType,
-    args:{
-        RefCode: { type: new GraphQLNonNull(GraphQLString)},
-        Description: { type: new GraphQLNonNull(GraphQLString)}
-    },
-    resolve(parent,args){
-        let oreference = new oReference({
-            RefCode:args.RefCode,
-            Description:args.Description
-        });
-        return oreference.save();
-    }
-};
-  function toinit(){
-    return {
-      toCreateOreference:toCreateOreference
-    };
-  }
-  return {
-toinit:toinit
-  };
+const oreferenceMutation = (function () {
+	const toCreateOReference = {
+		type: oReferenceType,
+		args: {},
+		resolve(parent, args, context, info) {
+			let oreference = new oReference({});
+			return oreference.save();
+		}
+	};
+	const toUpdateOReference = {
+		type: oReferenceType,
+		args: {},
+		resolve(parent, args, context, info) {
+			let oreference = new oReference({});
+			return oreference.save();
+		}
+	};
+	const toDeleteOReference = {
+		type: oReferenceType,
+		args: {},
+		resolve(parent, args, context, info) {
+			let oreference = new oReference({});
+			return oreference.save();
+		}
+	};
+	function toinit() {
+		return {
+			toCreateOReference: toCreateOReference,
+			toUpdateOReference: toUpdateOReference,
+			toDeleteOReference: toDeleteOReference,
+		};
+	}
+	return {
+		toinit: toinit
+	};
 })();
-module.exports={
-toinit:oreferenceMutation.toinit
+module.exports = {
+	toinit: oreferenceMutation.toinit
 };

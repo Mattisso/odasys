@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 
 const olevelClass=(function(){
   const modelObject = {
@@ -8,8 +8,8 @@ const olevelClass=(function(){
     olevelDescption: {
       type: String
     }
-  }
-  class olevelClass {    
+  };
+  class olevelClass {
     constructor(olevelNum, olevelDescption) {
       this._olevelNum = olevelNum;
       this._olevelDescption = olevelDescption;
@@ -28,18 +28,18 @@ const olevelClass=(function(){
       this._olevelDescption = olevelDescption;
       return this;
     }
-  }  
+  }
   function toinit(){
     return {
 modelObject:modelObject,
 olevelClass:olevelClass
-    }
+    };
   }
   return {
     toinit:toinit
-  }
+  };
 
-})()
+})();
 module.exports={
 toinit:olevelClass.toinit
-}
+};

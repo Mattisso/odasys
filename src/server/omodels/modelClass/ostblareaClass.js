@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 
 const mongoose = require('mongoose'),
  ObjectId = mongoose.SchemaTypes.ObjectId;
@@ -19,11 +19,11 @@ const ostblareaClass=(function(){
           alias: ''
         }
       }
-  
+
     ]
-  }
+  };
   class ostblareaClass {
-    constructor(AreaShortName, AreaLongName ='Unknown') {  
+    constructor(AreaShortName, AreaLongName ='Unknown',ocomptes=[]) {
       this._AreaShortName = AreaShortName;
       this._AreaLongName = AreaLongName;
       this._ocomptes = ocomptes;
@@ -55,12 +55,12 @@ const ostblareaClass=(function(){
     return {
       modelObject:modelObject,
       ostblareaClass:ostblareaClass
-    }
+    };
   }
   return {
     tonit:tonit
-  }
-})()
+  };
+})();
 module.exports={
   tonit:ostblareaClass.tonit
-}
+};

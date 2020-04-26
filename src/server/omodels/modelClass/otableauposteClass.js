@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 const mongoose = require('mongoose'),
  ObjectId = mongoose.SchemaTypes.ObjectId;
 const otableauposteClass=(function(){
@@ -14,18 +14,18 @@ const otableauposteClass=(function(){
         OstableauposteKey: {
           type: ObjectId,
           ref: 'oStableauPoste'
-        }  
-      }  
+        }
+      }
     ]
-  }
-  
+  };
+
   class otableauposteClass {
     constructor(TableauName, tableauLongName) {
-  
+
       this._TableauName = TableauName;
       this._tableauLongName = tableauLongName;
     }
-  
+
     get tableauname() {
       return this._TableauName;
     }
@@ -45,13 +45,13 @@ const otableauposteClass=(function(){
     return {
       modelObject:modelObject,
       otableauposteClass:otableauposteClass
-    }
+    };
   }
 
   return {
     tonit:tonit
-  }
-})()
+  };
+})();
 module.exports={
   tonit:otableauposteClass.tonit
-}
+};

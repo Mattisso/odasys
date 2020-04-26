@@ -26,7 +26,7 @@ const odaStats = (function () {
         const arr = odaremoveDupnumcompte(oarray(_arr));
         for (let item of arr) {
             if (isValid(item.SoldeDebit) === true) {
-                TotalSoldeDebit += replaceNullToZero(item.SoldeDebit)
+                TotalSoldeDebit += replaceNullToZero(item.SoldeDebit);
             } else if (isValid(item.totalSoldeDebit) === true) {
                 TotalSoldeDebit += replaceNullToZero(item.totalSoldeDebit); //totalSoldeDebit
             } else {
@@ -38,10 +38,10 @@ const odaStats = (function () {
     };
 
     const getTotalSoldecredit = function (_arr) {
-        const arr = odaremoveDupnumcompte(oarray(_arr));   
+        const arr = odaremoveDupnumcompte(oarray(_arr));
              for (let item of arr) {
             if (isValid(item.SoldeCredit) === true) {
-                TotalSoldeCredit += replaceNullToZero(item.SoldeCredit)
+                TotalSoldeCredit += replaceNullToZero(item.SoldeCredit);
             } else if (isValid(item.totalSoldeCredit) === true) {
                 TotalSoldeCredit += replaceNullToZero(item.totalSoldeCredit);
             } else {

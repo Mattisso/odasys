@@ -20,7 +20,7 @@ function BuildUser(model,body, fn) {
   const arr = addItem(toCreateModel);
   return odareduceArray(arr);
 }
-            
+
       function toInitUserInstance(model,body,fn) {
         const getCreatedModel = BuildUser(model,body,fn);
         return getCreatedModel.slice();

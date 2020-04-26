@@ -1,6 +1,6 @@
 //  async = require('async')
 const { find, map, assign, filter, forEach } = require('lodash');
-const { isValid, odauditObj, getStringValue, odareduceArray } = require('../../SharedKernel/odaUtility').toinit();
+const { isValid, odauditObj, getStringValue, odareduceArray, addItem } = require('../../SharedKernel/odaUtility').toinit();
 
 const staticOstableauposte = (function () {
   const toOstableauposte = function (o) {
@@ -14,16 +14,16 @@ const staticOstableauposte = (function () {
       });
   };
 
-  
-let toCreateModel = null
+
+let toCreateModel = null;
 function BuildOstableauposte(model,body, fn) {
   let toacreateinstance=fn;
-  toCreateModel =toacreateinstance(model,body,toOstableauposte);    
+  toCreateModel =toacreateinstance(model,body,toOstableauposte);
   const arr = addItem(toCreateModel);
   return odareduceArray(arr);
-} 
-            
-     
+}
+
+
       function toInitOstableauposteInstance(model,body,fn) {
         const getCreatedModel = BuildOstableauposte(model,body,fn);
         return (getCreatedModel.slice());

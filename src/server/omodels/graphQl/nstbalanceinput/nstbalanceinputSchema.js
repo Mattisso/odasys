@@ -1,5 +1,5 @@
 
-const {GraphQLObjectType, GraphQLString, GraphQLID,  GraphQLInt} = require('graphql');
+const {GraphQLObjectType, GraphQLString, GraphQLID,  GraphQLInt, GraphQLNonNull} = require('graphql');
 
 const nstbalanceinputSchema=(function(){
   const nstBalanceInputType = new GraphQLObjectType({
@@ -8,21 +8,22 @@ const nstbalanceinputSchema=(function(){
       id: {
         type: GraphQLID
       },
+      NumCompte: {
+        type: new GraphQLNonNull(GraphQLString)
+      },
+      IntitulCompte: {
+        type: new GraphQLNonNull(GraphQLString)
+      },     
       SoldeDebit: {
         type: GraphQLInt
       },
       CompteNumber: {
-        type: GraphQLInt
+        type: GraphQLString
       },
       SoldeCredit: {
         type: GraphQLInt
       },
-      IntitulCompte: {
-        type: GraphQLString
-      },
-      NumCompte: {
-        type: GraphQLString
-      },
+      
     })
   });
   function toinit(){

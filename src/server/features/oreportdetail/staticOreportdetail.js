@@ -2,7 +2,7 @@
 "use strict";
 const { find, map, assign, filter, forEach,maxBy,ary,toString,toNumber} = require('lodash');
 const {staticObjects} =require('../../SharedKernel/index').toinit();
-const { isValid, odauditObj, getStringValue} = require('../../SharedKernel/odaUtility').toinit();
+const { isValid, odauditObj, getStringValue, addItem,odareduceArray} = require('../../SharedKernel/odaUtility').toinit();
 
 const staticOreportdetail = (function () {
   const toOreportDetail = function (o) {
@@ -14,16 +14,16 @@ const staticOreportdetail = (function () {
     });
   };
 
-  
-let toCreateModel = null
+
+let toCreateModel = null;
 function BuildOreportdetail(model,body, fn) {
   let toacreateinstance=fn;
-  toCreateModel =toacreateinstance(model,body,toOreportDetail);    
+  toCreateModel =toacreateinstance(model,body,toOreportDetail);
   const arr = addItem(toCreateModel);
   return odareduceArray(arr);
-} 
-            
-     
+}
+
+
       function toInitOreportdetailInstance(model,body,fn) {
         const getCreatedModel = BuildOreportdetail(model,body,fn);
         return (getCreatedModel.slice());

@@ -166,7 +166,7 @@ const staticObjects = (function () {
       const validate = find(arr, function (o) {
         return o.TableauName === getStringValue(value)
           || o.OtableauposteKey === getStringValue(value)
-          || o.id === getStringValue(value)
+          || o.id === getStringValue(value);
         //  || o.OstableauposteKey === getStringValue(value);
       });
       return {

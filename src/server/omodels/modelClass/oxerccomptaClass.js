@@ -1,8 +1,8 @@
 
 
-"use strict"
+"use strict";
 const oxerccomptaClass = (function () {
-  const initObject = { 
+  const initObject = {
     oExercComptaId: {  type: String,
       required: true,
       unique: true
@@ -22,7 +22,7 @@ const oxerccomptaClass = (function () {
     default:
       true
     }
-  }
+  };
   class oExercComptaClass {
     constructor(oExercComptaId, DateDebut, Datefin, Cloture) {
       this._oExercComptaId = oExercComptaId;
@@ -65,13 +65,13 @@ const oxerccomptaClass = (function () {
     return {
       initObject: initObject,
       oExercComptaClass: oExercComptaClass
-    }
+    };
   }
 
   return {
     toinit: toinit
-  }
-})()
+  };
+})();
 module.exports = {
   toinit: oxerccomptaClass.toinit
-}
+};

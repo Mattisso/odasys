@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 const userClass=(function(){
   const modelObject = {
     username: {
@@ -30,18 +30,18 @@ const userClass=(function(){
     default:
       0
     }
-  
-  }
-  
+
+  };
+
   class userClass {
-    constructor( username, role, password, loginAttempts = 0, lockUntil = 0) {  
+    constructor( username, role, password, loginAttempts = 0, lockUntil = 0) {
      this._username = username;
       this._role = role;
       this._password = password;
       this._loginAttempts = loginAttempts;
-      this._lockUntil = lockUntil; 
+      this._lockUntil = lockUntil;
     }
-  
+
    get lockuntil() {
       return this._lockUntil;
     }
@@ -55,7 +55,7 @@ const userClass=(function(){
     set Username(username) {
       this._username = username;
       return this;
-    } 
+    }
     get Role() {
       return this._role;
     }
@@ -77,20 +77,20 @@ const userClass=(function(){
       this._loginAttempts = loginAttempts;
       return this;
     }
-  
+
 
 }
 function toinit(){
   return {
 userClass:userClass,
 modelObject:modelObject
-  }
+  };
 }
   return {
 toinit:toinit
-  }
+  };
 
 })();
 module.exports={
 toinit:userClass.toinit
-}
+};

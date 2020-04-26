@@ -15,7 +15,7 @@ const staticOstblarea= (function () {
   };
 
   
-let toCreateModel = null
+let toCreateModel = null;
 function BuildOstblarea(model,body, fn) {
   let toacreateinstance=fn;
   toCreateModel =toacreateinstance(model,body,toOstblarea);    

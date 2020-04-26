@@ -34,7 +34,7 @@ const StaticOexercice = (function () {
     "OexercComptaEncourKey":  o.OexercComptaEncourKey,
     "OexercComptaPrevKey":o.OexercComptaPrevKey
    });
-  }; 
+  };
 
   let toCreateModel = null;
   function BuildOexercice(model,body, fn) {

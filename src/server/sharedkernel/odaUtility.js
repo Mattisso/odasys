@@ -3,21 +3,14 @@ const {remove,isEmpty, isUndefined, isNull, toString, toNumber, reject, forEach,
 const odaUtility = (function () {
 const removeodauditobj = ['CreatedBy', 'ModifiedOn', 'ModifiedBy', 'CreatedOn', 'id'];
 
-const getcurrentYearObj=function(arr){
-  let _getcurrentYear= maxBy(map(map(oexcomptadata,'oExercComptaId'), ary(parseInt, 1)));
-  return _getcurrentYear;
-}
-const getPreviousYearObj=function(arr){
-  let _getPreviousYear=(maxBy(map(map(oexcomptadata,'oExercComptaId'), ary(parseInt, 1))))-1;
-  return _getPreviousYear;
-}
+
 
 const  addItem = function(item)  {
   let arr=[];
   if (!hasitem(item, arr))
   arr.push(item);
   return arr;
-  }
+  };
 const odareomoveInvalidObject = function(arr,fn){
   return remove(arr, function(n) {
     return fn(n)===true;
@@ -49,7 +42,7 @@ const odaremoveDupnumcompte = function (array) {
     }
     return val;
   };
-  const oarray = function (array) {    
+  const oarray = function (array) {
     var passed = [];
     for (var i = 0; i < array.length; i++) {
       if (!hasitem(array[i],passed))
@@ -137,7 +130,7 @@ const odaremoveDupnumcompte = function (array) {
   };
 function odareduceArray(options) {
     return flattenDeep(odaremove(options));
-  };
+  }
 
   var removeDupbalanceinputs = function (array) {
     var arr = array.filter(function (a) {

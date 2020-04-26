@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 const odaiterator = (function () {
 
     //	data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
@@ -7,10 +7,7 @@ const odaiterator = (function () {
         let location = 0,
         length = argone.length;
         return {
-            next: function () {
-                return argone[location++];
-            },
-            next: function () {
+                       next: function () {
                 let element;
                 if (!this.hasNext()) {
                 return null;
@@ -33,7 +30,7 @@ const odaiterator = (function () {
                     return false;
                 }
             }
-        }
+        };
          /*    return {
         hasNext: function () {
         return index < length;
@@ -57,7 +54,7 @@ const odaiterator = (function () {
         }
         } */
 
-    }
+    };
     function reverseArrayIterator(array) {
         var index = array.length - 1;
         return {
@@ -69,7 +66,7 @@ const odaiterator = (function () {
              : {
                 done: true
             }
-        }
+        };
     }
 
     function toinit() {

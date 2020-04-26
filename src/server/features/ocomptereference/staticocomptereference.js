@@ -19,7 +19,7 @@ const staticocomptereference = (function () {
   };
 
   
-let toCreateModel = null
+let toCreateModel = null;
 function BuildOcomptereference(model,body,fn) {
   let toacreateinstance=fn;
   toCreateModel =toacreateinstance(model,body,toOcomptereference);    

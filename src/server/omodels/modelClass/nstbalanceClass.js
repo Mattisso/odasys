@@ -17,16 +17,16 @@ const nstbalanceClass=(function(){
     },
     OcompteKey: {
       type: ObjectId,
-      ref: 'Ocompte'
+      ref: 'oCompte'
     }
   };
 
   class nstbalanceClass {
-    constructor(OexercComptaKey, OtableauposteKey, OreferenceKey , NumCompte, IntitulCompte, SoldeCredit, SoldeDebit) {
+    constructor(OexercComptaKey, OtableauposteKey, OreferenceKey , OcompteKey='0000',NumCompte, IntitulCompte, SoldeCredit, SoldeDebit) {
       this._OexercComptaKey = OexercComptaKey;
       this._OtableauposteKey = OtableauposteKey;
       this._OreferenceKey = OreferenceKey;
-     // this._OcompteKey = OcompteKey;
+     this._OcompteKey = OcompteKey;
       this._IntitulCompte = IntitulCompte;
       this._NumCompte = NumCompte;
       this._SoldeDebit = SoldeDebit;

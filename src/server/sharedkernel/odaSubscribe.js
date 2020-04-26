@@ -76,6 +76,23 @@ return;
     };
   };
 
+
+  const getapidata = function () {
+return {
+  next: function(x){
+    return x;
+  } ,
+  error: function(err)
+  {
+    return (new Error(`Observer got an error:  ${err}`));
+  } ,
+
+  complete: function()  {
+  return `Observer got a complete notification `; // console.log('Observer got a complete notification');
+  }
+};
+
+  };
    const getapideleteObserver = function (req, res) {
     return {
       next:()=> {
@@ -95,7 +112,7 @@ return;
     return  getapiCreateObserver(req,res,next);
   };
 
-  const getapiObserver = function (req, res, next) {
+  const getapiObserver = function (res, next) {
     return {
       next: result => res.result = result,
       error(err) {
@@ -124,7 +141,8 @@ return;
       getObserverWithShareReplaydata$:getObserverWithShareReplaydata$,
       getapiupdateObserver:getapiupdateObserver,
       getapideleteObserver:getapideleteObserver,
-      getapinotification:getapinotification
+      getapinotification:getapinotification,
+      getapidata:getapidata
     };
   }
 

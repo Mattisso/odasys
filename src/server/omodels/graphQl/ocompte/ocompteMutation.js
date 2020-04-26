@@ -3,29 +3,43 @@ const graphql = require('graphql');
 const { GraphQLObjectType,  GraphQLString,   GraphQLNonNull} = graphql;
 const {Ocompte} = require('../../modelsSchema/index').toinit();
 
-const ocompteMutation=(function(){
-  const tocreateOcompte= {
-            type: OcompteType,
-            args: {
-                CompteNumber: { type: new GraphQLNonNull(GraphQLString) },
-            },
-            resolve(parent, args) {
-                let ocompte = new Ocompte({
-                    CompteNumber: args.CompteNumber
-                                  });
-                return ocompte.save();
-            }
-        };
+  const ocompteMutation = (function () {
 
-  function toinit(){
-    return {
-      tocreateOcompte:tocreateOcompte
-    };
-  }
-  return {
-toinit:toinit
+    const toCreateOcompte = {
+    type: OcompteType,
+    args: {},
+    resolve(parent, args, context, info) {
+      let ocompte = new Ocompte({});
+      return ocompte.save();
+    }
   };
-})();
-module.exports = {
-  toinit: ocompteMutation.toinit
-};
+  const toUpdateOcompte = {
+    type: OcompteType,
+    args: {},
+    resolve(parent, args, context, info) {
+      let ocompte = new Ocompte({});
+      return ocompte.save();
+    }
+  };
+  const toDeleteOcompte = {
+    type: OcompteType,
+    args: {},
+    resolve(parent, args, context, info) {
+      let ocompte = new Ocompte({});
+      return ocompte.save();
+    }
+  };
+    function toinit() {
+      return {
+        toCreateOcompte: toCreateOcompte,
+        toUpdateOcompte: toUpdateOcompte,
+        toDeleteOcompte: toDeleteOcompte,
+      };
+    }
+    return {
+      toinit: toinit
+    };
+  })();
+  module.exports = {
+    toinit: ocompteMutation.toinit
+  };

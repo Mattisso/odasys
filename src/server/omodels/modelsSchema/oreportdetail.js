@@ -30,14 +30,14 @@ oReportDetailSchema.virtual('otableauposte')
   function toinit(){
    return {
     oReportDetail:oReportDetail
-   } 
+   };
   }
   return {
     toinit:toinit
-  }
-})()
+  };
+})();
 module.exports={
   toinit:oreportdetail.toinit
-}
+};
 
 

@@ -1,9 +1,9 @@
-"use strict"
+"use strict";
 const mongoose = require('mongoose');
 const ObjectId = mongoose.SchemaTypes.ObjectId;
 
 const oreportheaderClass=(function(){
-  
+
 const modelObject = {
 	OtableauposteKey: {
 		type: ObjectId,
@@ -19,7 +19,7 @@ const modelObject = {
 		1
 	},
 
-}
+};
 
 class oreportHeaderClass {
 	constructor(OtableauposteKey, OreferenceKey, SortOrderH) {
@@ -56,13 +56,13 @@ function toinit(){
   return {
     modelObject:modelObject,
     oreportHeaderClass:oreportHeaderClass,
-  }
+  };
 }
 
 return {
 toinit:toinit
-}
-})()
+};
+})();
 module.exports={
   toinit:oreportheaderClass.toinit
-}
+};

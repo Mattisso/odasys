@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 const mongoose = require('mongoose'),
  ObjectId = mongoose.SchemaTypes.ObjectId;
 const ostableauposteClass= (function(){
@@ -9,7 +9,7 @@ const ostableauposteClass= (function(){
     },
     StbleauLongName: {
       type: String
-  
+
     },
     OtableauposteKey: {
       type: ObjectId,
@@ -21,13 +21,13 @@ const ostableauposteClass= (function(){
           ref: 'oStblArea'
         }
       }]
-  }
+  };
 class ostableauposteClass {
   constructor(StableauName,StbleauLongName){
     this._StableauName = StableauName;
     this._StbleauLongName = StbleauLongName;
   }
-  
+
   get stableauname() {
     return this._StableauName;
   }
@@ -48,14 +48,14 @@ class ostableauposteClass {
     return {
       modelObject:modelObject,
       ostableauposteClass:ostableauposteClass,
-    }
+    };
   }
   return {
 toinit:toinit
-  }
+  };
 
-})()
+})();
 module.exports={
   toinit: ostableauposteClass.toinit
 
-}
+};

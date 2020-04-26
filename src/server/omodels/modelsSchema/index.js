@@ -20,7 +20,7 @@ var index = (function () {
       'oStblArea': require('./ostblarea').toinit().oStblArea,
       'oTableauPoste': require('./otableauPoste').toinit().oTableauPoste,
      // 'oGestion': require('./ogestion').toinit(),
-      'olevel': require('./olevel').toinit().Olevel,
+      'Olevel': require('./olevel').toinit().Olevel,
        'User': require('./user').toinit().User,
        'OcompteReference': require('./ocomptereference').toinit().OcompteReference,
        'oReportDetail': require('./oreportdetail').toinit().oReportDetail,

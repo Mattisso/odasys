@@ -12,10 +12,7 @@ const toInitializeInstance = (function () {
       const _getdata = toapicreateinstance(model, requestBody, fn);
         arrArg =_getdata.slice();
          return arrArg;
-     /*  return {
-        DetailCount: _getdata.length,
-        arrArg: _getdata.slice()
-      }; */
+    
     }
     else  if (inArray(requestBody) === false) {
       const _getdata = toapicreateinstance(model, requestBody, fn);
@@ -23,16 +20,14 @@ const toInitializeInstance = (function () {
         arrArg.push(_getdata);
         arrArg =arrArg.slice();
         return arrArg;
-      /*   if (isValid(arrArg.length) === true) {
-          DetailCount = arrArg.length;
-        }
-      return {
-        DetailCount: DetailCount,
-        arrArg: arrArg.slice()
-      }; */
+
+    }
+    else {
+      return new Error(
+  ` missing some arguments`);
     }
 
-  } 
+  }
 
   function tocreateChildBuild(model, requestBody,requestparamid, fn) {
     let DetailCount = 0,
@@ -56,7 +51,7 @@ const toInitializeInstance = (function () {
         arrArg: arrArg.slice()
       };
     }
-    
+
   }
   const toInitializeInstance = function (model, body, f) {
     const data = tocreateBuild(model, body, f);
@@ -79,7 +74,18 @@ const toInitializeInstance = (function () {
         observer.error(err);
       }
     });
-  
+
+  };
+
+  const toapiOdaCreate = function (model,requestBody, fn) {
+      try {
+        return fn(model,requestBody);
+
+      } catch (err) {
+      return new Error(err);
+      }
+
+
   };
 
   const toapiOdaChildCreate$ = function (model,requestBody,requestparamid, fn) {
@@ -93,21 +99,25 @@ const toInitializeInstance = (function () {
       } catch (err) {
         observer.error(err);
       }
-    });  
+    });
   };
   const svctoInitializeInstance$ = function (model,requestBody,toinitobj) {
     return toapiOdaCreate$(model, requestBody,toinitobj,toInitializeInstance);
 };
 
 const toInitCustomInstance = function (model,requestBody, fn) {
-  return fn(model, requestBody,toapicreateinstance)
+  return fn(model, requestBody,toapicreateinstance);
 };
 
 
 const svctoInitCustomInstance$= function(model,requestBody,fn){
 return toapiOdaCreate$(model, requestBody,fn);
-}
+};
 
+
+const svctoInitCustomInstance= function(model,requestBody,fn){
+  return toapiOdaCreate(model, requestBody,fn);
+  };
 const svctoInitializeChildInstance$ = function (model,requestBody,requestparamid) {
   return toapiOdaChildCreate$(model, requestBody, requestparamid,toInitializeChildInstance);
 };
@@ -120,7 +130,8 @@ const svctoInitializeChildInstance$ = function (model,requestBody,requestparamid
       toapicreateChildinstance:toInitializeChildInstance,
       toapicreateinstance:toapicreateinstance,
       svctoInitCustomInstance$:svctoInitCustomInstance$,
-      toInitCustomInstance:toInitCustomInstance
+      toInitCustomInstance:toInitCustomInstance,
+      svctoInitCustomInstance:svctoInitCustomInstance
 
     };
   }

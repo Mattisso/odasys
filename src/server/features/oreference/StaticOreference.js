@@ -15,7 +15,7 @@ const staticOreference = (function () {
   };
 
 
-  let toCreateModel = null
+  let toCreateModel = null;
   function BuildOreference(model,body, fn) {
     let toacreateinstance=fn;
     toCreateModel =toacreateinstance(model,body,toOreference);    

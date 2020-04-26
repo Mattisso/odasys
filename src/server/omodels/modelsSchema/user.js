@@ -1,5 +1,8 @@
 /*eslint-disable no-unused-vars */
 "use strict";
+/*const graphql = require('graphql');
+const {GraphQLObjectType,GraphQLString,GraphQLID,GraphQLInt} = graphql; */
+
 const mongoose = require('mongoose'),
 Schema = mongoose.Schema;
 const  bcrypt = require('bcryptjs');
@@ -14,7 +17,7 @@ const user = (function () {
     const UserSchema= extendSchema(auditBaseSchema, modelObject);
   //  UserSchema.loadClass(userClass);
    // ocompteschema.plugin(auditEntityPlugin);
-   
+
 UserSchema.set('toObject', { getters: true });
 UserSchema.set('toJSON', { getters: true });
 // expose enum on the model
@@ -145,17 +148,39 @@ UserSchema.statics.getAuthenticated = function (username, password, cb) {
   }
 });
     let User = mongoose.model('User', UserSchema);
-     
+
+   /*  const UserType = new GraphQLObjectType({
+      name : 'User',
+      fields: () => ({
+          id: {
+              type: GraphQLID
+          },
+          username: {
+              type: GraphQLString
+          },
+          role: {
+              type: GraphQLString
+          },
+          password: {
+              type: GraphQLString
+          },
+          loginAttempts: {
+              type: GraphQLInt
+          }
+      })
+  }); */
+
     function toinit() {
       return {
         User: User
-      }
+      //  UserType:UserType
+      };
     }
     return {
       toinit: toinit
-    }
+    };
   })();
   module.exports = {
     toinit: user.toinit
-  }
-  
+  };
+

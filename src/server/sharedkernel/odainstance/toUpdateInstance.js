@@ -1,30 +1,34 @@
 "use strict";
 const { forEach,merge} = require('lodash');
-const {hasitem, inArray} = require('../odaUtility').toinit();
+const {hasitem, inArray, isValid} = require('../odaUtility').toinit();
 const {toapiUpdateChildInstance,toapiUpdateInstance}=require('../odainstance/toOdaInstance').toinit();
 const {odaupdate$, odaLoadupdate$, SearchByid}=require('../odarepository/odarepository').toinit();
 const { Observable } = require('rxjs');
 const toUpdateInstance = (function () {
-        
-    function toupdateBuild(requestBody, fn) {
-        let  arrArg = [];
-        const _getdata = toapiUpdateInstance(requestBody, fn);
-        if ((!hasitem(_getdata, arrArg))) {
-          arrArg.push(_getdata);
-                     return arrArg.slice()
-           
-        }   else {
-          return new Error(
-            ` missing some arguments`);
-          }
-   
-      }
+  function toupdateBuild(requestBody, fn) {
+    let arrArg = [];
+    if (inArray(requestBody) === true) {
+      const _getdata = toapiUpdateInstance(requestBody, fn);
+      arrArg = _getdata.slice();
+      return arrArg;
+    } else if (inArray(requestBody) === false) {
+      const _getdata = toapiUpdateInstance(requestBody, fn);
+      if ((!hasitem(_getdata, arrArg)))
+        arrArg.push(_getdata);
+      arrArg = arrArg.slice();
+      return arrArg;
+
+    } else {
+      return new Error(
+  ` missing some arguments`);
+    }
+  }
 
       const toUpdateInstance = function (body, f) {
         const data = toupdateBuild(body, f);
         return data;
-      };      
-    
+      };
+
     const toOdaUpdate$ = function (requestBody, toupdobj, fn) {
         return Observable.create(function (observer) {
             // const _toupdatedata = fn(requestBody, objupd);
@@ -40,10 +44,28 @@ const toUpdateInstance = (function () {
         });
     };
 
+    const toOdaUpdate = function (requestBody, toupdobj, fn) {
+          // const _toupdatedata = fn(requestBody, objupd);
+          try {
+              const _toupdatedata = fn(requestBody, toupdobj);
+              return _toupdatedata;
+
+          } catch (err) {
+            return new Error(err);
+          }
+
+  };
+  const toUpdateCustomInstance = function (requestBody, fn) {
+    return fn(requestBody,toapiUpdateInstance);
+  };
+
+  const svctoUpdateCustomInstance= function(requestBody, toupdobj, fn){
+    return toOdaUpdate(requestBody, toupdobj, fn);
+    };
     const svctoUpdateInstance$ = function (requestBody, toupdobj) {
       return toOdaUpdate$(requestBody,  toupdobj, toUpdateInstance);
   };
-
+/*
     const toOdaUpdateChild$ = function (requestBody, requestparamid,  toupdobj, fn) {
       return Observable.create(function (observer) {
           // const _toupdatedata = fn(requestBody, objupd);
@@ -58,13 +80,13 @@ const toUpdateInstance = (function () {
           }
       });
   };
-   
+
   function toupdateChildBuild(requestBody, requestparamid, fn){
     let arrArg = [];
     const _getdata = toapiUpdateChildInstance(requestBody, requestparamid, fn);
     if ((!hasitem(_getdata, arrArg))) {
       arrArg.push(_getdata);
-       return arrArg.slice()           
+       return arrArg.slice();
     }   else {
       return new Error(
         ` missing some arguments`);
@@ -74,11 +96,12 @@ const toUpdateInstance = (function () {
    const  toUpdateChildInstance  = function (requestBody, requestparamid, fn) {
     const data = toupdateChildBuild(requestBody, requestparamid, fn);
     return data;
-  };      
-  
+  };
+
     const svctoUpdateChildInstance$ = function (requestBody, requestparamid, toupdobj) {
       return toOdaUpdateChild$(requestBody, requestparamid, toupdobj, toUpdateChildInstance);
   };
+  */
    const odaApiupdateObj$ = function (model, body, reqparmid) {
     let _arr = [], result={};
     return Observable.create(function (observer) {
@@ -146,7 +169,7 @@ const toUpdateInstance = (function () {
     });
   };
 
-  
+
   const odapiupdate$=function(model, ArgOne,reqparmid) {
     if(inArray(ArgOne)===true){
       return odaApiupdateArray$(model, ArgOne,reqparmid);
@@ -173,20 +196,21 @@ const toUpdateInstance = (function () {
         return {
       svctoUpdateInstance$: svctoUpdateInstance$,
         toUpdateInstance: toUpdateInstance,
-        svctoUpdateChildInstance$:svctoUpdateChildInstance$,
-        toUpdateChildInstance:toUpdateChildInstance,
+     //   svctoUpdateChildInstance$:svctoUpdateChildInstance$,
+    //    toUpdateChildInstance:toUpdateChildInstance,
         svcapiupdate$:svcapiupdate$,
-        svcodaupdate$:svcodaupdate$
+        svcodaupdate$:svcodaupdate$,
+        toUpdateCustomInstance:toUpdateCustomInstance,
+        svctoUpdateCustomInstance:svctoUpdateCustomInstance
 
         };
       }
-    
+
       return {
         toinit: toinit
       };
-    
+
     })();
     module.exports = {
       toinit: toUpdateInstance.toinit
     };
-    

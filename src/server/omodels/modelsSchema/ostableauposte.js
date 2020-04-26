@@ -1,7 +1,7 @@
 const mongoose = require('mongoose'),
 Schema = mongoose.Schema;
 const {getauditentity, gettoObject ,extendSchema, auditEntityPlugin} = require('../helpers/odabaseSchema').toinit();
-const {ostableauposteClass, modelObject}=require('../modelClass/ostableauposteClass').toinit()
+const {ostableauposteClass, modelObject}=require('../modelClass/ostableauposteClass').toinit();
 
 const ostableauposte = (function () {
 	const auditBaseSchema = new Schema(getauditentity, gettoObject);
@@ -33,14 +33,14 @@ const ostableauposte = (function () {
 	function toinit() {
 		return {
 			oStableauPoste: oStableauPoste
-		}
+		};
 	}
 
 	return {
 		toinit: toinit
-	}
+	};
 
-})()
+})();
 module.exports = {
 	toinit: ostableauposte.toinit
 };
@@ -48,7 +48,7 @@ module.exports = {
 const obj = {
   "StableauName": "tblAmortImmo",
   "StbleauLongName": "Amortissements",
-  "ostblareas": [{ "AreaShortName": "AmortImmo" }]}
+  "ostblareas": [{ "AreaShortName": "AmortImmo" }]};
 
 
 // ostableauposte.toinit().oStableauPoste.create(obj);

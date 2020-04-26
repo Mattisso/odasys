@@ -1,5 +1,5 @@
 "use strict";
-const { getStringValue,isValid,odauditObj, odareduceArray} = require('../../SharedKernel/odaUtility').toinit();
+const { getStringValue,isValid,odauditObj, odareduceArray, addItem} = require('../../SharedKernel/odaUtility').toinit();
 const { find, map, assign, filter, forEach } = require('lodash');
 
 
@@ -12,7 +12,7 @@ const staticOlevel = (function () {
  };
 
  
-let toCreateModel = null
+let toCreateModel = null;
 function BuildOlevel(model,body, fn) {
   let toacreateinstance=fn;
   toCreateModel =toacreateinstance(model,body,toOlevel);    

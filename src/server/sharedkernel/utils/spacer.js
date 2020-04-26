@@ -28,7 +28,7 @@ const spacer = (function () {
         }
 
         return longString.substr(characterIndex, length);
-    }
+    };
 
     const wrap = function (text, length, character) {
         var padLength = length - text.length - 3;
@@ -36,7 +36,7 @@ const spacer = (function () {
         wrapText +=line(padLength, " ");
         wrapText += character;
         return wrapText;
-    }
+    };
 
     const box = function (text, length, character) {
         var boxText =newLine();
@@ -44,7 +44,7 @@ const spacer = (function () {
         boxText +=wrap(text, length, character) +newLine();
         boxText +=line(length, character) +newLine();
         return boxText;
-    }
+    };
 
     function toinit() {
         return {
@@ -53,7 +53,7 @@ const spacer = (function () {
             wrap : wrap,
             newLine:newLine,
             box:box
-        }
+        };
     }
 
 

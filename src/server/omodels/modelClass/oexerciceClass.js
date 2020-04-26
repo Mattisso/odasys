@@ -1,5 +1,5 @@
 
-"use strict"
+"use strict";
 const mongoose = require('mongoose'),
 ObjectId = mongoose.SchemaTypes.ObjectId;
 const oexerciceClass = (function () {
@@ -22,14 +22,14 @@ const oexerciceClass = (function () {
       type: ObjectId,
       ref: 'oExercCompta'
     }
-  }
+  };
 
   class oExerciceClass {
     constructor(oExerciceEncour, ExercicePrev,  OexercComptaPrevKey, OexercComptaEncourKey) {
       this._oExerciceEncour = oExerciceEncour;
       this._OexercComptaEncourKey = OexercComptaEncourKey;
       this._OexercComptaPrevKey = OexercComptaPrevKey;
-      this._ExercicePrev = ExercicePrev;      
+      this._ExercicePrev = ExercicePrev;
     }
     get oexerccomptaencourkey() {
       return this._OexercComptaEncourKey;
@@ -64,12 +64,12 @@ const oexerciceClass = (function () {
     return {
       initObjOexcerice: initObjOexcerice,
       oExerciceClass: oExerciceClass
-    }
+    };
   }
   return {
     tonit: tonit
-  }
-})()
+  };
+})();
 module.exports = {
   tonit: oexerciceClass.tonit
-}
+};

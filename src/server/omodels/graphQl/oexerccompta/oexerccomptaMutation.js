@@ -2,11 +2,9 @@ const {oExercComptaType}=require('./oexerccomptaSchema').toinit();
 const graphql = require('graphql');
 const { GraphQLObjectType,  GraphQLString,   GraphQLNonNull} = graphql;
 const {oExercCompta} = require('../../modelsSchema/index').toinit();
+const oexerccomptaMutation = (function () {
 
-
-
-const OexerccomptaMutation = (function () {
-	const toCreateOexerccompta = {
+	const toCreateOExercCompta = {
 		type: oExercComptaType,
 		args: {},
 		resolve(parent, args, context, info) {
@@ -14,7 +12,7 @@ const OexerccomptaMutation = (function () {
 			return oexerccompta.save();
 		}
 	};
-	const toUpdateOexerccompta = {
+	const toUpdateOExercCompta = {
 		type: oExercComptaType,
 		args: {},
 		resolve(parent, args, context, info) {
@@ -22,7 +20,7 @@ const OexerccomptaMutation = (function () {
 			return oexerccompta.save();
 		}
 	};
-	const toDeleteOexerccompta = {
+	const toDeleteOExercCompta = {
 		type: oExercComptaType,
 		args: {},
 		resolve(parent, args, context, info) {
@@ -30,11 +28,12 @@ const OexerccomptaMutation = (function () {
 			return oexerccompta.save();
 		}
 	};
+
 	function toinit() {
 		return {
-			toCreateOexerccompta: toCreateOexerccompta,
-			toUpdateOexerccompta: toUpdateOexerccompta,
-			toDeleteOexerccompta: toDeleteOexerccompta,
+			toCreateOExercCompta: toCreateOExercCompta,
+			toUpdateOExercCompta: toUpdateOExercCompta,
+			toDeleteOExercCompta: toDeleteOExercCompta,
 		};
 	}
 	return {
@@ -42,5 +41,5 @@ const OexerccomptaMutation = (function () {
 	};
 })();
 module.exports = {
-	toinit: OexerccomptaMutation.toinit
+	toinit: oexerccomptaMutation.toinit
 };

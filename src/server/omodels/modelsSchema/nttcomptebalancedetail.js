@@ -9,7 +9,7 @@ const nttcomptebalancedetail=(function(){
 
   nttcomptebalanceDetailSchema.loadClass(nttcomptebalanceDetailClass);
   nttcomptebalanceDetailSchema.plugin(auditEntityPlugin);
-  
+
 nttcomptebalanceDetailSchema.virtual('nttcomptebalance')
 .set(function (nttcomptebalance) {
   this._nttcomptebalance = nttcomptebalance;
@@ -31,12 +31,12 @@ let  nttCompteBalanceDetail = mongoose.model('nttCompteBalanceDetail', nttcompte
   function toinit(){
     return {
       nttCompteBalanceDetail:nttCompteBalanceDetail
-    }
+    };
   }
   return {
     toinit:toinit
-  }
+  };
 })();
 module.exports={
 toinit:nttcomptebalancedetail.toinit
-}
+};

@@ -1,27 +1,27 @@
 
 "use strict";
-const {olevel} = require('../../omodels/modelsSchema/index').toinit();
+const {Olevel} = require('../../omodels/modelsSchema/index').toinit();
 const {odaByarg,getodafilter} =require('../../SharedKernel/index').toinit().filtered;
 const { Observable } = require('rxjs');
 const {togetolevel, getobjolevel,toOlevel,toUpdateolevel}=require('./staticOlevel').toinit();
 const {getodaindex$, odaindex,getodaByid$}=require('../../SharedKernel/odaservice/dataservices').toinit();
 const {svctoapiUpdateInstance,svcodasave$,svcodaApiDel$,svcodaSearchBy}=require('../../SharedKernel/odaservice/odaservice').toinit();
-const {svctoInitializeInstance$,svctoUpdateInstance$,svcapiupdate$}=require('../../sharedkernel/odainstance/index').toinit(); 
+const {svctoInitializeInstance$,svctoUpdateInstance$,svcapiupdate$}=require('../../sharedkernel/odainstance/index').toinit();
 const {concat } = require('rxjs');
 
 const olevelRepository = (function () {
 
   const index = function (callback) {
-    return odaindex(olevel, togetolevel, callback);
+    return odaindex(Olevel, togetolevel, callback);
   };
   const getolevels$ = function () {
-    return getodaindex$(olevel, togetolevel);
+    return getodaindex$(Olevel, togetolevel);
   };
   const getByid$ = function (requestparamid) {
-    return getodaByid$(olevel, togetolevel, requestparamid, getobjolevel);
+    return getodaByid$(Olevel, togetolevel, requestparamid, getobjolevel);
   };
   const toCreateoleveldata$ = function (requestBody,requestparamid) {
-    return svctoInitializeInstance$(olevel, requestBody,requestparamid, toOlevel);
+    return svctoInitializeInstance$(Olevel, requestBody,requestparamid, toOlevel);
   };
   const insertolevel$ = function (arr) {
     return svcodasave$(arr);
@@ -31,18 +31,18 @@ const olevelRepository = (function () {
   };
 
   const editolevel$ = function (body, requestparamid) {
-    return svcapiupdate$(olevel, body, requestparamid);
+    return svcapiupdate$(Olevel, body, requestparamid);
   };
   const odasearchBy = function (body) {
-    return svcodaSearchBy(olevel, body);
+    return svcodaSearchBy(Olevel, body);
   };
   const Deleteolevel$ = function (requestparamid) {
-    return svcodaApiDel$(olevel, requestparamid);
+    return svcodaApiDel$(Olevel, requestparamid);
   };
 
   const getolevelsBy$ = function (levelnum) {
     return Observable.create(function (observer) {
-      odaindex(olevel, togetolevel, function (err, datas) {
+      odaindex(Olevel, togetolevel, function (err, datas) {
         if (err) {
           observer.next(err);
         } else {

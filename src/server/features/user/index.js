@@ -1,7 +1,6 @@
 
 "use strict";
-const {index$,
-  getall,
+const {index$,  getall,
   getbyid$,
   insert$,
   update$,

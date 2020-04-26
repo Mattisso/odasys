@@ -32,18 +32,18 @@ oStblAreaSchema.virtual('suboreferences', {
   })
   .get(function() {
     return this._ocompte;
-  }); 
+  });
   let  oStblArea = mongoose.model('oStblArea', oStblAreaSchema);
 function toinit() {
 	return {
 		oStblArea:oStblArea
-	}
+	};
 }
 return {
 	toinit:toinit
-}
+};
 
-})()
+})();
 module.exports =  {
     toinit: ostblarea.toinit
      };
@@ -60,7 +60,7 @@ module.exports =  {
 		{
 			"CompteNumber": "488"
 		}]
-	}
+	};
 
 
 // ostblarea.toinit().oStblArea.create(obj);

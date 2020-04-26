@@ -1,6 +1,6 @@
-const graphql = require('graphql');
 const {User} = require('../../modelsSchema/index').toinit();
 const {UserType}=require('./userSchema').toinit();
+const graphql = require('graphql');
 const { GraphQLID, GraphQLList, GraphQLString} = graphql;
 
 

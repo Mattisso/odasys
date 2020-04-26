@@ -25,15 +25,15 @@ function toOexercompta(o) {
   });
 }
 
-let toCreateModel = null
+let toCreateModel = null;
   function BuildOexerccompta(model,body,fn) {
     let toacreateinstance=fn;
-    toCreateModel =toacreateinstance(model,body,toOexercompta);   
- //   console.log(toCreateModel) 
+    toCreateModel =toacreateinstance(model,body,toOexercompta);
+ //   console.log(toCreateModel)
     const arr = addItem(toCreateModel);
    // console.log(arr);
     return odareduceArray(arr);
-  }               
+  }
     function toInitOexerccomptaInstance(model,body,fn) {
        const getCreatedModel = BuildOexerccompta(model,body,fn);
      //  console.log(balance);
@@ -116,7 +116,7 @@ function toinit() {
     odaqueryselector:odaqueryselector,
     getobjOexercCompta:getobjOexercCompta,
     staticDropListExerComptable:staticDropListExerComptable,
-    toInitOexerccomptaInstance:toInitOexerccomptaInstance    
+    toInitOexerccomptaInstance:toInitOexerccomptaInstance
   };
 
 }

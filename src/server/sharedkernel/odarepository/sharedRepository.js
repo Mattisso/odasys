@@ -1,5 +1,5 @@
 "use strict";
-const _ = require('lodash')
+const _ = require('lodash');
 const Model = require('../../omodels/modelsSchema/index').toinit();
 const { getodaindex$ } = require('../odaservice/dataservices').toinit();
 const odaObjects = require('../odaObjects').toinit();

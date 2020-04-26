@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 const mongoose = require('mongoose');
 const ObjectId = mongoose.SchemaTypes.ObjectId;
 const oreportdetailClass=(function(){
@@ -20,8 +20,8 @@ const oreportdetailClass=(function(){
     default:
       1
     }
-  }
-  
+  };
+
   class oreportDetailClass {
     constructor(OtableauposteKey, OreferenceKey, olevelKey, SortOrder) {
       this._SortOrder = SortOrder;
@@ -29,7 +29,7 @@ const oreportdetailClass=(function(){
       this._OreferenceKey = OreferenceKey;
       this._olevelKey = olevelKey;
     }
-  
+
     get sortorder() {
       return this._sortOrder;
     }
@@ -59,18 +59,18 @@ const oreportdetailClass=(function(){
       return this;
     }
   }
-  
+
 function toinit(){
   return {
     modelObject:modelObject,
     oreportDetailClass:oreportDetailClass,
-  }
+  };
 }
 
 return {
 toinit:toinit
-}
-})()
+};
+})();
 module.exports={
   toinit:oreportdetailClass.toinit
-}
+};
