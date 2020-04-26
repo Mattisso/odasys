@@ -1,35 +1,33 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
+// import { HttpClientModule } from '@angular/common/http';
+import { Router } from '@angular/router';
+
 import { NgModule } from '@angular/core';
-import {ApolloModule, APOLLO_OPTIONS} from 'apollo-angular';
-import { HttpLinkModule, HttpLink } from 'apollo-angular-link-http';
-import { InMemoryCache } from 'apollo-cache-inmemory';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ExchangeRatesComponent } from './exchange-rates/exchange-rates.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+
+
+// Apollo
+import {GraphqlModule}  from './graphql.module'
 
 @NgModule({
   declarations: [
     AppComponent,
-    ExchangeRatesComponent
+    ExchangeRatesComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    HttpClientModule,
-    ApolloModule,
-    HttpLinkModule
+    GraphqlModule
   ],
-  providers: [{
-    provide: APOLLO_OPTIONS,
-    useFactory: (httpLink: HttpLink) => {
-      return {
-        cache: new InMemoryCache(),
-        link: httpLink.create({uri: ''})
-      };
-    },
-    deps: [HttpLink]
-  }],
+  providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor(router: Router) {
+    console.log('Routes: ', JSON.stringify(router.config, undefined, 2));
+  }
+}
