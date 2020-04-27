@@ -4,10 +4,11 @@ import { Observable, of, BehaviorSubject } from 'rxjs';
 import { MessageService } from '../../messages/message.service';
 import { catchError, tap, map, shareReplay, mergeAll, pluck, distinct, toArray } from 'rxjs/operators';
 
-import { IOexerccompta } from './oexerccompta';
+import { IOexerccompta,Response} from './oexerccompta';
 import { environment } from '../../../environments/environment';
 import { HttpErrorHandler, HandleError } from '../../http-error-handler.service';
-
+import {Query} from 'apollo-angular';
+import gql from 'graphql-tag';
 const httpOptions = {
   headers: new HttpHeaders({
     'Content-Type': 'application/json',
@@ -29,12 +30,21 @@ export class OexerccomptaService {
   oexcercompteSelectedAction$ = this.oexcercompteSelectedSubject.asObservable();
 
   constructor(private http: HttpClient,
-    private messageService: MessageService,
+        private messageService: MessageService,
     httpErrorHandler: HttpErrorHandler) {
     this.handleError = httpErrorHandler.createHandleError('OexccomptaService');
   }
 
-    // All getOexccomptas
+/*
+   Query<Response>= (
+    document=gql`
+query getoexerccomptas {
+  oExercComptaId
+  Cloture
+}
+    `
+  ) */
+  // All getOexccomptas
   getoexerccompta$: Observable<IOexerccompta[]> =  this.http.get<IOexerccompta[]>(this.oexercComptaUrl)
     .pipe(
       tap(data => console.log('exercComptas', JSON.stringify(data))),
