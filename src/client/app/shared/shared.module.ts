@@ -13,14 +13,44 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule, MatRippleModule} from '@angular/material/core';
 
 
-//import { NgxPaginationModule } from 'ngx-pagination';
+import { NgxPaginationModule } from 'ngx-pagination';
 import { LoadingSpinnerComponent } from './loading-spinner.component';
 
 
 @NgModule({
-  declarations: [],
+  declarations: [ConvertToSpacesPipe,
+    LoadingSpinnerComponent,
+    ConvertToDatePipe],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    NgxPaginationModule,
+    MatPaginatorModule,
+    MatProgressBarModule,
+    MatInputModule,
+    MatBottomSheetModule,
+    MatButtonModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatRippleModule
+  ],
+  exports:[
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    ConvertToSpacesPipe,
+    ConvertToDatePipe,
+    NgxPaginationModule,
+    LoadingSpinnerComponent,
+    MatPaginatorModule,
+    MatProgressBarModule,
+    MatInputModule,
+    MatBottomSheetModule,
+    MatButtonModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatRippleModule,
   ]
 })
 export class SharedModule { }
