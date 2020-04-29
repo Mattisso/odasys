@@ -1,0 +1,62 @@
+<div class="card" *ngIf="vn$ | async  as vn ">
+  <div class="card-header">
+    {{vn.pageTitle}}
+  </div>
+
+  <div class="card-body">
+    <form>
+      <div class="form-group row">
+        <div class="col-sm-2 col-form-label col-form-label-sm">Year:</div>
+        <div class="form-control form-control-sm">{{ vn.ocomptebalance.oexercCompta }}</div>
+      </div>
+      <div class="form-group row">
+        <div class="col-sm-2 col-form-label col-form-label-sm">RefCode:</div>
+        <div class="form-control form-control-sm">{{ vn.ocomptebalance.oreference }}</div>
+      </div>
+      <div class="form-group row">
+        <div class="col-sm-2 col-form-label col-form-label-sm">table:</div>
+        <div class="form-control form-control-sm">{{ vn.ocomptebalance.otableauposte}}</div>
+      </div>
+
+      <div class="table-responsive">
+        <table class="table mb-0" *ngIf="vn.comptebalanceDetails && vn.comptebalanceDetails.length">
+          <thead>
+            <tr>
+              <th>NumCompte</th>
+              <th>IntitulCompte</th>
+              <th>SoldeDebit</th>
+              <th>SoldeCredit</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let ocomptebalance of vn.comptebalanceDetails">
+
+              <td> {{ ocomptebalance.NumCompte }}
+              </td>
+              <td>
+                {{ ocomptebalance.IntitulCompte | lowercase | convertToSpaces : ',' }}
+              </td>
+              <td>{{ ocomptebalance.SoldeDebit |currency:'USD':code: '1.0-2'}}</td>
+              <td>{{ ocomptebalance.SoldeCredit |currency:'USD':code: '1.0-2'}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </form>
+
+    <div class="panel-footer">
+      <a class="btn btn-default" [routerLink]="['/nttcomptebalances']" [queryParamsHandling]="preserve">
+        <i calss="glyphicon glyphicon-chevron-left"></i>Back
+      </a>
+      <!--   <a class="btn btn-primary" style="width:80px;margin-left:10px" [routerLink]="['/nttcomptebalances',ocomptebalance.id, 'edit']">
+      Edit
+    </a> -->
+    </div>
+  </div>
+
+</div>
+<div class="alert alert-danger" *ngIf="errorMessage$ | async as errorMessage">
+  {{errorMessage}}
+</div>
+<!-- {{  vn  | json }} -->

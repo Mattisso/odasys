@@ -1,0 +1,24 @@
+<h3>Upload file</h3>
+<!-- <form enctype="multipart/form-data" method="post">
+  <div>
+    <label for="picked">Choose file to upload</label>
+    <div>
+      <input type="file" name="ohafile" id="ohafile" #ohafile
+
+        (change)="onPicked(ohafile)">
+
+    </div>
+  </div>
+  <p *ngIf="message">{{message}}</p>
+</form> -->
+<form enctype="multipart/form-data" method="post">
+<label class="btn btn-default">
+    <input type="file" (change)="onFileSelected($event)">
+</label>
+
+<button type="button" class="btn btn-success btn-s" [disabled]="!selectedFiles" (click)="onUpload()">
+upload
+  </button>
+</form>
+  <p *ngIf="message">{{message}}</p>
+

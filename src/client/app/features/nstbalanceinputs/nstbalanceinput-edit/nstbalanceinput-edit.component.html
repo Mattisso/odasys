@@ -1,0 +1,87 @@
+<div class="card">
+  <div class="card-header">
+    {{pageTitle}}
+  </div>
+
+  <div class="card-body">
+    <form class="form-horizontal" novalidate (ngSubmit)="saveBalance()" [formGroup]="nstbalanceinputForm">
+      <fieldset>
+        <div class="form-group row" [ngClass]="{'has-error': displayMessage.IntitulCompte}">
+          <label class="col-sm-8 col-form-label" for="IntitulCompteId">balance Name</label>
+
+          <div class="col-sm-10">
+            <input class="form-control" id="IntitulCompteId" type="text" placeholder="Name (required)"
+              formControlName="IntitulCompte" />
+            <span class="help-block" *ngIf="displayMessage.IntitulCompte">
+              {{displayMessage.IntitulCompte}}
+            </span>
+          </div>
+        </div>
+
+        <div class="form-group row" [ngClass]="{'has-error': displayMessage.NumCompte}">
+          <label class="col-sm-8 col-form-label" for="NumCompteId">Compte Number</label>
+
+          <div class="col-sm-10">
+            <input class="form-control" id="NumCompteId" type="text" placeholder="Code (required)" required
+              formControlName="NumCompte" />
+            <span class="help-block" *ngIf="displayMessage.NumCompte">
+              {{displayMessage.NumCompte}}
+            </span>
+          </div>
+        </div>
+
+
+        <div class="form-group row" [ngClass]="{'has-error': displayMessage.SoldeDebit}">
+          <label class="col-sm-8 col-form-label" for="SoldeDebitId">Solde Debit</label>
+
+          <div class="col-sm-10">
+            <input class="form-control" id="SoldeDebitId" type="text" placeholder="Solde Debit"
+              formControlName="SoldeDebit" />
+            <span class="help-block" *ngIf="displayMessage.SoldeDebit">
+              {{displayMessage.SoldeDebit}}
+            </span>
+          </div>
+        </div>
+
+        <div class="form-group row" [ngClass]="{'has-error': displayMessage.SoldeCredit}">
+          <label class="col-sm-8 col-form-label" for="SoldeCreditId">Solde Credit</label>
+
+          <div class="col-sm-10">
+            <input class="form-control" id="SoldeCreditId" type="text" placeholder="Solde Credit"
+              formControlName="SoldeCredit" />
+            <span class="help-block" *ngIf="displayMessage.SoldeCredit">
+              {{displayMessage.SoldeCredit}}
+            </span>
+          </div>
+        </div>
+
+        <div class="card-footer">
+          <div class="row">
+            <button class="btn btn-primary" type="submit" style="width:80px;margin-right:10px"
+              [title]="nstbalanceinputForm.valid ? 'Save your entered data' : 'Disabled until the form data is valid'"
+              [disabled]="!nstbalanceinputForm.valid">
+              Save
+            </button>
+            <button class="btn btn-secondary" style="width:80px;" type="button" style="width:80px;margin-right:10px" title="Cancel your edits"
+              [routerLink]="['/nstbalanceinputs']">
+              Cancel
+            </button>
+            <button class="btn btn-danger" style="width:80px" type="button" style="width:80px;margin-right:10px" title="Delete this balance"
+              (click)="deleteBalance()">
+              Delete
+            </button>
+          </div>
+        </div>
+
+      </fieldset>
+    </form>
+    <div class="has-error" *ngIf="errorMessage">{{errorMessage}}</div>
+  </div>
+<div></div>
+  <br>Dirty: {{ nstbalanceinputForm.dirty }}
+  <br>Touched: {{ nstbalanceinputForm.touched }}
+  <br>Valid: {{ nstbalanceinputForm.valid }}
+  <br>Value: {{ nstbalanceinputForm.value | json }}
+  <br>&nbsp;
+
+</div>

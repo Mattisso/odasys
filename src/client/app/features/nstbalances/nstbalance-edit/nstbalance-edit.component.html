@@ -1,0 +1,117 @@
+<div class="card">
+  <div class="card-header">
+    {{pageTitle}}
+  </div>
+
+  <div class="card-body">
+    <form class="form-horizontal" novalidate (ngSubmit)="saveBalance()" [formGroup]="nstbalanceForm">
+      <fieldset>
+        <div class="form-group row" [ngClass]="{'has-error': displayMessage.OexercComptaKey}">
+          <label class="col-sm-8 col-form-label" for="oExercComptaid">Year</label>
+          <div class="col-sm-10">
+            <input class="form-control" id="oExercComptaid" type="text" placeholder="Name (required)"
+              formControlName="OexercComptaKey" />
+            <span class="help-block" *ngIf="displayMessage.OexercComptaKey">
+              {{displayMessage.OexercComptaKey}}
+            </span>
+          </div>
+        </div>
+        <div class="form-group row" [ngClass]="{'has-error': displayMessage.OreferenceKey}">
+          <label class="col-sm-8 col-form-label" for="oreferenceId">refCode</label>
+
+          <div class="col-sm-10">
+            <input class="form-control" id="oreferenceId" type="text" placeholder="Name (required)"
+              formControlName="OreferenceKey"/>
+            <span class="help-block" *ngIf="displayMessage.OreferenceKey">
+              {{displayMessage.OreferenceKey}}
+            </span>
+          </div>
+        </div>
+        <div class="form-group row" [ngClass]="{'has-error': displayMessage.OtableauposteKey}">
+          <label class="col-sm-8 col-form-label" for="tableauLongNameId">Table</label>
+
+          <div class="col-sm-10">
+            <input class="form-control" id="tableauLongNameId" type="text" placeholder="Name (required)"
+              formControlName="OtableauposteKey" />
+            <span class="help-block" *ngIf="displayMessage.OtableauposteKey">
+              {{displayMessage.OtableauposteKey}}
+            </span>
+          </div>
+        </div>
+        <div class="form-group row" [ngClass]="{'has-error': displayMessage.IntitulCompte}">
+          <label class="col-sm-8 col-form-label" for="IntitulCompteId">balance Name</label>
+
+          <div class="col-sm-10">
+            <input class="form-control" id="IntitulCompteId" type="text" placeholder="Name (required)"
+              formControlName="IntitulCompte" />
+            <span class="help-block" *ngIf="displayMessage.IntitulCompte">
+              {{displayMessage.IntitulCompte}}
+            </span>
+          </div>
+        </div>
+
+        <div class="form-group row" [ngClass]="{'has-error': displayMessage.NumCompte}">
+          <label class="col-sm-8 col-form-label" for="NumCompteId">Compte Number</label>
+
+          <div class="col-sm-10">
+            <input class="form-control" id="NumCompteId" type="text" placeholder="Code (required)" required
+              formControlName="NumCompte" />
+            <span class="help-block" *ngIf="displayMessage.NumCompte">
+              {{displayMessage.NumCompte}}
+            </span>
+          </div>
+        </div>
+
+
+        <div class="form-group row" [ngClass]="{'has-error': displayMessage.SoldeDebit}">
+          <label class="col-sm-8 col-form-label" for="SoldeDebitId">Solde Debit</label>
+
+          <div class="col-sm-10">
+            <input class="form-control" id="SoldeDebitId" type="text" placeholder="Solde Debit"
+              formControlName="SoldeDebit" />
+            <span class="help-block" *ngIf="displayMessage.SoldeDebit">
+              {{displayMessage.SoldeDebit}}
+            </span>
+          </div>
+        </div>
+
+        <div class="form-group row" [ngClass]="{'has-error': displayMessage.SoldeCredit}">
+          <label class="col-sm-8 col-form-label" for="SoldeCreditId">Solde Credit</label>
+
+          <div class="col-sm-10">
+            <input class="form-control" id="SoldeCreditId" type="text" placeholder="Solde Credit"
+              formControlName="SoldeCredit" />
+            <span class="help-block" *ngIf="displayMessage.SoldeCredit">
+              {{displayMessage.SoldeCredit}}
+            </span>
+          </div>
+        </div>
+
+
+
+        <div class="card-footer">
+          <div class="row">
+            <button class="btn btn-primary" type="submit" style="width:80px;margin-right:10px"
+              [title]="nstbalanceForm.valid ? 'Save your entered data' : 'Disabled until the form data is valid'"
+              [disabled]="!nstbalanceForm.valid">
+              Save
+            </button>
+            <button class="btn btn-secondary" style="width:80px;" type="button" title="Cancel your edits"
+              [routerLink]="['/nstbalances']">
+              Cancel
+            </button>
+            <button class="btn btn-danger" style="width:80px" type="button" title="Delete this balance"
+              (click)="deleteBalance()">
+              Delete
+            </button>
+          </div>
+        </div>
+
+      </fieldset>
+    </form>
+    <div class="has-error" *ngIf="errorMessage">{{errorMessage}}</div>
+  </div>
+
+</div>
+
+{{  _nstbalance$  | json }}

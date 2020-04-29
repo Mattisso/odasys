@@ -1,0 +1,62 @@
+<div class="card">
+  <div class="card-header">
+    {{pageTitle}}
+  </div>
+
+  <div class="card-body">
+    <form class="form-horizontal" novalidate (ngSubmit)="saveOtableauposte()" [formGroup]="otableauposteForm">
+      <fieldset>
+        <div class="form-group row" [ngClass]="{'has-error': displayMessage.TableauName}">
+          <label class="col-sm-8 col-form-label" for="TableauName">Year</label>
+
+          <div class="col-sm-10">
+            <input class="form-control" id="TableauName" type="text" placeholder="Name (required)" formControlName="TableauName" />
+            <span class="help-block" *ngIf="displayMessage.TableauName">
+              {{displayMessage.TableauName}}
+            </span>
+          </div>
+        </div>
+        <div class="form-group row" [ngClass]="{'has-error': displayMessage.TableauLongName}">
+          <label class="col-sm-8 col-form-label" for="descriptionId">TableauLongName</label>
+
+          <div class="col-sm-10">
+            <input class="form-control" id="descriptionId" type="text" placeholder="Name (required)" formControlName="TableauLongName" />
+            <span class="help-block" *ngIf="displayMessage.TableauLongName">
+              {{displayMessage.TableauLongName}}
+            </span>
+          </div>
+        </div>
+      <!--   <div class="form-group row" [ngClass]="{'has-error': displayMessage.Datefin}">
+          <label class="col-sm-8 col-form-label" for="tableauLongNameId">Datefin</label>
+
+          <div class="col-sm-10">
+            <input class="form-control" id="tableauLongNameId" type="text" placeholder="Name (required)"
+              formControlName="Datefin" />
+            <span class="help-block" *ngIf="displayMessage.Datefin">
+              {{displayMessage.Datefin}}
+            </span>
+          </div>
+        </div> -->
+
+
+        <div class="card-footer">
+          <div class="row">
+            <button class="btn btn-primary" type="submit" style="width:80px;margin-right:10px" [title]="otableauposteForm.valid ? 'Save your entered data' : 'Disabled until the form data is valid'"
+              [disabled]="!otableauposteForm.valid">
+              Save
+            </button>
+            <button class="btn btn-secondary" style="width:80px;" type="button" title="Cancel your edits" [routerLink]="['/otableaupostes']">
+              Cancel
+            </button>
+            <button class="btn btn-danger" style="width:80px" type="button" title="Delete this year" (click)="deleteOtableauposte()">
+              Delete
+            </button>
+          </div>
+        </div>
+
+      </fieldset>
+    </form>
+    <div class="has-error" *ngIf="errorMessage">{{errorMessage}}</div>
+  </div>
+
+</div>

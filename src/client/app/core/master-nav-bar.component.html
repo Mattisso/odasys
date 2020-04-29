@@ -1,0 +1,43 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class='navbar-brand'>{{pageTitle}}</a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div>
+      <ul class='navbar-nav'>
+        <li class="nav-item" routerLinkActive="active">
+          <!--    <input type="file" id="uploader" name="odafile"> -->
+          <a [routerLink]="['/file/upload']">Upload</a>
+          <!--               <label for="uploader">Uploader</label>
+ -->
+          <!--  <input type="checkbox" id="search" [checked]="showSearch" (click)="toggleSearch()">
+              <label for="search">Search</label> -->
+        </li>
+
+      </ul>
+    </div>
+    <ul class="navbar navbar-nav navbar-light">
+
+        <li class="nav-item" routerLinkActive="active">
+            <a class="nav-item nav-link" routerLink="/nstbalances">Balance List</a>
+          </li>
+          <li class="nav-item" routerLinkActive="active">
+            <a class="nav-item nav-link" routerLink="/oexerccomptas">Year List</a>
+          </li>
+          <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+            <a class="nav-item nav-link" routerLink="/nstbalanceinputs">Balance Sheet List</a>
+          </li>
+          <li class="nav-item" routerLinkActive="active">
+            <a [routerLink]="['/nstbalanceinputs','0','edit']">Add Balance</a>
+          </li>
+          <li class="nav-item" routerLinkActive="active">
+            <a [routerLink]="['/oexerccomptas','0','edit']">Add Year</a>
+          </li>
+
+    </ul>
+  </div>
+</nav>

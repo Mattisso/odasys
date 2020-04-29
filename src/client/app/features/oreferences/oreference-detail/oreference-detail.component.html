@@ -1,0 +1,32 @@
+<div class="card" *ngIf="balance">
+  <div class="card-header" style="font-size:large">
+    {{pageTitle + ": " + balance.RefCode }}
+  </div>
+
+  <div class="card-body">
+    <form>
+      <div class="form-group row">
+        <div class="col-sm-2 col-form-label col-form-label-sm">Year:</div>
+        <div class="form-control form-control-sm">{{ balance.RefCode }}</div>
+      </div>
+      <div class="form-group row">
+        <div class="col-sm-2 col-form-label col-form-label-sm">Description:</div>
+        <div class="form-control form-control-sm">{{ balance.Description }}</div>
+      </div>
+     <!--  <div class="form-group row">
+        <div class="col-sm-2 col-form-label col-form-label-sm">Datefin:</div>
+        <div class="form-control form-control-sm">{{ balance.Datefin}}</div>
+      </div> -->
+    </form>
+    <div class="has-error" *ngIf="errorMessage">{{errorMessage}}</div>
+  </div>
+
+  <div class="panel-footer">
+    <a class="btn btn-default" [routerLink]="['/oreferences']" [queryParamsHandling]="preserve">>
+      <i calss="glyphicon glyphicon-chevron-left"></i>Back
+    </a>
+    <a class="btn btn-primary" style="width:80px;margin-left:10px" [routerLink]="['/oreferences',balance.id, 'edit']">
+      Edit
+    </a>
+  </div>
+</div>

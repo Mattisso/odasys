@@ -13,7 +13,6 @@ export class AuthInterceptor implements HttpInterceptor {
 
   constructor(public auth: AuthService , private router: Router ) {}
 
-
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     // tslint:disable-next-line:prefer-const
     let currentUser =  this.auth.currentUserValue;

@@ -1,0 +1,26 @@
+ <div id="search-component">
+  <h4>Search</h4>
+  <input #searchBox id="search-box" (keyup)="search(searchBox.value)" />
+  <ul class="search-result">
+    <li *ngFor="let balance of balances$ | async" >
+      <a routerLink="/nstbalanceinputs/{{balance.id}}/edit">
+        {{balance.IntitulCompte}}
+      </a>
+  </ul>
+</div>
+
+<!--
+<h3>Search </h3>
+<p><i>Searches when typing stops. Caches for 30 seconds.</i></p>
+<input (keyup)="search($event.target.value)" id="name" placeholder="Search"/>
+<input type="checkbox" id="refresh" [checked]="withRefresh" (click)="toggleRefresh()">
+<label for="refresh">with refresh</label>
+
+<ul>
+  <li *ngFor="let balance of balances$ | async" >
+    <b>{{balance.NumCompte}} {{balance.IntitulCompte}}</b> -
+    <i>{{balance.SoldeDebit}}</i>
+    <i>{{balance.SoldeCredit}}</i>
+  </li>
+</ul>
+ -->

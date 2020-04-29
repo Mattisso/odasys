@@ -1,0 +1,122 @@
+<div class="card">
+  <div class="card-header">
+    {{pageTitle}}
+  </div>
+  <div class="card-body" *ngIf="vn$ | async as vn">
+
+    <!--    <div class="container">
+    <div class="row justify-content-between">
+      <div class="col-3">
+        <select class="form-control"
+                (change)=" onComptaKeySelected($event.target.value)">
+          <option value="0">- Display All -</option>
+          <option *ngFor="let oexcompta of vn.oexcomptas"
+                  [value]="oexcompta.OexercComptaKey">{{ oexcompta.oExercComptaId}}</option>
+        </select>
+      </div> 
+
+      <div class="col-3">
+        <select class="form-control"
+          (change)="onOtableauposteKeySelected($event.target.value)">
+          <option value="0">- Display All -</option>
+          <option *ngFor="let otableauposte of vn.otableaupostes"
+                  [value]="otableauposte.OtableauposteKey">{{ otableauposte.tableauLongName}}</option>
+        </select>
+      </div>
+       <div class="col-3">
+        <select class="form-control"
+          (change)="onOreferenceKeySelected($event.target.value)">
+          <option value="0">- Display All -</option>
+          <option *ngFor="let oreference of vn.oreferences"
+                  [value]="oreference.OreferenceKey">{{ oreference.fullDescription}}</option>
+        </select>
+      </div>  -->
+    <!--  <div class="col-2">
+        <button type="button"
+                class="btn btn-outline-secondary"
+                (click)="onAdd()">Add Product</button>
+      </div> -->
+    <!--  </div>
+  </div> -->
+    <div class="container">
+      <div class="row">
+        <div class="row justify-content-between">
+          <app-oda-drop-down-list></app-oda-drop-down-list>
+        </div>
+      </div>
+    </div>
+   
+    <div class="table-responsive">
+      <table class="table mb-0" *ngIf="vn.ocomptebalances">
+        <thead>
+          <tr>
+            <th>Year</th>
+            <th>table</th>
+            <th>RefCode</th>
+            <th>totalSoldeDebit</th>
+            <th>totalSoldeCredit</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let balance of vn.ocomptebalances">
+            <td> {{ balance.oexercCompta }}
+            </td>
+            <td> {{ balance.otableauposte }}
+            </td>
+            <td> {{ balance.oreference}}
+            </td>
+
+            <td>{{ balance.totalSoldeDebit |currency:'USD':code: '1.0-2'}}</td>
+            <td>{{ balance.totalSoldeCredit |currency:'USD':code: '1.2-2'}}</td>
+            <td>
+              <a class="btn btn-primary" [routerLink]="['/nttcomptebalances',balance.id, 'edit']">
+                Edit
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!--     <div class="table-responsive">
+      <table class="table md-0" *ngIf="comptebalances && comptebalances.length">
+        <thead>
+          <tr>
+            <th>Year</th>
+            <th>table</th>
+            <th>RefCode</th>
+            <th>totalSoldeDebit</th>
+            <th>totalSoldeCredit</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let balance of comptebalances">
+              <td> {{ balance.OexercComptaKey }}
+                </td>
+                <td> {{ balance.OtableauposteKey }}
+                  </td>
+                  <td> {{ balance.OreferenceKey}}
+                    </td>
+
+            <td>{{ balance.totalSoldeDebit |currency:'USD':code: '1.0-2'}}</td>
+            <td>{{ balance.totalSoldeCredit |currency:'USD':code: '1.2-2'}}</td>
+            <td>
+              <a class="btn btn-primary" [routerLink]="['/nttcomptebalances',balance.id, 'edit']">
+                Edit
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+</div> -->
+
+  </div>
+  {{ vn | json }}
+</div>
+
+<div class="alert alert-danger" *ngIf="errorMessage$ | async as errorMessage">
+  {{ errorMessage }}
+</div>

@@ -1,0 +1,38 @@
+<div class="card">
+ <div class="card-header">
+  {{pageTitle}}
+ </div>
+ <div class="card-body" *ngIf="vn$ | async as vn">
+  <div class="container">
+   <div class="row justify-content-between">
+    <div class="col-3">
+     <select class="form-control"  (change)=" onComptaKeySelected($event.target.value)">
+      <option value="0">- Display All -</option>
+      <option *ngFor="let oexcompta of vn.oexcomptas" [value]="oexcompta.OexercComptaKey">{{ oexcompta.oExercComptaId}}
+      </option>
+     </select>
+    </div>
+
+    <div class="col-3">
+     <select class="form-control" (change)="onOtableauposteKeySelected($event.target.value)">
+      <option value="0">- Display All -</option>
+      <option *ngFor="let otableauposte of vn.otableaupostes" [value]="otableauposte.OtableauposteKey">
+       {{ otableauposte.tableauLongName}}</option>
+     </select>
+    </div>
+    <div class="col-3">
+     <select class="form-control" (change)="onOreferenceKeySelected($event.target.value)">
+      <option value="0">- Display All -</option>
+      <option *ngFor="let oreference of vn.oreferences" [value]="oreference.OreferenceKey">
+       {{ oreference.fullDescription}}</option>
+     </select>
+    </div>
+    <!--  <div class="col-2">
+       <button type="button"
+               class="btn btn-outline-secondary"
+               (click)="onAdd()">Add Product</button>
+     </div> -->
+   </div>
+  </div>
+ </div>
+</div>

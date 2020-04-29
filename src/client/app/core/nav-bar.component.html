@@ -1,0 +1,61 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class='navbar-brand'>{{pageTitle}}</a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div>
+      <ul class='navbar-nav'>
+
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-item nav-link" routerLink="/welcome">Home</a>
+        </li>
+
+      </ul>
+    </div>
+    <ul class="navbar navbar-nav navbar-light">
+      <li *ngIf="currentUser">
+        <span>Welcome {{ currentUser.username}}</span>
+        <div class="spacer"></div>
+
+      </li>
+      <li *ngIf="!messageService.isDisplayed">
+        <a (click)="displayMessages()">Show Messages</a>
+      </li>
+      <li *ngIf="messageService.isDisplayed">
+        <a (click)="hideMessages()">Hide Messages</a>
+      </li>
+      <li>
+      <li *ngIf="!currentUser">
+        <a [routerLink]="['/login']" routerLinkActive="active">Log In</a>
+        <!--  <a [routerLink]="['/login']">Log In</a> -->
+      </li>
+      <li *ngIf="!currentUser" class="nav-item">
+        <a [routerLink]="['/register']" routerLinkActive="active">
+          <i class="fa fa-user-plus"></i> Register
+        </a>
+      </li>
+      <li class="nav-link">
+        <a [routerLink]="['/users',currentUser.id]" class="nav-link" routerLinkActive="active" *ngIf="currentUser">
+          <i class="fa fa-user"></i> Account {{currentUser.username}}
+        </a>
+      </li>
+      <li class="nav-link">
+        <a routerLink="/admin" class="nav-link" routerLinkActive="active" *ngIf="currentUser && currentUser.role==='admin'">
+          <i class="fa fa-lock"></i> admin
+        </a>
+      </li>
+      <li>
+      <li *ngIf="currentUser">
+        <a class="nav-item nav-link" (click)="logOut()">Logout</a>
+      </li>
+    </ul>
+  </div>
+  <div><input type="checkbox" id="config" [checked]="showConfig" (click)="toggleConfig()">
+    <label for="config">Config</label>
+  </div>
+  <app-config *ngIf="showConfig"></app-config>
+</nav>

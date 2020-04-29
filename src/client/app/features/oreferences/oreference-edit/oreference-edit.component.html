@@ -1,0 +1,62 @@
+<div class="card">
+  <div class="card-header">
+    {{pageTitle}}
+  </div>
+
+  <div class="card-body">
+    <form class="form-horizontal" novalidate (ngSubmit)="saveOreference()" [formGroup]="oreferenceForm">
+      <fieldset>
+        <div class="form-group row" [ngClass]="{'has-error': displayMessage.RefCode}">
+          <label class="col-sm-8 col-form-label" for="RefCode">Ref. Code</label>
+
+          <div class="col-sm-10">
+            <input class="form-control" id="RefCode" type="text" placeholder="Name (required)" formControlName="RefCode" />
+            <span class="help-block" *ngIf="displayMessage.RefCode">
+              {{displayMessage.RefCode}}
+            </span>
+          </div>
+        </div>
+        <div class="form-group row" [ngClass]="{'has-error': displayMessage.Description}">
+          <label class="col-sm-8 col-form-label" for="descriptionId">Description</label>
+
+          <div class="col-sm-10">
+            <input class="form-control" id="descriptionId" type="text" placeholder="Name (required)" formControlName="Description" />
+            <span class="help-block" *ngIf="displayMessage.Description">
+              {{displayMessage.Description}}
+            </span>
+          </div>
+        </div>
+      <!--   <div class="form-group row" [ngClass]="{'has-error': displayMessage.Datefin}">
+          <label class="col-sm-8 col-form-label" for="tableauLongNameId">Datefin</label>
+
+          <div class="col-sm-10">
+            <input class="form-control" id="tableauLongNameId" type="text" placeholder="Name (required)"
+              formControlName="Datefin" />
+            <span class="help-block" *ngIf="displayMessage.Datefin">
+              {{displayMessage.Datefin}}
+            </span>
+          </div>
+        </div> -->
+
+
+        <div class="card-footer">
+          <div class="row">
+            <button class="btn btn-primary" type="submit" style="width:80px;margin-right:10px" [title]="oreferenceForm.valid ? 'Save your entered data' : 'Disabled until the form data is valid'"
+              [disabled]="!oreferenceForm.valid">
+              Save
+            </button>
+            <button class="btn btn-secondary" style="width:80px;" type="button" title="Cancel your edits" [routerLink]="['/oreferences']">
+              Cancel
+            </button>
+            <button class="btn btn-danger" style="width:80px" type="button" title="Delete this year" (click)="deleteOreference()">
+              Delete
+            </button>
+          </div>
+        </div>
+
+      </fieldset>
+    </form>
+    <div class="has-error" *ngIf="errorMessage">{{errorMessage}}</div>
+  </div>
+
+</div>

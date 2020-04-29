@@ -1,0 +1,10 @@
+<div id="search-component">
+  <h4>Search</h4>
+  <input #searchBox id="search-box" (keyup)="search(searchBox.value)" />
+  <ul class="search-result">
+    <li *ngFor="let balance of balances$ | async" >
+      <a routerLink="/nttbalances/{{balance.id}}/edit">
+        {{balance.IntitulCompte}}
+      </a>
+  </ul>
+</div>

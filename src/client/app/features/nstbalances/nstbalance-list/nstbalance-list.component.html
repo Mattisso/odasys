@@ -1,0 +1,81 @@
+<div class="card" *ngIf="vm$ | async as vm">
+  <div class="card-header">
+    {{pageTitle}}
+  </div>
+
+  <div class="card-body">
+    <div class="container">
+      <div class="row justify-content-between">
+        <div class="row">
+          <div class="col-md-6">
+            <input type="checkbox" id="search" [checked]="showSearch" (click)="toggleSearch()">
+            <label for="search">Search</label>
+            <app-nstbalance-search *ngIf="showSearch"></app-nstbalance-search>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="row justify-content-between">
+              <app-oda-drop-down-list></app-oda-drop-down-list>
+            </div>
+          </div>
+        </div>
+        {{ vm | json }}
+
+      </div>
+    </div>
+
+    <div class="table-responsive">
+      <table class="table md-0" *ngIf="vm.balances   && vm.balances.length">
+        <thead>
+          <tr>
+            <th>Year</th>
+            <th>Ref Code</th>
+            <th>table</th>
+            <th>NumCompte</th>
+            <th>IntitulCompte</th>
+            <th>SoldeDebit</th>
+            <th>SoldeCredit</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let balance of vm.balances  | paginate: config">
+            <td> {{ balance.oexercCompta }}
+            </td>
+            <td> {{ balance.oreference }}
+            </td>
+            <td> {{ balance.otableauposte}}
+            </td>
+            <td> {{ balance.NumCompte }}
+            </td>
+            <td> <a [ngClass]="{'active': balance.id===vm.balanceId }"
+                [routerLink]="['/nstbalances',balance.id, 'edit']">
+                <!--  routerLink="/nstbalances/{{balance.id}}" > -->
+                {{ balance.IntitulCompte | lowercase | convertToSpaces : ',' }}
+              </a>
+            </td>
+            <td>{{ balance.SoldeDebit |currency:'USD':code: '1.0-2'}}</td>
+            <td>{{ balance.SoldeCredit |currency:'USD':code: '1.2-2'}}</td>
+            <td>
+              <a class="btn btn-primary" [routerLink]="['/nstbalances',balance.id, 'edit']">
+                Edit
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <pagination-controls (pageChange)="pageChange($event)"></pagination-controls>
+    </div>
+
+  </div>
+
+</div>
+
+<div class="alert alert-danger" *ngIf="errorMessage$ | async as errorMessage">
+  {{ errorMessage }}
+</div>
+{{ vm | json }}
+
+
+<!--{{ balances.length | json }}-->

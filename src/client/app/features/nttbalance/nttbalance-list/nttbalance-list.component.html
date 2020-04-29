@@ -1,0 +1,84 @@
+<div class="card">
+  <div class="card-header">
+    {{pageTitle}}
+  </div>
+  <div class="card-body" *ngIf="vm$ | async as vm">
+      <div class="row">
+          <div class="col-md-6">
+            <input type="checkbox" id="search" [checked]="showSearch" (click)="toggleSearch()">
+            <label for="search">Search</label>
+            <app-nttbalance-search *ngIf="showSearch"></app-nttbalance-search>
+          </div>
+        </div>
+        <div class='list-group'>
+            <a
+                class='list-group-item'
+                *ngFor='let balance of vm.balances | paginate: config'
+                [ngClass]="{'active': balance?.id === vm.balanceId}"
+                (click)='onSelected(balance.id)' routerLink="/nttbalances/{{balance.id}}" >
+          {{ balance.oexercCompta }} - ({{ balance.oreference  }})-({{ balance.otableauposte}})
+        </a>
+        <pagination-controls (pageChange)="pageChange($event)"></pagination-controls>
+      </div>
+
+
+
+<!--
+    <div class="table-responsive">
+
+      <table class="table md-0"
+      *ngIf="vm.balances  && vm.balances.length">
+
+
+        <thead>
+          <tr>
+            <th>Year</th>
+            <th>RefCode</th>
+            <th>table</th>
+            <th>NumCompte</th>
+            <th>IntitulCompte</th>
+            <th>SoldeDebit</th>
+            <th>SoldeCredit</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let balance of balance$.balances  | paginate: config">
+            <td> {{ balance.oexercCompta }}
+            </td>
+            <td> {{ balance.oreference }}
+            </td>
+            <td> {{ balance.otableauposte}}
+            </td>
+
+            <td> {{ balance.NumCompte }}
+            </td>
+            <td> <a [ngClass]="{'active': balance.id===balance$.balanceId }"
+                routerLink="/nttbalances/{{balance.id}}">
+                {{ balance.IntitulCompte | lowercase | convertToSpaces : ',' }}
+              </a>
+            </td>
+            <td>{{ balance.SoldeDebit |currency:'USD':code: '1.0-2'}}</td>
+            <td>{{ balance.SoldeCredit |currency:'USD':code: '1.2-2'}}</td>
+            <td>
+              <a class="btn btn-primary" [routerLink]="['/nttbalances',balance.id, 'edit']">
+                Edit
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <pagination-controls (pageChange)="pageChange($event)"></pagination-controls>
+    </div> -->
+
+  </div>
+</div>
+
+<div class="alert alert-danger" *ngIf="errorMessage$ | async as errorMessage">
+  {{ errorMessage }}
+</div>
+
+
+<!-- {{ _nttbalance$ | json }} -->
+
+<!-- {{ balance$ | json }} -->

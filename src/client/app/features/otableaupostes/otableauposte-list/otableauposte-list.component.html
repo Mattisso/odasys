@@ -1,0 +1,43 @@
+<div class="card">
+  <div class="card-header">
+    {{pageTitle}}
+  </div>
+  <div class="card-body">
+    <div class="row">
+      <div class="col-md-4">
+        <input type="checkbox" id="search" [checked]="showSearch" (click)="toggleSearch()">
+        <label for="search">Search</label>
+        <app-otableauposte-search *ngIf="showSearch"></app-otableauposte-search>
+      </div>
+    </div>
+    <div class="has-error" *ngIf="errorMessage">{{errorMessage}}</div>
+    <div class="table-responsive">
+      <table class="table md-0" *ngIf="balances && balances.length">
+        <thead>
+          <tr>
+            <th>TableauName</th>
+            <th>tableauLongName</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let balance of balances | paginate: config">
+            <td> <a routerLink="/otableaupostes/{{balance.id}}/edit">
+                {{ balance.TableauName}}
+              </a>
+            </td>
+            <td> {{ balance.tableauLongName }}
+            </td>
+            <td>
+              <a class="btn btn-primary" [routerLink]="['/otableaupostes',balance.id, 'edit']">
+                Edit
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <pagination-controls (pageChange)="pageChange($event)"></pagination-controls>
+    </div>
+
+  </div>
+</div>
