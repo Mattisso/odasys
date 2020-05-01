@@ -1,7 +1,7 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { INttcomptebalance } from '../nttcomptebalance';
-import { OexccomptaService } from '../../oexerccomptas/oexccompta.service';
+import { OexerccomptaService } from '../../oexerccompta/oexerccompta.service';
 import { OreferenceService } from '../../oreferences/oreference.service';
 import { IOreference } from '../../oreferences/oreference';
 import { NttcomptebalanceService } from '../nttcomptebalance.service';
@@ -32,7 +32,7 @@ export class NttcomptebalanceListComponent implements OnInit {
   constructor(
     private nttcomptebalanceservice: NttcomptebalanceService,
     private route: ActivatedRoute, private router: Router,
-    private oexccomptaService: OexccomptaService,
+    private oexerccomptaService: OexerccomptaService,
     private otableauposteService: OtableauposteService,
     private odaDropDownListService: OdaDropDownListService,
     private oreferenceService: OreferenceService

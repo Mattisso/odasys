@@ -9,8 +9,8 @@ import {
 import { INttcomptebalance } from './nttcomptebalance';
 import { environment } from '../../../environments/environment';
 import { HttpErrorHandler, HandleError } from '../../http-error-handler.service';
-import { Oexccompta } from '../oexerccomptas/oexccompta';
-import { OexccomptaService } from '../oexerccomptas/oexccompta.service';
+import { Oexerccompta } from '../oexerccompta/oexerccompta';
+import { OexerccomptaService } from '../oexerccompta/oexerccompta.service';
 import { Oreference } from '../oreferences/oreference';
 import { OreferenceService } from '../oreferences/oreference.service';
 import { IOtableauposte } from '../otableaupostes/otableauposte';
@@ -178,7 +178,7 @@ export class NttcomptebalanceService {
 
   constructor(private http: HttpClient,
     private messageService: MessageService,
-    private oexccomptaservice: OexccomptaService,
+    private oexerccomptaservice: OexerccomptaService,
     private oreferenceservice: OreferenceService,
     private otableauposteservice: OtableauposteService,
     private nttcomptebalancedetailService: NttcomptebalancedetailService,

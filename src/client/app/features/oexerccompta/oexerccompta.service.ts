@@ -100,11 +100,11 @@ query getoexerccomptas {
   }
 
 
-  getOexccomptaByYear(oexccompta: IOexerccompta): Observable<IOexerccompta> {
-    const url = `${this.oexercComptaUrl}/v2/${oexccompta.oExercComptaId}`;
+  getOexccomptaByYear(oexerccompta: IOexerccompta): Observable<IOexerccompta> {
+    const url = `${this.oexercComptaUrl}/v2/${oexerccompta.oExercComptaId}`;
     return this.http.get<IOexerccompta>(url).pipe(
       tap(data => this.log('getOexccompta: ' + JSON.stringify(data))),
-    catchError(this.handleError<IOexerccompta>(`getOexccompta id =${oexccompta.oExercComptaId}`))
+    catchError(this.handleError<IOexerccompta>(`getOexccompta id =${oexerccompta.oExercComptaId}`))
     );
 
   }
@@ -118,7 +118,7 @@ query getoexerccomptas {
 
     return this.http.get<IOexerccompta[]>(this.oexercComptaUrl, options).pipe(
 
-      tap(_ => this.log(`found oexccompta matching "${term}"`)),
+      tap(_ => this.log(`found oexerccompta matching "${term}"`)),
       catchError(this.handleError<IOexerccompta[]>('searchoExercComptas', []))
     );
   }

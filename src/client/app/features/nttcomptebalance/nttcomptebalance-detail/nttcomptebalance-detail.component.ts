@@ -2,7 +2,7 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { NttcomptebalanceService } from '../nttcomptebalance.service';
 import { INttcomptebalance } from '../nttcomptebalance';
 import { ActivatedRoute, Router } from '@angular/router';
-import { OexccomptaService } from '../../oexerccomptas/oexccompta.service';
+import { OexerccomptaService } from '../../oexerccompta/oexerccompta.service';
 import { OreferenceService } from '../../oreferences/oreference.service';
 import { OtableauposteService } from '../../otableaupostes/otableauposte.service';
 

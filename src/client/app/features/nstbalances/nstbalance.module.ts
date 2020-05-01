@@ -6,7 +6,7 @@ import { NstbalanceDetailComponent } from '../nstbalances/nstbalance-detail/nstb
 import { NstbalanceEditComponent } from '../nstbalances/nstbalance-edit/nstbalance-edit.component';
 
 // Imports for loading & configuring the in-memory web api
-import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
+// import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 // import { InMemoryDataService } from './nstbalancedata';
 
 // import { ConvertToSpacesPipe } from '../../shared/ConvertToSpacesPipe';

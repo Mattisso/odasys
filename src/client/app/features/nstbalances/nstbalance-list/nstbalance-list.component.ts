@@ -5,10 +5,10 @@ import { INstbalance } from '../nstbalance';
 import { NstbalanceService } from '../nstbalance.service';
 import { Observable, Subject, EMPTY, combineLatest } from 'rxjs';
 import { debounceTime, merge, share, map, startWith, switchMap, catchError, tap, toArray , concatMap} from 'rxjs/operators';
-import { OexccomptaService } from '../../oexerccomptas/oexccompta.service';
+import { OexerccomptaService } from '../../oexerccompta/oexerccompta.service';
 import { OtableauposteService } from '../../otableaupostes/otableauposte.service';
 import { OreferenceService } from '../../oreferences/oreference.service';
-import { IOexccompta } from '../../oexerccomptas/oexccompta';
+import { IOexerccompta } from '../../oexerccompta/oexerccompta';
 import { IOreference } from '../../oreferences/oreference';
 import { IOtableauposte } from '../../otableaupostes/otableauposte';
 import {OdaDropDownListService} from '../../../core/oda-drop-down-list/oda-drop-down-list.service';
@@ -41,7 +41,7 @@ export class NstbalanceListComponent implements OnInit {
   constructor(private balanceservice: NstbalanceService,
     private route: ActivatedRoute, private router: Router,
     private odaDropDownListService: OdaDropDownListService,
-    private oexccomptaService: OexccomptaService,
+    private oexccomptaService: OexerccomptaService,
     private otableauposteService: OtableauposteService ,
      private oreferenceService: OreferenceService) {
 

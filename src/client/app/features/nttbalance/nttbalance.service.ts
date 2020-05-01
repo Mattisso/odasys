@@ -6,7 +6,7 @@ import { catchError, tap, map , filter, shareReplay, mergeMap, reduce, concatMap
 import { INttbalance } from './nttbalance';
 import { environment } from '../../../environments/environment';
 import { HttpErrorHandler, HandleError } from '../../http-error-handler.service';
-import { OexccomptaService } from '../oexerccomptas/oexccompta.service';
+import { OexerccomptaService } from '../oexerccompta/oexerccompta.service';
 import { Oreference } from '../oreferences/oreference';
 import { OreferenceService } from '../oreferences/oreference.service';
 import { IOtableauposte } from '../otableaupostes/otableauposte';
@@ -34,7 +34,7 @@ export class NttbalanceService {
   constructor(private http: HttpClient,
     private messageService: MessageService,
     httpErrorHandler: HttpErrorHandler,
-    private oexccomptaservice: OexccomptaService,
+    private oexerccomptaservice: OexerccomptaService,
     private oreferenceservice: OreferenceService,
     private otableauposteservice: OtableauposteService,
     ) {
@@ -48,7 +48,7 @@ export class NttbalanceService {
 
       nttbalanceCombined$ = combineLatest(
         this.getnttbalances$,
-        this.oexccomptaservice.getoexerccompta$,
+        this.oexerccomptaservice.getoexerccompta$,
         this.otableauposteservice.getOtableaupostes$,
         this.oreferenceservice.getOreferences$
       ).pipe(map(([nttbalances, oexcercices, otableaupostes, oreferences]) =>

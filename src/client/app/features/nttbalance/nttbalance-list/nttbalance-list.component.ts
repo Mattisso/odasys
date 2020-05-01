@@ -5,10 +5,10 @@ import { INttbalance } from '../nttbalance';
 import { NttbalanceService } from '../nttbalance.service';
 import { Observable, Subject, EMPTY, combineLatest } from 'rxjs';
 import { debounceTime, merge, share, map, startWith, switchMap, catchError } from 'rxjs/operators';
-import { OexccomptaService } from '../../oexerccomptas/oexccompta.service';
+import { OexerccomptaService } from '../../oexerccompta/oexerccompta.service';
 import { OtableauposteService } from '../../otableaupostes/otableauposte.service';
 import { OreferenceService } from '../../oreferences/oreference.service';
-import { IOexccompta } from '../../oexerccomptas/oexccompta';
+import { IOexerccompta } from '../../oexerccompta/oexerccompta';
 
 @Component({
   selector: 'app-nttbalance-list',

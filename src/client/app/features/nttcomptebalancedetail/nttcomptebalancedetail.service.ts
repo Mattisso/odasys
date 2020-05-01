@@ -6,8 +6,8 @@ import { catchError, tap, map, retry, shareReplay, concatMap, mergeMap, switchMa
 import { INttcomptebalancedetail } from './nttcomptebalancedetail';
 import { environment } from '../../../environments/environment';
 import { HttpErrorHandler, HandleError } from '../../http-error-handler.service';
-import { Oexccompta } from '../oexerccomptas/oexccompta';
-import { OexccomptaService } from '../oexerccomptas/oexccompta.service';
+import { Oexerccompta } from '../oexerccompta/oexerccompta';
+import { OexerccomptaService } from '../oexerccompta/oexerccompta.service';
 import { Oreference } from '../oreferences/oreference';
 import { OreferenceService } from '../oreferences/oreference.service';
 import { Otableauposte } from '../otableaupostes/otableauposte';

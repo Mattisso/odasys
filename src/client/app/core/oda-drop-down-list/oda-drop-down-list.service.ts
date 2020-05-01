@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import {IddlOExerComptable, IddlOtableauposteByYear, IddlOreferenceByear} from './oda-drop-down-list';
 import { HttpErrorHandler, HandleError } from '../../http-error-handler.service';
-import { OexccomptaService } from '../../models/oexerccomptas/oexccompta.service';
-import { OreferenceService } from '../../models/oreferences/oreference.service';
-import { OtableauposteService } from '../../models/otableaupostes/otableauposte.service';
+import { OexerccomptaService } from '../../features/oexerccompta/oexerccompta.service';
+import { OreferenceService } from '../../features/oreferences/oreference.service';
+import { OtableauposteService } from '../../features/otableaupostes/otableauposte.service';
 import { MessageService } from '../../messages/message.service';
 import { Observable, BehaviorSubject } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
@@ -50,7 +50,7 @@ export class OdaDropDownListService {
       }
       constructor(private http: HttpClient,
         private messageService: MessageService,
-        private oexccomptaservice: OexccomptaService,
+        private oexerccomptaservice: OexerccomptaService,
         private oreferenceservice: OreferenceService,
         private otableauposteservice: OtableauposteService,
         httpErrorHandler: HttpErrorHandler) {
