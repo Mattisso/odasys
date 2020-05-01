@@ -12,7 +12,6 @@ import { httpInterceptorProviders } from './http-interceptors/index';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ExchangeRatesComponent } from './exchange-rates/exchange-rates.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 import { WelcomeComponent } from './home/welcome.component';
@@ -33,7 +32,6 @@ import { MessageModule } from './messages/message.module';
 import { LoginModule } from './users/login/login.module';
 import { LogoutComponent } from './users/logout/logout.component';
 import { AboutComponent } from './about/about.component';
-
 
 import { OexerccomptaModule } from './features/oexerccompta/oexerccompta.module';
 import { OreferenceModule } from './features/oreferences/oreference.module';

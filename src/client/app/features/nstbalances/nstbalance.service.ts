@@ -6,7 +6,7 @@ import { catchError, tap, map, filter, shareReplay, mergeMap, reduce, concatMap,
 import { INstbalance } from './nstbalance';
 import { environment } from '../../../environments/environment';
 import { HttpErrorHandler, HandleError } from '../../http-error-handler.service';
-import { OexccomptaService } from '../oexerccomptas/oexccompta.service';
+import { OexerccomptaService } from '../oexerccompta/oexerccompta.service';
 import { Oreference } from '../oreferences/oreference';
 import { OreferenceService } from '../oreferences/oreference.service';
 import { IOtableauposte } from '../otableaupostes/otableauposte';
@@ -38,7 +38,7 @@ export class NstbalanceService {
   constructor(private http: HttpClient,
     private messageService: MessageService,
     httpErrorHandler: HttpErrorHandler,
-    private oexccomptaservice: OexccomptaService,
+    private oexccomptaservice: OexerccomptaService,
     private oreferenceservice: OreferenceService,
     private otableauposteservice: OtableauposteService,
   ) {
