@@ -3,6 +3,8 @@
 const dotenv= require('dotenv');
 const express = require('express');
 //const graphqlHTTP = require('express-graphql');
+const setRoutes= require('../client/api/index');
+
 const {ApolloServer}= require('apollo-server-express');
 const path = require('path');
 const schema = require('../server/omodels/graphQl/schema').toinit();
@@ -29,13 +31,16 @@ app.use(function(req, res, next) {
 const server = new ApolloServer({schema, cors:true, introspection:true});
 server.applyMiddleware({app});
 
+
+app.use(setRoutes);
+
   app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, '../src/client/index.html'));
   });
 
 if (!module.parent){
 app.listen(app.get('port'), () => {
-    console.log(`listening on port  ${app.get('port')}/${server.graphqlPath}`);
+    console.log(`listening on port  ${app.get('port')}${server.graphqlPath}`);
   });
 }
 

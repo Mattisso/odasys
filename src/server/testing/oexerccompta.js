@@ -6,14 +6,15 @@ const {arroexerccomptadata,objoexerccomptadata}=require('../testing/data/index')
 const {oExercCompta}=require('../omodels/modelsSchema/index').toinit();
 const {toInitOexerccomptaInstance,toOexercompta}=require('../features/oexerccompta/staticOxerccompta').toinit();
 const {odaremoveDupnumcompte} = require('../sharedkernel/odaUtility').toinit();
-const {toInitializeInstance}=require('../sharedkernel/odainstance/toInitializeInstance').toinit()
+const {toInitializeInstance}=require('../sharedkernel/odainstance/toInitializeInstance').toinit();
 const {getstreamdata$, odagetObserver,getapistreamdata$,getapiObserver}=require('../sharedkernel/odaSubscribe').toinit();
+const {getsrdexeccomptas$}=require('../sharedkernel/odarepository/sharedRepository').toinit();
 const { toCreateExerccomptadata$} = require('../features/oexerccompta/oexerccomptaRepository').toinit();
 const {update$, delete$, index$$,insert$$ } = require('../features/oexerccompta/index').toinit();
 
 const {toseedoexercompta} = require('../features/oexerccompta/oexercomptaSeed').toinit();
 
-const getoreportdetail$ =index$$;
+const getoreportdetail$ =getsrdexeccomptas$;
 //update$(objoexerccomptadata,'5e8b7a140310040e3c00481d')
 // getstreamdata$(getoreportdetail$(objoexerccomptadata())).subscribe(odagetObserver());
 

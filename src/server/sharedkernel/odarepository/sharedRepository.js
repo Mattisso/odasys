@@ -93,22 +93,7 @@ const sharedRepository = (function () {
             const Objotableauposte = getobjOtableauposte(getotableaupostes, obj.OtableauposteKey).filteredObject();
             if (isValid(Objocompte) === true && isValid(Objoreference) === true && isValid(Objosblarea) === true && isValid(Objostableauposte) === true && isValid(Objotableauposte) === true) {
               return _.assign({},{'Exception': obj.Exception,'Taux': obj.Taux},Objocompte,Objoreference,Objosblarea,Objostableauposte,Objotableauposte);
-              /* return ({
-                "OreferenceKey": Objoreference.id,
-                "TableauName": Objotableauposte.TableauName,
-                "RefCode": Objoreference.RefCode,
-                "Description": Objoreference.Description,
-                "fullDescription": Objoreference.fullDescription,
-                "OcompteKey": Objocompte.id,
-                "CompteNumber": Objocompte.CompteNumber,
-                "OstblareaKey": Objosblarea.id,
-                "AreaShortName": Objosblarea.AreaShortName,
-                "OstableauposteKey": Objostableauposte.id,
-                "StableauName": Objostableauposte.StableauName,
-                "OtableauposteKey": Objotableauposte.id,
-                'Exception': obj.Exception,
-                'Taux': obj.Taux,
-              }); */
+            
             }
           });
         return neobj;
