@@ -54,7 +54,7 @@ export class NttcomptebalanceDetailComponent implements OnInit {
 
   constructor(private nttcomptebalanceservice: NttcomptebalanceService,
     private route: ActivatedRoute, private router: Router,
-    private oexccomptaService: OexccomptaService,
+    private oexerccomptaService: OexerccomptaService,
     private otableauposteService: OtableauposteService,
     private oreferenceService: OreferenceService) { }
 

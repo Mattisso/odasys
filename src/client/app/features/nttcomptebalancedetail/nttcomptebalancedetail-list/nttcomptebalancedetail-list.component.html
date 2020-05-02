@@ -32,8 +32,8 @@
                 {{ balance.IntitulCompte | lowercase | convertToSpaces : ',' }}
               </a>
             </td>
-            <td>{{ balance.SoldeDebit |currency:'USD':code: '1.0-2'}}</td>
-            <td>{{ balance.SoldeCredit |currency:'USD':code: '1.0-2'}}</td>
+            <td>{{ balance.SoldeDebit}}</td>
+            <td>{{ balance.SoldeCredit}}</td>
             <td>
               <a class="btn btn-primary" [routerLink]="['/nstbalanceinputs',balance.id, 'edit']">
                 Edit

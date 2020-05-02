@@ -37,8 +37,8 @@
               <td>
                 {{ ocomptebalance.IntitulCompte | lowercase | convertToSpaces : ',' }}
               </td>
-              <td>{{ ocomptebalance.SoldeDebit |currency:'USD':code: '1.0-2'}}</td>
-              <td>{{ ocomptebalance.SoldeCredit |currency:'USD':code: '1.0-2'}}</td>
+              <td>{{ ocomptebalance.SoldeDebit}}</td>
+              <td>{{ ocomptebalance.SoldeCredit}}</td>
             </tr>
           </tbody>
         </table>
@@ -46,7 +46,7 @@
     </form>
 
     <div class="panel-footer">
-      <a class="btn btn-default" [routerLink]="['/nttcomptebalances']" [queryParamsHandling]="preserve">
+      <a class="btn btn-default" [routerLink]="['/nttcomptebalances']" >
         <i calss="glyphicon glyphicon-chevron-left"></i>Back
       </a>
       <!--   <a class="btn btn-primary" style="width:80px;margin-left:10px" [routerLink]="['/nttcomptebalances',ocomptebalance.id, 'edit']">

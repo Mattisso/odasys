@@ -1,6 +1,6 @@
 
 import { Component, OnInit, HostBinding } from '@angular/core';
-import {Router, ActivatedRoute, ParamMap} from '@angular/router';
+import {Router, ActivatedRoute, ParamMap,NavigationExtras} from '@angular/router';
 
 import { INstbalanceinput } from '../nstbalanceinput';
 import { NstbalanceinputService } from '../nstbalanceinput.service';
@@ -50,9 +50,13 @@ export class NstbalanceinputDetailComponent implements OnInit {
       getBalances(balance: INstbalanceinput) {
         // tslint:disable-next-line:prefer-const
         let  balanceId = balance ? balance.id : null;
+        const redirectUrl = '/nstbalanceinputs';
 
-        this.router.navigate(['/nstbalanceinputs', {id: balanceId}]);
+        let navigationExtras: NavigationExtras = {
+          queryParamsHandling: 'preserve',
+          preserveFragment: true
+        };
+        this.router.navigate([redirectUrl, {id: balanceId}],navigationExtras);
       }
-
 
 }

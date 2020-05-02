@@ -93,7 +93,7 @@ export class NttcomptebalanceListComponent implements OnInit {
   }
 
   onComptaKeySelected(OexercComptaKey: string): void {
-    this.oexccomptaService.oexcercompteSelectedSubject.next(OexercComptaKey);
+    this.oexerccomptaService.oexcercompteSelectedSubject.next(OexercComptaKey);
   }
   onOtableauposteKeySelected(OtableauposteKey: string): void {
     this.otableauposteService.otableauposteSelectedSubject.next(OtableauposteKey);

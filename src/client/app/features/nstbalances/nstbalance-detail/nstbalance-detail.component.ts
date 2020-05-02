@@ -1,5 +1,5 @@
 import { Component, OnInit, HostBinding, ChangeDetectionStrategy } from '@angular/core';
-import {Router, ActivatedRoute, ParamMap} from '@angular/router';
+import {Router, ActivatedRoute, ParamMap,NavigationExtras} from '@angular/router';
 
 import { INstbalance } from '../nstbalance';
 import { NstbalanceService } from '../nstbalance.service';
@@ -95,8 +95,15 @@ this.balance$= this.getBalance(id); */
   getBalances(balance: INstbalance) {
     // tslint:disable-next-line:prefer-const
     let  balanceId = balance ? balance.id : null;
+    const redirectUrl = '/nstbalances';
 
-    this.router.navigate(['/nstbalances', {id: balanceId}]);
+    // Set our navigation extras object
+    // that passes on our global query params and fragment
+    let navigationExtras: NavigationExtras = {
+      queryParamsHandling: 'preserve',
+      preserveFragment: true
+    };
+    this.router.navigate([redirectUrl, {id: balanceId}], navigationExtras);
   }
 
 

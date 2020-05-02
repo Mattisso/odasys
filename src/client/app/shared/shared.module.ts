@@ -16,11 +16,13 @@ import {MatNativeDateModule, MatRippleModule} from '@angular/material/core';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { LoadingSpinnerComponent } from './loading-spinner.component';
 
+import {OdaDropDownListComponent} from '../core/oda-drop-down-list/oda-drop-down-list.component';
 
 @NgModule({
   declarations: [ConvertToSpacesPipe,
     LoadingSpinnerComponent,
-    ConvertToDatePipe],
+    ConvertToDatePipe,
+    OdaDropDownListComponent],
   imports: [
     CommonModule,
     FormsModule,
@@ -51,6 +53,7 @@ import { LoadingSpinnerComponent } from './loading-spinner.component';
     MatDatepickerModule,
     MatNativeDateModule,
     MatRippleModule,
+    OdaDropDownListComponent
   ]
 })
 export class SharedModule { }

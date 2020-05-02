@@ -15,7 +15,7 @@ import {OdaDropDownListService} from '../../../core/oda-drop-down-list/oda-drop-
 
 @Component({
   selector: 'app-nstbalance-list',
-  templateUrl: './nstbalance-list.component.html',
+  templateUrl:'./nstbalance-list.component.html',
   styleUrls: ['./nstbalance-list.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })

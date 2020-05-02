@@ -13,7 +13,7 @@
           <option *ngFor="let oexcompta of vn.oexcomptas"
                   [value]="oexcompta.OexercComptaKey">{{ oexcompta.oExercComptaId}}</option>
         </select>
-      </div> 
+      </div>
 
       <div class="col-3">
         <select class="form-control"
@@ -45,7 +45,7 @@
         </div>
       </div>
     </div>
-   
+
     <div class="table-responsive">
       <table class="table mb-0" *ngIf="vn.ocomptebalances">
         <thead>
@@ -67,8 +67,8 @@
             <td> {{ balance.oreference}}
             </td>
 
-            <td>{{ balance.totalSoldeDebit |currency:'USD':code: '1.0-2'}}</td>
-            <td>{{ balance.totalSoldeCredit |currency:'USD':code: '1.2-2'}}</td>
+            <td>{{ balance.totalSoldeDebit}}</td>
+            <td>{{ balance.totalSoldeCredit}}</td>
             <td>
               <a class="btn btn-primary" [routerLink]="['/nttcomptebalances',balance.id, 'edit']">
                 Edit
@@ -114,7 +114,8 @@
 </div> -->
 
   </div>
-  {{ vn | json }}
+<!--   {{ vn | json }}
+ -->
 </div>
 
 <div class="alert alert-danger" *ngIf="errorMessage$ | async as errorMessage">

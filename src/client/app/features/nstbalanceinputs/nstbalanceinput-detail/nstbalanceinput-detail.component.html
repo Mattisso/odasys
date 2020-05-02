@@ -16,11 +16,11 @@
             </div>
             <div class="row">
                 <div class="col-md-3">SoldeDebit:</div>
-                <div class="col-md-6">{{ balance.SoldeDebit |currency:"USD":code: "1.0-2"}}</div>
+                <div class="col-md-6">{{ balance.SoldeDebit}}</div>
             </div>
             <div class="row">
                 <div class="col-md-3">SoldeCredit:</div>
-                <div class="col-md-6">{{ balance.SoldeCredit |currency:"USD":code: "1.2-2"}}</div>
+                <div class="col-md-6">{{ balance.SoldeCredit}}</div>
             </div>
 
         </div>
@@ -30,8 +30,7 @@
 
 <div class="panel-footer">
       <a class="btn btn-default"
-      [routerLink]="['/nstbalanceinputs']"
-      [queryParamsHandling]= "preserve">>
+      [routerLink]="['/nstbalanceinputs']">
           <i calss="glyphicon glyphicon-chevron-left"></i>Back
          </a>
       <a class="btn btn-primary" style="width:80px;margin-left:10px"

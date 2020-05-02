@@ -1,6 +1,6 @@
 
 import { Component, OnInit, HostBinding } from '@angular/core';
-import {Router, ActivatedRoute, ParamMap} from '@angular/router';
+import {Router, ActivatedRoute, ParamMap,NavigationExtras} from '@angular/router';
 
 import { INttcomptebalancedetail } from '../nttcomptebalancedetail';
 import { NttcomptebalancedetailService } from '../nttcomptebalancedetail.service';
@@ -11,7 +11,7 @@ import {slideInAnimation} from '../../../animations';
 
 @Component({
   selector: 'app-nttcomptebalancedetail-detail',
-  templateUrl: './nttcomptebalancedetail-detail.component.html',
+  templateUrl:'./nttcomptebalancedetail-detail.component.html',
   styleUrls: ['./nttcomptebalancedetail-detail.component.css']
 })
 export class NttcomptebalancedetailDetailComponent implements OnInit {
@@ -27,6 +27,7 @@ export class NttcomptebalancedetailDetailComponent implements OnInit {
   constructor(private nttcomptebalancedetailService: NttcomptebalancedetailService,
     private router: Router,
     private route: ActivatedRoute) { }
+
 
 
     ngOnInit(): void {
@@ -48,9 +49,17 @@ export class NttcomptebalancedetailDetailComponent implements OnInit {
     getBalances(balanceDetail: INttcomptebalancedetail) {
       // tslint:disable-next-line:prefer-const
       let  balanceDetailId = balanceDetail ? balanceDetail.id : null;
+      const redirectUrl = '/nttcomptebalancedetails';
 
-      this.router.navigate(['/nttcomptebalancedetails', {id: balanceDetailId}]);
+      let navigationExtras: NavigationExtras = {
+        queryParamsHandling: 'preserve',
+        preserveFragment: true
+      }
+      this.router.navigate([redirectUrl, {id: balanceDetailId}],navigationExtras);
     }
-
+   /*  let navigationExtras: NavigationExtras = {
+      queryParamsHandling: 'preserve',
+      preserveFragment: true
+    } */
 
 }

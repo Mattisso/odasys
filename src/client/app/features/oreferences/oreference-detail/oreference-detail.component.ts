@@ -1,5 +1,5 @@
 import { Component, OnInit, HostBinding } from '@angular/core';
-import {Router, ActivatedRoute, ParamMap} from '@angular/router';
+import {Router, ActivatedRoute, ParamMap,NavigationExtras} from '@angular/router';
 
 import { IOreference } from '../oreference';
 import { OreferenceService } from '../oreference.service';
@@ -47,8 +47,13 @@ this.balance$= this.getOexccompta(id); */
   getOreferences(balance: IOreference) {
     // tslint:disable-next-line:prefer-const
     let  balanceId = balance ? balance.id : null;
+    const redirectUrl = '/oreferences';
 
-    this.router.navigate(['/oreferences', {id: balanceId}]);
+    let navigationExtras: NavigationExtras = {
+      queryParamsHandling: 'preserve',
+      preserveFragment: true
+    };
+    this.router.navigate([redirectUrl, {id: balanceId}],navigationExtras);
   }
 
 }

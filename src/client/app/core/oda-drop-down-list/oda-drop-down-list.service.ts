@@ -13,7 +13,7 @@ import { tap, shareReplay, catchError } from 'rxjs/operators';
 })
 export class OdaDropDownListService {
   ddlExercComptas: IddlOExerComptable[];
-  private oexercComptaUrl = this.oexccomptaservice.oexercComptaUrl;
+  private oexercComptaUrl = this.oexerccomptaservice.oexercComptaUrl;
   private oreferenceUrl = this.oreferenceservice.oreferenceUrl;
   private otableauposteUrl = this.otableauposteservice.otableauposteUrl;
   private handleError: HandleError;
