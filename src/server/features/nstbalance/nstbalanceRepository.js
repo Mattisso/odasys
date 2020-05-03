@@ -12,9 +12,9 @@ const {toUpdateCH,toUpdateDS, toUpdateBS, toUpdateChgCredit, toUpdatePrdtDebit,t
 const {getsrdexeccomptas$,getsrdnttbalances$, getsrdoExercices$,getsrdotableaupostes$,getsrdoreferences$}=require('../../sharedkernel/odarepository/sharedRepository').toinit();
 const {getodaindex$, odaindex,getodaByid$,getodasharedByid$}=require('../../SharedKernel/odaservice/dataservices').toinit();
 const {svcodasave$, svcodaApiDel$,svcodaSearchBy}=require('../../SharedKernel/odaservice/odaservice').toinit();
-const {svctoInitializeInstance$,svctoUpdateInstance$, toInitCustomInstance,svctoInitCustomInstance$,svcapiupdate$}=require('../../sharedkernel/odainstance/index').toinit(); 
+const {svctoInitializeInstance$,svctoUpdateInstance$, toInitCustomInstance,svctoInitCustomInstance$,svcapiupdate$}=require('../../sharedkernel/odainstance/index').toinit();
 
-const nstbalanceRepository = (function () {  
+const nstbalanceRepository = (function () {
   const toInitializeFinalInstance = function (model, body) {
     const data = toInitCustomInstance(model, body,toInitNstbalanceInstance);
     return data;
@@ -49,7 +49,6 @@ return  svctoUpdateInstance$(requestBody,toUpdatenstbalancedata);
   const deletenstbalance$ = function (requestparamid) {
     return svcodaApiDel$(nstBalance, requestparamid);
   };
-
   const getcombinednIndex$ = combineLatest(getnstbalances$(), getsrdoreferences$, getsrdotableaupostes$, getsrdexeccomptas$).pipe(
       //   tap(ev => console.log(ev)),
       map(function ([getnstbalances, getoreferences,getotableaupostes,getAlloexerccompta]) {
@@ -115,7 +114,6 @@ return  svctoUpdateInstance$(requestBody,toUpdatenstbalancedata);
         const filteredData = toUpdateBPassif(getnstbalances, getocomptreferences).BPassifObjectUpdate();
         return filteredData;
       }));
-
   function toinit() {
     return {
       getnstbalances$: getnstbalances$(),
@@ -137,8 +135,6 @@ return  svctoUpdateInstance$(requestBody,toUpdatenstbalancedata);
       deletenstbalance$:deletenstbalance$,
       toCreateBalancedata$:toCreateBalancedata$,
       getcombinedByid$:getcombinedByid$
-
-
     };
   }
   return {

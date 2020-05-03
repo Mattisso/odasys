@@ -24,7 +24,6 @@ const StaticOexercice = (function () {
     };
     const finalobj = _.assign({}, currentYearObj, PreviousYearObj);
       return finalobj;
-
   };
 
   const toOexercice= function (o) {
@@ -47,14 +46,14 @@ const StaticOexercice = (function () {
           const getCreatedModel = BuildOexercice(model,body,fn);
           return getCreatedModel.slice();
      }
-  const togetoexercices = function (argOne) {
+  const togetoexercice = function (argOne) {
     let initObj, odauditobj;
     return _.map(argOne, function (obj) {
       initObj = {
         "id": obj.id,
         "oExerciceEncour": obj.oExerciceEncour,
         "ExercicePrev":  obj.ExercicePrev,
-       "OexercComptaEncourKey":  obj.OexercComptaEncourKey,
+       "OexercComptaKey":  obj.OexercComptaEncourKey,
        "OexercComptaPrevKey":obj.OexercComptaPrevKey
       };
       odauditobj = odauditObj(obj);
@@ -65,7 +64,7 @@ const StaticOexercice = (function () {
   const getobjOexercice = function (arr, value) {
     if (isValid(value) === true) {
       const validate = _.find(arr, function (o) {
-        return o.OexercComptaKey === getStringValue(value)
+        return o.OexercComptaEncourKey === getStringValue(value)
           || o.oExerciceEncour === getStringValue(value)
           || o.OexercComptaPrevKey === getStringValue(value)
           || o.ExercicePrev === getStringValue(value)
@@ -84,7 +83,7 @@ const StaticOexercice = (function () {
   function toinit() {
     return {
 // toOexercice:toOexercice,
-      togetoexercices:togetoexercices,
+      togetoexercice:togetoexercice,
       tocreateOexerciceObject:tocreateOexerciceObject,
       getobjOexercice:getobjOexercice,
       toInitOexerciceInstance:toInitOexerciceInstance

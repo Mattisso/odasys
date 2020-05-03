@@ -1,18 +1,18 @@
 const { oExercice, oExercCompta } = require('../../omodels/modelsSchema/index').toinit();
 
 // const getexeccomptas$ = sharedrepository.getexeccomptas$;
-const {toOexercice,togetoexercices, tocreateOexerciceObject}=require('./StaticOexercice').toinit();
+const {toOexercice,togetoexercice, tocreateOexerciceObject}=require('./StaticOexercice').toinit();
 const {togetoexerccompta} =require('../../SharedKernel/odaObjects').toinit();
 const {getobjOexercice} =require('../../SharedKernel/staticObjects').toinit();
 const {svcodaDel$, svcodasave$} = require('../../SharedKernel/odaservice/odaservice').toinit();
 const { concatMap} = require('rxjs/operators');
 const { Observable, concat } = require('rxjs');
 const {getodaindex$, odaindex,getodaByid$}=require('../../SharedKernel/odaservice/dataservices').toinit();
-const {toInitializeInstance, svctoInitializeInstance$,svctoUpdateInstance$}=require('../../sharedkernel/odainstance/index').toinit(); 
+const {toInitializeInstance, svctoInitializeInstance$,svctoUpdateInstance$}=require('../../sharedkernel/odainstance/index').toinit();
 const oexerciceRepository = (function () {
 
   const index = function (callback) {
-    return odaindex(oExercice,togetoexercices ,callback);
+    return odaindex(oExercice,togetoexercice ,callback);
   };
   const _tocreateoexerciceobject = function (callback) {
     return odaindex(oExercCompta, togetoexerccompta, function(err, data){
@@ -26,11 +26,11 @@ const oexerciceRepository = (function () {
     });
       };
       const getoExercices$ = function() {
-        return  getodaindex$(oExercice,togetoexercices);
+        return  getodaindex$(oExercice,togetoexercice);
       };
 
       const getByid$ = function (requestparamid) {
-        return  getodaByid$(oExercice,togetoexercices,requestparamid,getobjOexercice);
+        return  getodaByid$(oExercice,togetoexercice,requestparamid,getobjOexercice);
       };
 
   const removeoExercice$= function(model, item) {

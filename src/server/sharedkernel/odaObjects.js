@@ -52,20 +52,23 @@ const odaObjects = (function () {
     }
     return Math.abs(_netamount);
   };
+
   const togetoexercice = function (argOne) {
-    let initObj,
-    odauditobj;
+    let initObj, odauditobj;
     return _.map(argOne, function (obj) {
       initObj = {
         "id": obj.id,
-        "OexercComptaKey": obj.OexercComptaKey,
         "oExerciceEncour": obj.oExerciceEncour,
-        "ExercicePrev": obj.ExercicePrev
+        "ExercicePrev":  obj.ExercicePrev,
+       "OexercComptaKey":  obj.OexercComptaEncourKey,
+       "OexercComptaPrevKey":obj.OexercComptaPrevKey
       };
       odauditobj = odauditObj(obj);
       return _.assign({}, initObj, odauditobj);
-    });
+    }
+    );
   };
+
   const togetoexerccompta = function (argOne) {
     let initObj,
     odauditobj;

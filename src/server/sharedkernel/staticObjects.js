@@ -112,7 +112,7 @@ const staticObjects = (function () {
   const getobjOexercice = function (arr, value) {
     if (isValid(value) === true) {
       const validate = find(arr, function (o) {
-        return o.OexercComptaKey === getStringValue(value)
+        return o.OexercComptaEncourKey === getStringValue(value)
           || o.oExerciceEncour === getStringValue(value)
           || o.OexercComptaPrevKey === getStringValue(value)
           || o.ExercicePrev === getStringValue(value)
@@ -125,8 +125,9 @@ const staticObjects = (function () {
         filteredObject: function () {
           return {
             "OexerciceKey": validate.id,
-            "OexercComptaKey": validate.OexercComptaKey,
+            "OexercComptaEncourKey": validate.OexercComptaEncourKey,
             "oExerciceEncour": validate.oExerciceEncour,
+            "OexercComptaPrevKey":validate.OexercComptaPrevKey,
             "ExercicePrev": validate.ExercicePrev
           };
         }

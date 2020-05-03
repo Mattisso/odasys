@@ -5,12 +5,12 @@ const {toInitOexerccomptaInstance,toOexercompta}=require('../features/oreference
 const {odaremoveDupnumcompte} = require('../sharedkernel/odaUtility').toinit();
 const {toInitializeInstance}=require('../sharedkernel/odainstance/toInitializeInstance').toinit() */
 const {getstreamdata$, odagetObserver,getapistreamdata$,getapiObserver}=require('../sharedkernel/odaSubscribe').toinit();
-const {getloadnstbalancedatas$,  getnstbalances$ } = require('../features/nstbalance/nstbalanceRepository').toinit();
+const {getloadnstbalancedatas$,  getnstbalances$} = require('../features/nstbalance/nstbalanceRepository').toinit();
 
 require('../config/ohadb').connectserver();
 // const {toseedoexercompta} = require('../features/oexerccompta/oexercomptaSeed').toinit();
 
-const getoreportdetail$ = getnstbalances$;
+const getoreportdetail$ = getloadnstbalancedatas$;
 //getstreamdata$(getoreportdetail$())
 
 getstreamdata$(getoreportdetail$).subscribe(odagetObserver());
