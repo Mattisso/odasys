@@ -1,12 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FormGroup, FormControl } from '@angular/forms';
-import { INstbalanceinput } from '../nstbalanceinput';
+import { INstbalanceinput, nstbalanceinputQuery, AllbalanceInputResponse, balance_PER_PAGE} from '../nstbalanceinput';
 import { NstbalanceinputService } from '../nstbalanceinput.service';
-import { Observable, Subject } from 'rxjs';
+import { Subject, combineLatest, Observable,observable, Subscription} from 'rxjs';
 import { debounceTime, merge, share, map, startWith, switchMap } from 'rxjs/operators';
+import {ApolloQueryResult} from 'apollo-client';
+//import {} from 'rxjs/Subscription';
 
-
+// import 'rxjs/add/observable/combineLatest';
+import { Apollo } from 'apollo-angular';
 @Component({
   selector: 'app-nstbalanceinput-list',
   templateUrl: './nstbalanceinput-list.component.html',
@@ -16,7 +19,14 @@ export class NstbalanceinputListComponent implements OnInit {
   pageTitle = 'Balance Sheet List';
   listFilter: string;
   errorMessage: string;
+  balanceinputs$: Observable<INstbalanceinput[]>;
+  Allbalanceinputs: INstbalanceinput[]=[];
+  getnstbalanceinputs='getnstbalanceinputs';
+  loading:boolean=true ;
   selectedId: string;
+  error: any;
+  subscriptions: Subscription[] = [];
+  count=0;
   p: 1;
   filterForm: FormGroup;
   pageUrl = new Subject<string>();
@@ -25,10 +35,15 @@ export class NstbalanceinputListComponent implements OnInit {
   config: any;
   // balances: any = [];
    balances: INstbalanceinput[];
-  constructor(private balanceinputservice: NstbalanceinputService,
+   first$: Observable<number>;
+  skip$: Observable<number>;
+  orderBy$: Observable<string | null>;
+  constructor( private apollo:Apollo,
+    private balanceinputservice: NstbalanceinputService,
     private route: ActivatedRoute, private router: Router) {
 
      }
+
 
 /*   ngOnInit(): void {
     this.listFilter = this.route.snapshot.queryParams['filterBy'] || '';
@@ -36,6 +51,7 @@ export class NstbalanceinputListComponent implements OnInit {
       .subscribe(balances => this.balances = balances,
         error => this.errorMessage = <any>error);
   } */
+
 
   ngOnInit() {
     this.config = {
@@ -46,9 +62,27 @@ export class NstbalanceinputListComponent implements OnInit {
     this.route.queryParamMap.pipe(
       map(params => params.get('page'))
     )
+
     .subscribe(page => this.config.currentPage = page);
     this.getBalances();
 
+this.apollo.watchQuery({query: nstbalanceinputQuery})
+.valueChanges.subscribe(result=>{
+  this.getnstbalanceinputs=result.data && result.data[this.getnstbalanceinputs];
+  this.loading=result.loading;
+  this.error =result.errors;
+});
+
+
+//pipe(map(({data})=>data[this.getnstbalanceinputs]));
+
+
+    /*   const getQuery : Observable<ApolloQueryResult<AllbalanceInputResponse>> =>{
+      const query=  this.apollo.watchQuery<AllbalanceInputResponse>({
+        query: nstbalanceinputQuery
+      });
+      return query.valueChanges;
+    }; */
   }
 
 
@@ -77,4 +111,7 @@ this.balances = [];
     pageChange(newPage: number) {
       this.router.navigate(['nstbalanceinputs'], { queryParams: { page: newPage } });
     }
+
+
+
 }

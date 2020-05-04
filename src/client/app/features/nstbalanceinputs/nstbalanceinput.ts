@@ -120,3 +120,25 @@ return {
 
 
 }
+
+
+import gql from 'graphql-tag';
+export  const  nstbalanceinputQuery = gql`
+{
+  getnstbalanceinputs{
+    id
+    NumCompte
+    IntitulCompte
+    SoldeDebit
+    SoldeCredit
+  }
+}
+`
+
+export  interface AllbalanceInputResponse {
+  nstbalanceinputQuery: INstbalanceinput[];
+  getdataCount: { count:number};
+  loading:boolean
+}
+
+export  const  balance_PER_PAGE =5
