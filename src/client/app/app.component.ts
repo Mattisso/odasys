@@ -1,4 +1,4 @@
-import { Component, AfterViewChecked, ChangeDetectorRef } from '@angular/core';
+import { Component, AfterViewChecked, ChangeDetectorRef} from '@angular/core';
 import { Router, Event, NavigationStart, NavigationEnd, NavigationError, NavigationCancel } from '@angular/router';
 import { RouterOutlet } from '@angular/router';
 import { slideInAnimation } from './animations';

@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 // import { HttpClientModule } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { JwtModule, JwtHelperService } from '@auth0/angular-jwt';
-import { NgModule } from '@angular/core';
+import { NgModule,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { HttpClientModule, HttpClientXsrfModule } from '@angular/common/http';
 
 
@@ -101,7 +101,8 @@ import {GraphqlModule}  from './graphql.module'
       HttpErrorHandler,
    { provide: RequestCache, useClass: RequestCacheWithMap },
    httpInterceptorProviders],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas:[CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule {
   constructor(router: Router) {

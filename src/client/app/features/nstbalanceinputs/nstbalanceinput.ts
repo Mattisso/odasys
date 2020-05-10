@@ -121,24 +121,33 @@ return {
 
 }
 
-
-import gql from 'graphql-tag';
-export  const  nstbalanceinputQuery = gql`
-{
-  getnstbalanceinputs {
-    id
-    NumCompte
-    IntitulCompte
-    SoldeDebit
-    SoldeCredit
-  }
-}
-`
-
 export  interface getnstbalanceInputResponse {
-  nstbalanceinputQuery: INstbalanceinput[];
+  getbalanceinputs: INstbalanceinput[];
   getdataCount: { count:number};
   loading:boolean
 }
 
-export  const  balance_PER_PAGE =5
+
+
+import {Query} from 'apollo-angular';
+import gql from 'graphql-tag';
+export  class  nstbalanceinputQuery  extends Query<getnstbalanceInputResponse>
+
+{
+  document= gql`
+  query getnsbalanceinputs
+  {
+    getbalanceinputs {
+      id
+      NumCompte
+      IntitulCompte
+      SoldeDebit
+      SoldeCredit
+    }
+    getdataCount{
+      count
+    }
+  }
+  `;
+}
+

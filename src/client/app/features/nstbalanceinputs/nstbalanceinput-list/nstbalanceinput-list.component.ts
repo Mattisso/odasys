@@ -20,7 +20,7 @@ export class NstbalanceinputListComponent implements OnInit {
   listFilter: string;
   errorMessage: string;
   balanceinputs$: Observable<INstbalanceinput[]>;
-  Allbalanceinputs: INstbalanceinput[]=[];
+  getbalanceinputs: Observable<INstbalanceinput[]>;
   getnstbalanceinputs='getnstbalanceinputs';
   loading:boolean=true ;
   selectedId: string;
@@ -35,10 +35,12 @@ export class NstbalanceinputListComponent implements OnInit {
   config: any;
   // balances: any = [];
    balances: INstbalanceinput[];
+//nstbalanceinputquery: nstbalanceinputQuery;
    first$: Observable<number>;
   skip$: Observable<number>;
   orderBy$: Observable<string | null>;
   constructor( private apollo:Apollo,
+   private  nstbalanceinputquery: nstbalanceinputQuery,
     private balanceinputservice: NstbalanceinputService,
     private route: ActivatedRoute, private router: Router) {
 
@@ -51,7 +53,6 @@ export class NstbalanceinputListComponent implements OnInit {
       .subscribe(balances => this.balances = balances,
         error => this.errorMessage = <any>error);
   } */
-
   nstbalanceinputQuery=    this.balanceinputservice.getBalances();
 
   ngOnInit() {
@@ -66,15 +67,19 @@ export class NstbalanceinputListComponent implements OnInit {
 
     .subscribe(page => this.config.currentPage = page);
 
+ this.getbalanceinputs=this.nstbalanceinputquery.watch().valueChanges.pipe(map(result=>result.data.getbalanceinputs));
+
+
    //  this.getBalances();
-this.apollo.watchQuery({
+/* this.apollo.watchQuery({
   query: nstbalanceinputQuery
 }).valueChanges.subscribe(result=>{
   this.getnstbalanceinputs=result.data && result.data[this.getnstbalanceinputs];
   this.loading=result.loading;
   this.error =result.errors;
   console.log(result);
-})
+}) */
+
 
 /* this.apollo.watchQuery({query: nstbalanceinputQuery})
 .valueChanges.subscribe(result=>{
@@ -95,13 +100,18 @@ this.apollo.watchQuery({
     }; */
   }
 
+  /* const getQuery = (): Observable<ApolloQueryResult<getnstbalanceInputResponse>> => {
+    const query = this.apollo.watchQuery<getnstbalanceInputResponse>({
+      query: this.getnstbalanceinputs
+    });
+ return query.valueChanges;
+  }; */
  /*  getQuery():   Observable<ApolloQueryResult<getnstbalanceInputResponse>>=>{
     const query= this.apollo.watchQuery<getnstbalanceInputResponse>({
       query:nstbalanceinputQuery
     })
 return query.valueChanges;
   } */
-
 getBalances(): void {
 this.balances = [];
     this.balanceinputservice.getBalances()
