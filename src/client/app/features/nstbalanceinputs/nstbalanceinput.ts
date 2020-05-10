@@ -125,7 +125,7 @@ return {
 import gql from 'graphql-tag';
 export  const  nstbalanceinputQuery = gql`
 {
-  getnstbalanceinputs{
+  getnstbalanceinputs {
     id
     NumCompte
     IntitulCompte
@@ -135,7 +135,7 @@ export  const  nstbalanceinputQuery = gql`
 }
 `
 
-export  interface AllbalanceInputResponse {
+export  interface getnstbalanceInputResponse {
   nstbalanceinputQuery: INstbalanceinput[];
   getdataCount: { count:number};
   loading:boolean
