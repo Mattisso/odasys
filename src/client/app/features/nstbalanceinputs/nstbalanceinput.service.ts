@@ -1,9 +1,8 @@
 import { Injectable } from '@angular/core';
 // import { Http, Response, Headers, RequestOptions } from '@angular/http';
 import { HttpClient, HttpHeaders, HttpResponse, HttpParams, HttpEvent, HttpEventType } from '@angular/common/http';
-import { Observable, of } from 'rxjs';
-import { MessageService } from '../../messages/message.service';
-import { catchError, tap, map, retry } from 'rxjs/operators';
+import { Observable, of, combineLatest, BehaviorSubject, Subject, merge } from 'rxjs';import { MessageService } from '../../messages/message.service';
+import { catchError, tap, map, retry, shareReplay } from 'rxjs/operators';
 
 import { INstbalanceinput } from './nstbalanceinput';
 import { environment } from '../../../environments/environment';
@@ -31,27 +30,14 @@ export class NstbalanceinputService {
     httpErrorHandler: HttpErrorHandler) {
     this.handleError = httpErrorHandler.createHandleError('NstbalanceinputService');
   }
-/*
-  getBalances(urlOrFilter?: string | object): Observable<PaginatorService<INstbalanceinput>> {
-    //  const url = `${this.balanceinputUrl}`;
-    return queryPaginated<INstbalanceinput>(this.http, this.nstbalanceinputUrl, urlOrFilter)
-   // return this.http.get<INstbalanceinput[]>(this.nstbalanceinputUrl)
-      .pipe(
-       tap(data => this.log(`getBalances:   ${JSON.stringify(data)}`)),
-        catchError(this.handleError('getBalances', []))
-      );
 
-  }*/
-
-  getBalances(): Observable<INstbalanceinput[]> {
-    //  const url = `${this.balanceinputUrl}`;
-    return this.http.get<INstbalanceinput[]>(this.nstbalanceinputUrl)
+  getBalancesInput$= this.http.get<INstbalanceinput[]>(this.nstbalanceinputUrl)
       .pipe(
         tap(data => this.log(`getBalances:   ${JSON.stringify(data)}`)),
-        catchError(this.handleError('getBalances', []))
-      );
+        catchError(this.handleError));
 
-  }
+     private nstbalanceinputSelectedSubject = new BehaviorSubject<string>('0');
+     nttbalanceinputSelectedAction$ = this.nstbalanceinputSelectedSubject.asObservable();
 
   getBalanceCompte (balance: INstbalanceinput): Observable<INstbalanceinput> {
     if (balance.NumCompte === undefined) {
@@ -64,6 +50,17 @@ export class NstbalanceinputService {
     );
 
   }
+  selectedNstbalanceinputChanged(selectedNstbalanceinputId: string): void {
+    this.nstbalanceinputSelectedSubject.next(selectedNstbalanceinputId);
+  }
+
+  selectednstbalanceinput$= combineLatest([
+    this.getBalancesInput$,
+    this.nttbalanceinputSelectedAction$
+  ]).pipe(map(([nstbalanceinputs,selectednstbalanceinputkey])=>
+  nstbalanceinputs.find(nstbalanceinput=>nstbalanceinput.id===selectednstbalanceinputkey)),tap(
+    nstbalanceinput=>this.log(`selectednstbalanceinput,${JSON.stringify(nstbalanceinput)}`)
+  ),shareReplay(1));
 
   getBalanceNo404<Data>(id: string): Observable<INstbalanceinput> {
     const url = `${this.nstbalanceinputUrl}/?id=${id}`;

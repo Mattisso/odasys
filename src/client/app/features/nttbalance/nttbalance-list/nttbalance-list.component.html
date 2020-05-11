@@ -10,7 +10,7 @@
             <app-nttbalance-search *ngIf="showSearch"></app-nttbalance-search>
           </div>
         </div>
-        <div class='list-group'>
+       <!--  <div class='list-group'>
             <a
                 class='list-group-item'
                 *ngFor='let balance of vm.balances | paginate: config'
@@ -20,10 +20,10 @@
         </a>
         <pagination-controls (pageChange)="pageChange($event)"></pagination-controls>
       </div>
+ -->
 
 
 
-<!--
     <div class="table-responsive">
 
       <table class="table md-0"
@@ -43,7 +43,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let balance of balance$.balances  | paginate: config">
+          <tr *ngFor="let balance of vm.balances  | paginate: config">
             <td> {{ balance.oexercCompta }}
             </td>
             <td> {{ balance.oreference }}
@@ -53,13 +53,13 @@
 
             <td> {{ balance.NumCompte }}
             </td>
-            <td> <a [ngClass]="{'active': balance.id===balance$.balanceId }"
-                routerLink="/nttbalances/{{balance.id}}">
+            <td> <a [ngClass]="{'active': balance?.id===vm.balanceId }"
+              (click)='onSelected(balance.id)'   routerLink="/nttbalances/{{balance.id}}">
                 {{ balance.IntitulCompte | lowercase | convertToSpaces : ',' }}
               </a>
             </td>
-            <td>{{ balance.SoldeDebit |currency:'USD':code: '1.0-2'}}</td>
-            <td>{{ balance.SoldeCredit |currency:'USD':code: '1.2-2'}}</td>
+            <td>{{ balance.SoldeDebit}}</td>
+            <td>{{ balance.SoldeCredit}}</td>
             <td>
               <a class="btn btn-primary" [routerLink]="['/nttbalances',balance.id, 'edit']">
                 Edit
@@ -69,7 +69,7 @@
         </tbody>
       </table>
       <pagination-controls (pageChange)="pageChange($event)"></pagination-controls>
-    </div> -->
+    </div>
 
   </div>
 </div>

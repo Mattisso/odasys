@@ -6,7 +6,7 @@ import { InMemoryCache } from 'apollo-cache-inmemory';
 import { environment } from '../environments/environment';
 
 const apiUrl = environment.apiUrl;
-export function createApollo(httpLink:HttpLink){
+export function useFactory(httpLink:HttpLink){
   return {
       link:httpLink.create({uri:apiUrl}),
       cache: new InMemoryCache()
@@ -26,7 +26,7 @@ HttpLinkModule
   providers:[
     {
       provide: APOLLO_OPTIONS,
-      useFactory: createApollo,
+      useFactory: useFactory,
       deps: [HttpLink],
     }
 

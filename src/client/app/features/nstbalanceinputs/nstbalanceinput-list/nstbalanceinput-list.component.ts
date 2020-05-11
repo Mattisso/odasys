@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FormGroup, FormControl } from '@angular/forms';
-import { INstbalanceinput, nstbalanceinputQuery, getnstbalanceInputResponse} from '../nstbalanceinput';
+import { INstbalanceinput,  getnstbalanceInputResponse, nstbalanceinputQuery} from '../nstbalanceinput';
 import { NstbalanceinputService } from '../nstbalanceinput.service';
-import { Subject, combineLatest, Observable,observable, Subscription} from 'rxjs';
-import { debounceTime, merge, share, map, startWith, switchMap } from 'rxjs/operators';
+import { Subject, combineLatest, Observable,observable, Subscription, EMPTY} from 'rxjs';
+import { debounceTime, merge, share, map, startWith, switchMap, catchError } from 'rxjs/operators';
 import {ApolloQueryResult} from 'apollo-client';
 //import {} from 'rxjs/Subscription';
 
@@ -35,25 +35,29 @@ export class NstbalanceinputListComponent implements OnInit {
   config: any;
   // balances: any = [];
    balances: INstbalanceinput[];
-//nstbalanceinputquery: nstbalanceinputQuery;
-   first$: Observable<number>;
-  skip$: Observable<number>;
-  orderBy$: Observable<string | null>;
+
   constructor( private apollo:Apollo,
-   private  nstbalanceinputquery: nstbalanceinputQuery,
+  // private  nstbalanceinputquery: nstbalanceinputQuery,
     private balanceinputservice: NstbalanceinputService,
     private route: ActivatedRoute, private router: Router) {
 
      }
+     private errorMessageSubject = new Subject<string>();
+     errorMessage$ = this.errorMessageSubject.asObservable();
 
+  nstbalanceinputQuery$=    this.balanceinputservice.getBalancesInput$.pipe(
+    catchError(err=>{
+      this.errorMessageSubject.next(err);
+      return EMPTY;
+    })
+  );
+selectednstbalanceinput$=this.balanceinputservice.selectednstbalanceinput$;
 
-/*   ngOnInit(): void {
-    this.listFilter = this.route.snapshot.queryParams['filterBy'] || '';
-    this.balanceinputservice.getBalances()
-      .subscribe(balances => this.balances = balances,
-        error => this.errorMessage = <any>error);
-  } */
-  nstbalanceinputQuery=    this.balanceinputservice.getBalances();
+vm$ = combineLatest([this.nstbalanceinputQuery$,
+this.selectednstbalanceinput$]).pipe(
+  map(([nstbalanceinputs, nstbalanceinput]:[INstbalanceinput[],INstbalanceinput])=>({
+    nstbalanceinputs,nstbalanceinputId:nstbalanceinput?nstbalanceinput.id:'0'}))
+);
 
   ngOnInit() {
     this.config = {
@@ -67,61 +71,22 @@ export class NstbalanceinputListComponent implements OnInit {
 
     .subscribe(page => this.config.currentPage = page);
 
- this.getbalanceinputs=this.nstbalanceinputquery.watch().valueChanges.pipe(map(result=>result.data.getbalanceinputs));
 
-
-   //  this.getBalances();
-/* this.apollo.watchQuery({
-  query: nstbalanceinputQuery
-}).valueChanges.subscribe(result=>{
-  this.getnstbalanceinputs=result.data && result.data[this.getnstbalanceinputs];
-  this.loading=result.loading;
-  this.error =result.errors;
-  console.log(result);
-}) */
-
-
-/* this.apollo.watchQuery({query: nstbalanceinputQuery})
-.valueChanges.subscribe(result=>{
-  this.getnstbalanceinputs=result.data && result.data[this.getnstbalanceinputs];
-  this.loading=result.loading;
-  this.error =result.errors;
-}); */
-
-
-//pipe(map(({data})=>data[this.getnstbalanceinputs]));
-
-
-     /*  const getQuery : Observable<ApolloQueryResult<getnstbalanceInputResponse>> =>{
-      const query=  this.apollo.watchQuery<getnstbalanceInputResponse>({
-        query: nstbalanceinputQuery
-      });
-      return query.valueChanges;
-    }; */
   }
 
-  /* const getQuery = (): Observable<ApolloQueryResult<getnstbalanceInputResponse>> => {
-    const query = this.apollo.watchQuery<getnstbalanceInputResponse>({
-      query: this.getnstbalanceinputs
-    });
- return query.valueChanges;
-  }; */
- /*  getQuery():   Observable<ApolloQueryResult<getnstbalanceInputResponse>>=>{
-    const query= this.apollo.watchQuery<getnstbalanceInputResponse>({
-      query:nstbalanceinputQuery
-    })
-return query.valueChanges;
-  } */
-getBalances(): void {
+/* getBalances(): void {
 this.balances = [];
     this.balanceinputservice.getBalances()
     .subscribe(balances => this.balances = balances,
       error =>  this.errorMessage = <any>error,
       () => this.isLoading = false);
-    }
+    } */
     //  error => this.errorMessage = <any>error);
 
 
+    onSelected(balanceId: string): void {
+      this.balanceinputservice.selectedNstbalanceinputChanged(balanceId);
+    }
     search(searchTerm: string) {
    //   this.editHero = undefined;
       if (searchTerm) {
@@ -135,7 +100,5 @@ this.balances = [];
     pageChange(newPage: number) {
       this.router.navigate(['nstbalanceinputs'], { queryParams: { page: newPage } });
     }
-
-
 
 }
