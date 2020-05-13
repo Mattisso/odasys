@@ -25,25 +25,22 @@ const httpOptions = {
 export class NstbalanceService {
   apiUrl = environment.apiUrl;
   nstbalanceUrl = `${this.apiUrl}/api/nstbalances`;
-  private oexercComptaUrl = this.oexccomptaservice.oexercComptaUrl;
-  private oreferenceUrl = this.oreferenceservice.oreferenceUrl;
-  private otableauposteUrl = this.otableauposteservice.otableauposteUrl;
+
   // nstbalanceUrl = 'api/nstbalances';
   private handleError: HandleError;
   balances: INstbalance[];
   editbalance: INstbalance;
-  private nstbalanceSelectedSubject = new BehaviorSubject<string | null>(null);
-  nstbalanceSelectedAction$ = this.nstbalanceSelectedSubject.asObservable();
+
 
   constructor(private http: HttpClient,
     private messageService: MessageService,
     httpErrorHandler: HttpErrorHandler,
-    private oexccomptaservice: OexerccomptaService,
-    private oreferenceservice: OreferenceService,
-    private otableauposteservice: OtableauposteService,
   ) {
     this.handleError = httpErrorHandler.createHandleError('NstbalanceService');
   }
+
+  private nstbalanceSelectedSubject = new BehaviorSubject<string>('0');
+  nstbalanceSelectedAction$ = this.nstbalanceSelectedSubject.asObservable();
 
   getnstbalances$ = this.http.get<INstbalance[]>(this.nstbalanceUrl)
     .pipe(
@@ -81,7 +78,7 @@ export class NstbalanceService {
     map(([nstbalances, selectednstbalanceKey]) =>
       nstbalances.find(nstbalance => nstbalance.id === selectednstbalanceKey)
     ),
-    tap(nstbalance => this.log(`selectedComptebalance , ${JSON.stringify(nstbalance)}`)),
+   // tap(nstbalance => this.log(`selectedComptebalance , ${JSON.stringify(nstbalance)}`)),
     shareReplay(1)
   );
 

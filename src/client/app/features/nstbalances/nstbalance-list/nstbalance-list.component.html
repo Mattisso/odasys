@@ -1,6 +1,6 @@
 <div class="card" *ngIf="vm$ | async as vm">
   <div class="card-header">
-    {{pageTitle}}
+    {{vm.title}}
   </div>
 
   <div class="card-body">
@@ -20,19 +20,19 @@
             </div>
           </div>
         </div>
-        {{ vm | json }}
-
+<!--         {{ vm.nstbalances | json }}
+ -->
       </div>
     </div>
 
     <div class="table-responsive">
-      <table class="table md-0" *ngIf="vm.balances   && vm.balances.length">
+      <table class="table md-0" *ngIf="vm.nstbalances  && vm.nstbalances.length">
         <thead>
           <tr>
             <th>Year</th>
             <th>Ref Code</th>
-            <th>table</th>
-            <th>NumCompte</th>
+<!--            <th>table</th>
+ -->            <th>NumCompte</th>
             <th>IntitulCompte</th>
             <th>SoldeDebit</th>
             <th>SoldeCredit</th>
@@ -40,17 +40,13 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let balance of vm.balances  | paginate: config">
-            <td> {{ balance.oexercCompta }}
-            </td>
-            <td> {{ balance.oreference }}
-            </td>
-            <td> {{ balance.otableauposte}}
-            </td>
-            <td> {{ balance.NumCompte }}
-            </td>
-            <td> <a [ngClass]="{'active': balance.id===vm.balanceId }"
-                [routerLink]="['/nstbalances',balance.id, 'edit']">
+          <tr *ngFor="let balance of vm.nstbalances  | paginate: config">
+            <td> {{ balance.oexercCompta }}  </td>
+            <td> {{ balance.oreference }}       </td>
+<!--           <td> {{ balance.otableauposte}}       </td>
+ -->            <td> {{ balance.NumCompte }}      </td>
+            <td> <a [ngClass]="{'active': balance.id===vm.nstbalance }"
+              (click)='onSelected(balance.id)'     [routerLink]="['/nstbalances',balance.id, 'edit']">
                 <!--  routerLink="/nstbalances/{{balance.id}}" > -->
                 {{ balance.IntitulCompte | lowercase | convertToSpaces : ',' }}
               </a>
@@ -75,6 +71,6 @@
 <div class="alert alert-danger" *ngIf="errorMessage$ | async as errorMessage">
   {{ errorMessage }}
 </div>
-<!-- {{ vm | json }} -->
+<!--  {{ vm | json }}  -->
 
 <!--{{ balances.length | json }}-->

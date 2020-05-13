@@ -50,7 +50,7 @@ it('should return expected nstbalanceinputs (HttpClient called once)', () => {
 
   httpClientSpy.get.and.returnValue(asyncData(expectednstbalanceinput));
 
-  nstbalanceinputService.getBalances().subscribe(
+  nstbalanceinputService.getBalancesInput$.subscribe(
     nstbalanceinputs => expect(nstbalanceinputs).toEqual(expectednstbalanceinput, 'expected nstbalanceinputs'),
     fail
   );
@@ -65,7 +65,7 @@ it('should return an error when the server returns a 404', () => {
 
   httpClientSpy.get.and.returnValue(asyncError(errorResponse));
 
-  nstbalanceinputService.getBalances().subscribe(
+  nstbalanceinputService.getBalancesInput$.subscribe(
     nstbalanceinputs => fail('expected an error, not nstbalanceinputs'),
     error  => expect(error.message).toContain('test 404 error')
   );
