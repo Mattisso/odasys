@@ -72,7 +72,7 @@ vm$ = combineLatest([
     .subscribe(page => this.config.currentPage = page);
 
     this.gettotaldebit();
-  this.getBalances();
+ // this.getBalances();
  // this.getall();
 
   }
@@ -104,10 +104,10 @@ gettotalcrebit(): void {
   // console.log(this.totalDebit);
   }
 
-  getBalances(): void {
+  /* getBalances(): void {
     this.vm$.subscribe(vnttbalance => this.balance$ = vnttbalance);
   }
-
+ */
 /* getBalances(): void {
 this.balances = [];
     this.balanceservice.getBalances()

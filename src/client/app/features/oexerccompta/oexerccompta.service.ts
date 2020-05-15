@@ -7,8 +7,6 @@ import { catchError, tap, map, shareReplay, mergeAll, pluck, distinct, toArray }
 import { IOexerccompta,Response} from './oexerccompta';
 import { environment } from '../../../environments/environment';
 import { HttpErrorHandler, HandleError } from '../../http-error-handler.service';
-import {Query} from 'apollo-angular';
-import gql from 'graphql-tag';
 const httpOptions = {
   headers: new HttpHeaders({
     'Content-Type': 'application/json',
