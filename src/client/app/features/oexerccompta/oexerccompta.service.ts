@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpResponse, HttpParams, HttpEvent, HttpEventType } from '@angular/common/http';
-import { Observable, of, BehaviorSubject } from 'rxjs';
+import { Observable, of, BehaviorSubject, combineLatest} from 'rxjs';
 import { MessageService } from '../../messages/message.service';
 import { catchError, tap, map, shareReplay, mergeAll, pluck, distinct, toArray } from 'rxjs/operators';
 
@@ -33,15 +33,7 @@ export class OexerccomptaService {
     this.handleError = httpErrorHandler.createHandleError('OexccomptaService');
   }
 
-/*
-   Query<Response>= (
-    document=gql`
-query getoexerccomptas {
-  oExercComptaId
-  Cloture
-}
-    `
-  ) */
+
   // All getOexccomptas
   getoexerccompta$: Observable<IOexerccompta[]> =  this.http.get<IOexerccompta[]>(this.oexercComptaUrl)
     .pipe(
@@ -49,6 +41,22 @@ query getoexerccomptas {
       shareReplay(1),
       catchError(this.handleError)
       );
+
+      private oexerccomptaSelectedSubject= new BehaviorSubject<string>('0');
+      oexerccomptaSelectedAction$= this.oexerccomptaSelectedSubject.asObservable();
+
+      selectedOexcerccomptaChanged(selectedoexerccomptaID:string):void{
+        this.oexcercompteSelectedSubject.next(selectedoexerccomptaID);
+      }
+
+      selectedoexerccompta$=combineLatest([
+        this.getoexerccompta$,
+        this.oexcercompteSelectedAction$
+      ]).pipe(map(([oexerccomptas, selectedoexerccomptaKey])=>
+      oexerccomptas.find(oexerccompta=>oexerccompta.id===selectedoexerccomptaKey)),tap(
+        oexerccompta=>this.log(`selectedoexerccompta,${JSON.stringify(oexerccompta)}`)
+      ),shareReplay(1));
+
 
         // Categories for drop down list
   // Example of using pluck and distinct
@@ -97,17 +105,13 @@ query getoexerccomptas {
 
   }
 
-
   getOexccomptaByYear(oexerccompta: IOexerccompta): Observable<IOexerccompta> {
     const url = `${this.oexercComptaUrl}/v2/${oexerccompta.oExercComptaId}`;
     return this.http.get<IOexerccompta>(url).pipe(
       tap(data => this.log('getOexccompta: ' + JSON.stringify(data))),
     catchError(this.handleError<IOexerccompta>(`getOexccompta id =${oexerccompta.oExercComptaId}`))
     );
-
   }
-
-
   /* GET heroes whose name contains search term */
   searchoExercComptas(term: string): Observable<IOexerccompta[]> {
     term = term.trim();

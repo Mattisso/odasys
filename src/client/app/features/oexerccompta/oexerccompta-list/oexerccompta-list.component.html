@@ -1,1 +1,68 @@
-<p>oexerccompta-list works!</p>
+<div class="card">
+  <div class="card-header">
+    {{pageTitle}}
+  </div>
+  <!-- Filter the oexerccompta sheet   -->
+  <div class="card-body"  *ngIf="vm$ | async as vm">
+    <div class="container">
+      <div class="row justify-content-between">
+        <div class="row">
+          <div class="col-md-6">
+            <input type="checkbox" id="search" [checked]="showSearch" (click)="toggleSearch()">
+            <label for="search">Search</label>
+            <app-oexerccompta-search *ngIf="showSearch"></app-oexerccompta-search>
+          </div>
+        </div>
+        <div class="has-error" *ngIf="errorMessage">{{errorMessage$}}</div>
+        <div class="nav-item" routerLinkActive="active">
+          <a [routerLink]="['/oexerccomptas','0','edit']">Add Balance</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="table-responsive">
+      <table class="table md-0" *ngIf="vm.oexerccomptas && vm.oexerccomptas.length">
+        <thead>
+          <tr>
+            <th>Year</th>
+            <th>Beginning Date</th>
+            <th>End Date</th>
+            <th>Cloture</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let oexerccompta of vm.oexerccomptas | paginate: config">
+            <td> <a [ngClass]="{'active': oexerccompta?.id===vm.nstoexerccomptainputId }"
+              (click)='onSelected(oexerccompta.id)'  routerLink="/oexerccomptas/{{oexerccompta.id}}/edit">
+              {{ oexerccompta.oExercComptaId }}
+            </a>
+            </td>
+            <td>
+                {{ oexerccompta.DateDebut}}
+
+            </td>
+            <td>{{ oexerccompta.Datefin}}</td>
+            <td>{{ oexerccompta.Cloture}}</td>
+            <td>
+              <a class="btn btn-primary" [routerLink]="['/oexerccomptas',oexerccompta.id, 'edit']">
+                Edit
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <!--   <mat-paginator [length]="100"
+              [pageSize]="10"
+              [pageSizeOptions]="[5, 10, 25, 100]">
+</mat-paginator> -->
+      <pagination-controls (pageChange)="pageChange($event)"></pagination-controls>
+    </div>
+
+
+    <div class="alert alert-danger" *ngIf="errorMessage$ | async as errorMessage">
+      {{ errorMessage }}
+    </div>
+
+  </div>
+</div>
