@@ -1,4 +1,5 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light"> -->
+  <mat-toolbar>
   <a class='navbar-brand'>{{pageTitle}}</a>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -33,10 +34,10 @@
            [routerLink]="['/nttcomptebalances/alternate']"
            routerLinkActive="active">Product List (Alternate UI)</a>
       </li>
-      
+
       <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
         <a class="nav-item nav-link" routerLink="/nstbalanceinputs">Balance Sheet List</a>
-      </li>       
+      </li>
     </ul>
   </div>
-</nav>
+</mat-toolbar>

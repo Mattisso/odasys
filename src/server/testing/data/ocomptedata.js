@@ -20,18 +20,18 @@ const ocomptedata = (function () {
 
     const objocomptedata = {
         "CompteNumber": "106"
-    }
+    };
 
     function toinit() {
         return {
             arrocomptedata: arrocomptedata,
             objocomptedata: objocomptedata
-        }
+        };
     }
     return {
         toinit: toinit
-    }
+    };
 })();
 module.exports = {
     toinit: ocomptedata.toinit
-}
+};

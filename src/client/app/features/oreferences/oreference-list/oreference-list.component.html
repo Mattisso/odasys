@@ -2,17 +2,24 @@
   <div class="card-header">
     {{pageTitle}}
   </div>
-  <div class="card-body">
-    <div class="row">
-      <div class="col-md-4">
-        <input type="checkbox" id="search" [checked]="showSearch" (click)="toggleSearch()">
-        <label for="search">Search</label>
-        <app-oreference-search *ngIf="showSearch"></app-oreference-search>
+  <div class="card-body" *ngIf="vm$ | async as vm">
+    <div class="container">
+      <div class="row justify-content-between">
+        <div class="row">
+          <div class="col-md-4">
+            <input type="checkbox" id="search" [checked]="showSearch" (click)="toggleSearch()">
+            <label for="search">Search</label>
+            <app-oreference-search *ngIf="showSearch"></app-oreference-search>
+          </div>
+        </div>
+        <div class="has-error" *ngIf="errorMessage$">{{errorMessage$}}</div>
+        <div class="nav-item" routerLinkActive="active">
+          <a [routerLink]="['/oreferences','0','edit']">Add reference</a>
+        </div>
       </div>
     </div>
-    <div class="has-error" *ngIf="errorMessage">{{errorMessage}}</div>
     <div class="table-responsive">
-      <table class="table md-0" *ngIf="balances && balances.length">
+      <table class="table md-0" *ngIf="vm.oreferences && vm.oreferences.length">
         <thead>
           <tr>
             <th>RefCode</th>
@@ -21,15 +28,16 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let balance of balances | paginate: config">
-            <td> <a routerLink="/oreferences/{{balance.id}}/edit">
-                {{ balance.RefCode}}
+          <tr *ngFor="let oreference of vm.oreferences | paginate: config">
+            <td> <a [ngClass]="{'active': oreference?.id===vm.orererenceId }"
+              (click)='onSelected(oreference.id)' routerLink="/oreferences/{{oreference.id}}/edit">
+                {{ oreference.RefCode}}
               </a>
             </td>
-            <td> {{ balance.Description }}
+            <td> {{ oreference.Description }}
             </td>
             <td>
-              <a class="btn btn-primary" [routerLink]="['/oreferences',balance.id, 'edit']">
+              <a class="btn btn-primary" [routerLink]="['/oreferences',oreference.id, 'edit']">
                 Edit
               </a>
             </td>
@@ -39,5 +47,8 @@
       <pagination-controls (pageChange)="pageChange($event)"></pagination-controls>
     </div>
 
+    <div class="alert alert-danger" *ngIf="errorMessage$ | async as errorMessage">
+      {{ errorMessage }}
+    </div>
   </div>
 </div>

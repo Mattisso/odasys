@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpResponse, HttpParams, HttpEvent, HttpEventType } from '@angular/common/http';
-import { Observable, of, BehaviorSubject } from 'rxjs';
+import { Observable, of, BehaviorSubject, combineLatest} from 'rxjs';
 import { MessageService } from '../../messages/message.service';
 import { catchError, tap, map, shareReplay, mergeAll, pluck, distinct, toArray} from 'rxjs/operators';
 
@@ -27,14 +27,13 @@ export class OreferenceService {
  //  Oreferences: IOexccompta[];
   editOreference: IOreference;
     // Action stream
-    oreferenceSelectedSubject = new BehaviorSubject<string>('0');
-    oreferenceSelectedAction$ = this.oreferenceSelectedSubject.asObservable();
-
+   // oreferenceSelectedSubject = new BehaviorSubject<string>('0');
+   // oreferenceSelectedAction$ = this.oreferenceSelectedSubject.asObservable();
 
   constructor(private http: HttpClient,
     private messageService: MessageService,
     httpErrorHandler: HttpErrorHandler) {
-    this.handleError = httpErrorHandler.createHandleError('OexccomptaService');
+    this.handleError = httpErrorHandler.createHandleError('OreferenceService');
   }
 
   getOreferences$: Observable<IOreference[]> = this.http.get<IOreference[]>(this.oreferenceUrl)
@@ -60,6 +59,20 @@ export class OreferenceService {
         shareReplay()
       );
 
+       oreferenceSelectedSubject= new BehaviorSubject<string>('0');
+      oreferenceSelectedAction$= this.oreferenceSelectedSubject.asObservable();
+
+      selectedOreferenceChanged(selectedoreferenceID:string):void{
+        this.oreferenceSelectedSubject.next(selectedoreferenceID);
+      }
+
+      selectedoreference$=combineLatest([
+        this.getOreferences$,
+        this.oreferenceSelectedAction$
+      ]).pipe(map(([oreferences, selectedoreferenceKey])=>
+      oreferences.find(oreference=>oreference.id===selectedoreferenceKey)),tap(
+        oreference=>this.log(`selectedoreference,${JSON.stringify(oreference)}`)
+      ),shareReplay(1));
 
   getOreferences(): Observable<IOreference[]> {
     //  const url = `${this.OreferenceUrl}`;
@@ -70,7 +83,6 @@ export class OreferenceService {
       );
 
   }
-
 
   getOreferenceNo404(id: string): Observable<IOreference> {
     const url = `${this.oreferenceUrl}/?id=${id}`;

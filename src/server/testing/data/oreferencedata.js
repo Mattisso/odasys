@@ -61,7 +61,7 @@ const oreferencedata = (function () {
 
       }
     ]
-  }
+  };
   const updObject = {
     "_id": "5e8b7a210310040e3c00487e",
     "isActive": true,
@@ -84,18 +84,18 @@ const oreferencedata = (function () {
     "CreatedBy": "Admin",
     "ModifiedBy": "Admin",
     "__v": 0
-  }
+  };
   function toinit() {
     return {
       arroreferencedata: arroreferencedata,
       objoreferencedata: objoreferencedata,
       updObject:updObject
-    }
+    };
   }
   return {
     toinit: toinit
-  }
+  };
 })();
 module.exports = {
   toinit: oreferencedata.toinit
-}
+};

@@ -7,7 +7,7 @@ const oexerccomptadata = (function () {
         "oExercComptaId": 2006
       }
     ];
-  }
+  };
 
   const oexcomptadata = [{
       " isActive": true,
@@ -37,7 +37,7 @@ const oexerccomptadata = (function () {
       "  id": '5e8b7a140310040e3c00481d'
     }
 
-  ]
+  ];
   const objoexerccomptadata = function () {
     return {
       "id" : "5e8b7a140310040e3c00481d",
@@ -46,19 +46,19 @@ const oexerccomptadata = (function () {
       "DateDebut" : "2007-01-01T19:34:49.659Z",
       "Datefin" : "2007-12-31T19:34:49.659Z"
     };
-  }
+  };
 
   function toinit() {
     return {
       arroexerccomptadata: arroexerccomptadata(),
       objoexerccomptadata: objoexerccomptadata(),
       oexcomptadata: oexcomptadata
-    }
+    };
   }
   return {
     toinit: toinit
-  }
+  };
 })();
 module.exports = {
   toinit: oexerccomptadata.toinit
-}
+};

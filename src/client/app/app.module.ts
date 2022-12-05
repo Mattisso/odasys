@@ -42,9 +42,10 @@ import {NttcomptebalancedetailModule} from './features/nttcomptebalancedetail/nt
 
 import { MasterNavBarComponent } from './core/master-nav-bar/master-nav-bar.component';
 import { NavBarComponent } from './core/nav-bar/nav-bar.component';
-import { ConfigComponent } from './config/config.component';
+// import { ConfigComponent } from './config/config.component';
 // Apollo
 import {GraphqlModule}  from './graphql.module'
+// import {MAT_FORM_FIELD_DEFAULT_OPTIONS} from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,7 @@ import {GraphqlModule}  from './graphql.module'
     PageNotFoundComponent,
     NavBarComponent,
     MasterNavBarComponent,
-    ConfigComponent,
+  // ConfigComponent,
     LogoutComponent,
     AboutComponent
   ],
@@ -88,7 +89,7 @@ import {GraphqlModule}  from './graphql.module'
         tokenGetter: function tokenGetter() {
           return localStorage.getItem('token');
         },
-        whitelistedDomains: ['localhost:3000', 'localhost:4200'],
+      allowedDomains: ['localhost:3000', 'localhost:4200'],
     //  blacklistedRoutes: ['localhost:3000']
       }
     }),
@@ -100,7 +101,9 @@ import {GraphqlModule}  from './graphql.module'
     // UserService,
       HttpErrorHandler,
    { provide: RequestCache, useClass: RequestCacheWithMap },
-   httpInterceptorProviders],
+   httpInterceptorProviders
+ //  { provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { appearance: 'fill' } },
+],
   bootstrap: [AppComponent],
   schemas:[CUSTOM_ELEMENTS_SCHEMA]
 })

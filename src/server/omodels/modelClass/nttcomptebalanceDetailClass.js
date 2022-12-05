@@ -27,56 +27,56 @@ class nttcomptebalanceDetailClass {
   }
   set nttcomptebalancekey(nttcomptebalanceKey) {
     this._nttcomptebalanceKey = nttcomptebalanceKey;
-    return this;
+    //return this;
   }
   get numcompte() {
     return this._NumCompte;
   }
   set numcompte(NumCompte) {
     this._NumCompte = NumCompte;
-    return this;
+   // return this;
   }
   get intitulcompte() {
     return this._IntitulCompte;
   }
   set intitulcompte(IntitulCompte) {
     this._IntitulCompte = IntitulCompte;
-    return this;
+   // return this;
   }
   get soldedebit() {
     return this._SoldeDebit;
   }
   set soldedebit(SoldeDebit) {
     this._SoldeDebit = SoldeDebit;
-    return this;
+   // return this;
   }
   get soldecredit() {
     return this._SoldeCredit;
   }
   set soldecredit(SoldeCredit) {
     this._SoldeCredit = SoldeCredit;
-    return this;
+   // return this;
   }
   get amort_amnt() {
     return this._Amort_Amnt;
   }
   set amort_amnt(Amort_Amnt) {
     this._Amort_Amnt = Amort_Amnt;
-    return this;
+  //  return this;
   }
   get provis_amnt() {
     return this._Provis_Amnt;
   }
   set provis_amnt(Provis_Amnt) {
     this._Provis_Amnt = Provis_Amnt;
-    return this;
+  //  return this;
   }
   get net_amnt() {
     return this._Net_Amnt;
   }
   set net_amnt(Net_Amnt) {
     this._Net_Amnt = Net_Amnt;
-    return this;
+   // return this;
   }
 }
 function toinit(){

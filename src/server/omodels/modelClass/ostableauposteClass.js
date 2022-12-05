@@ -33,14 +33,14 @@ class ostableauposteClass {
   }
   set stableauname(StableauName) {
     this._StableauName = StableauName;
-    return this;
+ //   return this;
   }
   get stbleaulongname() {
     return this._StbleauLongName;
   }
   set stbleaulongname(StbleauLongName) {
     this._StbleauLongName = StbleauLongName;
-    return this;
+   // return this;
   }
 }
 

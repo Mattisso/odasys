@@ -1,5 +1,5 @@
 const graphql = require('graphql');
-const {User, OcompteReference, oCompte, nstBalance, nstBalanceInput, nttBalance, nttCompteBalance, nttCompteBalanceDetail, olevel, oStableauPoste, oStblArea, oTableauPoste, oReference, oReportDetail, oReportHeader}=require('../omodels/modelsSchema').toinit()
+const {User, OcompteReference, oCompte, nstBalance, nstBalanceInput, nttBalance, nttCompteBalance, nttCompteBalanceDetail, olevel, oStableauPoste, oStblArea, oTableauPoste, oReference, oReportDetail, oReportHeader}=require('../omodels/modelsSchema').toinit();
 const {GraphQLObjectType, GraphQLString, GraphQLID,GraphQLInt, GraphQLSchema, GraphQLList, GraphQLNonNull} = graphql;
 
 const  UserType = new GraphQLObjectType({
@@ -36,7 +36,7 @@ const OcompteType = new GraphQLObjectType({
       oreference: {
           type: OreferenceType,
           resolve(parent, args) {
-              return Oreference.findById(parent.oreferenceID);
+              return oReference.findById(parent.oreferenceID);
           }
       }
 
@@ -58,7 +58,7 @@ const OreferenceType = new GraphQLObjectType({
       ocompte: {
           type: new GraphQLList(OcompteType),
           resolve(parent, args) {
-              return Ocompte.find({
+              return oCompte.find({
                   oreferenceID: parent.id
               });
           }

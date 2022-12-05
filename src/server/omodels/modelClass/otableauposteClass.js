@@ -21,7 +21,6 @@ const otableauposteClass=(function(){
 
   class otableauposteClass {
     constructor(TableauName, tableauLongName) {
-
       this._TableauName = TableauName;
       this._tableauLongName = tableauLongName;
     }
@@ -34,11 +33,11 @@ const otableauposteClass=(function(){
     }
     set tableauname(TableauName) {
       this._TableauName = TableauName;
-      return this;
+    //  return this;
     }
     set tableaulongname(tableauLongName) {
       this._tableauLongName = tableauLongName;
-      return this;
+     // return this;
     }
   }
   function tonit(){

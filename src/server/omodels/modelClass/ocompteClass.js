@@ -10,7 +10,7 @@ const ocompteClass = (function () {
 
     set comptenumber(CompteNumber) {
       this._comptenumber = CompteNumber;
-      return this;
+    //  return this;
     }
   }
   const ocompteObj = {

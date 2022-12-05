@@ -1,5 +1,5 @@
 
-const {svctoInitializeInstance$}=require('../sharedkernel/odainstance/toInitializeInstance').toinit()
+const {svctoInitializeInstance$}=require('../sharedkernel/odainstance/toInitializeInstance').toinit();
 const {objocomptedata,arrocomptedata}=require('../testing/data/ocomptedata').toinit();
 const {Ocompte}=require('../omodels/modelsSchema/ocompte').toinit();
 const {render}=require('../features/ocompte/ocompteView').toinit();
@@ -10,7 +10,7 @@ const {toseedarray} = require('../features/ocompte/ocompteSeed').toinit();
 //
 const { toCreateOComptedata$, getAllocomptes} = require('../features/ocompte/ocompteRepository').toinit();
 const { toBalanceinput} = require('../features/nstbalanceinput/staticNstbalanceinput').toinit();
-require('../config/ohadb') .connectserver()
+require('../config/ohadb') .connectserver();
 
 
 // const getoreportdetail$= sharedrepository.getocomptreferences$;
@@ -25,6 +25,6 @@ require('../config/ohadb') .connectserver()
 
 // console.log((toseedarray));
 getAllocomptes(function(err,data){
-  if (err) console.log(err)
+  if (err) console.log(err);
   console.log(data[10]);
-})
+});

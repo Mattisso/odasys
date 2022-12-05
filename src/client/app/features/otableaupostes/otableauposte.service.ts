@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpResponse, HttpParams, HttpEvent, HttpEventType } from '@angular/common/http';
-import { Observable, of, BehaviorSubject } from 'rxjs';
+import { Observable, of, BehaviorSubject, combineLatest} from 'rxjs';
 import { MessageService } from '../../messages/message.service';
 import { catchError, tap, map, shareReplay } from 'rxjs/operators';
 
 import { IOtableauposte } from './otableauposte';
 import { environment } from '../../../environments/environment';
 import { HttpErrorHandler, HandleError } from '../../http-error-handler.service';
+import { OtableauposteDetailComponent } from './otableauposte-detail/otableauposte-detail.component';
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -41,12 +42,26 @@ export class OtableauposteService {
         catchError(this.handleError)
       );
 
+
+
       ddlOtableaupostes$: Observable<IOtableauposte[]> = this.http.get<IOtableauposte[]>(`${this.otableauposteUrl}/v1/ddlotableauposteWithcomptebalances`)
       .pipe(
         tap(data => this.log(`getOtableauposts:   ${JSON.stringify(data)}`)),
         shareReplay(1),
         catchError(this.handleError)
       );
+      otableauPostSelectedSubject= new BehaviorSubject<string>('0');
+      otableauPostSelectedAction$= this.otableauPostSelectedSubject.asObservable();
+
+      selectedotableauPosteChanged(selectedotableauposteId:string):void{
+        this.otableauPostSelectedSubject.next(selectedotableauposteId);
+      }
+selectedotableauPoste$=combineLatest([this.getOtableaupostes$,
+    this.otableauPostSelectedAction$])
+  .pipe(map(([otableaupostes,selectedotbleauposteKey])=>
+  otableaupostes.find(otableauposte=>otableauposte.id===selectedotbleauposteKey)),tap(
+    otableauposte=>this.log(`selectedotableauposte, ${JSON.stringify(otableauposte)}`),shareReplay(1)
+  ))
 
   getOtableaupostes(): Observable<IOtableauposte[]> {
     //  const url = `${this.OtableaupostUrl}`;

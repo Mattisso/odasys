@@ -36,28 +36,28 @@ const oexerciceClass = (function () {
     }
     set oexerccomptaencourkey(OexercComptaEncourKey) {
       this._OexercComptaEncourKey = OexercComptaEncourKey;
-      return this;
+     // return this;
     }
     get oexerccomptaprevkey() {
       return this._OexercComptaPrevKey;
     }
     set oexerccomptaprevkey(OexercComptaPrevKey) {
       this._OexercComptaPrevKey = OexercComptaPrevKey;
-      return this;
+     // return this;
     }
     get exerciceprev() {
       return this._ExercicePrev;
     }
     set exerciceprev(ExercicePrev) {
       this._ExercicePrev = ExercicePrev;
-      return this;
+     // return this;
     }
     get oexerciceencour() {
       return this._oExerciceEncour;
     }
     set oexerciceencour(oExerciceEncour) {
       this._oExerciceEncour = oExerciceEncour;
-      return this;
+    //  return this;
     }
   }
   function tonit() {

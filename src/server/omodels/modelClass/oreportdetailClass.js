@@ -35,28 +35,28 @@ const oreportdetailClass=(function(){
     }
     set sortorder(SortOrder) {
       this._sortOrder = SortOrder;
-      return this;
+     // return this;
     }
     get otableaupostekey() {
       return this._OtableauposteKey;
     }
     set otableaupostekey(OtableauposteKey) {
       this._OtableauposteKey = OtableauposteKey;
-      return this;
+     // return this;
     }
     get oreferencekey() {
       return this._OreferenceKey;
     }
     set oreferencekey(OreferenceKey) {
       this._OreferenceKey = OreferenceKey;
-      return this;
+     // return this;
     }
     get olevelkey() {
       return this._olevelKey;
     }
     set olevelkey(olevelKey) {
       this._olevelKey = olevelKey;
-      return this;
+     // return this;
     }
   }
 

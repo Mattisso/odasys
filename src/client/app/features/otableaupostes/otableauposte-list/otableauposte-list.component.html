@@ -2,17 +2,24 @@
   <div class="card-header">
     {{pageTitle}}
   </div>
-  <div class="card-body">
-    <div class="row">
-      <div class="col-md-4">
-        <input type="checkbox" id="search" [checked]="showSearch" (click)="toggleSearch()">
-        <label for="search">Search</label>
-        <app-otableauposte-search *ngIf="showSearch"></app-otableauposte-search>
+  <div class="card-body" *ngIf="vm$ | async as vm">
+    <div class="container">
+      <div class="row justify-content-between">
+        <div class="row">
+          <div class="col-md-4">
+            <input type="checkbox" id="search" [checked]="showSearch" (click)="toggleSearch()">
+            <label for="search">Search</label>
+            <app-otableauposte-search *ngIf="showSearch"></app-otableauposte-search>
+          </div>
+        </div>
+        <div class="has-error" *ngIf="errorMessage$">{{errorMessage$}}</div>
+        <div class="nav-item" routerLinkActive="active">
+          <a [routerLink]="['/otableaupostes','0','edit']">Add tableauPoste</a>
+        </div>
       </div>
     </div>
-    <div class="has-error" *ngIf="errorMessage">{{errorMessage}}</div>
     <div class="table-responsive">
-      <table class="table md-0" *ngIf="balances && balances.length">
+      <table class="table md-0" *ngIf="vm.otableaupostes && vm.otableaupostes.length">
         <thead>
           <tr>
             <th>TableauName</th>
@@ -21,15 +28,16 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let balance of balances | paginate: config">
-            <td> <a routerLink="/otableaupostes/{{balance.id}}/edit">
-                {{ balance.TableauName}}
+          <tr *ngFor="let otableauposte of vm.otableaupostes | paginate: config">
+            <td> <a [ngClass]="{'active': otableauposte?.id===vm.otableauposteId }"
+              (click)='onSelected(otableauposte.id)'   routerLink="/otableaupostes/{{otableauposte.id}}/edit">
+                {{ otableauposte.TableauName}}
               </a>
             </td>
-            <td> {{ balance.tableauLongName }}
+            <td> {{ otableauposte.tableauLongName }}
             </td>
             <td>
-              <a class="btn btn-primary" [routerLink]="['/otableaupostes',balance.id, 'edit']">
+              <a class="btn btn-primary" [routerLink]="['/otableaupostes',otableauposte.id,'edit']">
                 Edit
               </a>
             </td>
@@ -39,5 +47,8 @@
       <pagination-controls (pageChange)="pageChange($event)"></pagination-controls>
     </div>
 
+    <div class="alert alert-danger" *ngIf="errorMessage$ | async as errorMessage">
+      {{ errorMessage }}
+    </div>
   </div>
 </div>

@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "Hash": "YUwWanV0/1O6+7yrelfheqeB2MRYVcYpzLKK0Ywz2cQ=",
+  "Source": "odasys",
+  "BasePath": "_content/odasys",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "odasys\\wwwroot",
+      "Source": "odasys",
+      "ContentRoot": "C:\\Git\\odasys\\wwwroot\\",
+      "BasePath": "_content/odasys",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Git\\odasys\\wwwroot\\favicon.ico",
+      "SourceId": "odasys",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Git\\odasys\\wwwroot\\",
+      "BasePath": "_content/odasys",
+      "RelativePath": "favicon.ico",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\favicon.ico"
+    }
+  ]
+}
