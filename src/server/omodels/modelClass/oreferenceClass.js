@@ -48,7 +48,7 @@ const oreferenceClass=(function(){
 
     set refcode(RefCode) {
       this._refcode = RefCode;
-      return this;
+    //  return this;
     }
 
     get description() {
@@ -57,7 +57,7 @@ const oreferenceClass=(function(){
 
     set description(Description) {
       this._description = Description;
-      return this;
+     // return this;
     }
   }
   const toOreference = function (o) {

@@ -22,11 +22,11 @@ const olevelClass=(function(){
     }
     set olevelnum(olevelNum) {
       this._olevelNum = olevelNum;
-      return this;
+     // return this;
     }
     set oleveldescption(olevelDescption) {
       this._olevelDescption = olevelDescption;
-      return this;
+     // return this;
     }
   }
   function toinit(){

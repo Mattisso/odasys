@@ -1,13 +1,13 @@
 
 
-"use strict"
+"use strict";
 const nstbalanceinputdata = (function () {
   const createData = {
     "NumCompte": "102010",
     "IntitulCompte": "Dotation BENIN",
     "SoldeCredit": 44829579,
     "SoldeDebit": 0
-  }
+  };
   const arrcreateData = [{
       "NumCompte": "102010",
       "IntitulCompte": "Dotation BENIN",
@@ -37,7 +37,7 @@ const nstbalanceinputdata = (function () {
       "IntitulCompte": "Dotation TOGO",
       "SoldeCredit": 57203109
     } */
-  ]
+  ];
 
   const editData = {
     "id": "5cf172b4764e844eac931b80",
@@ -50,7 +50,7 @@ const nstbalanceinputdata = (function () {
     "ModifiedOn": "2019-05-31T18:30:12.955Z",
     "CreatedBy": "Admin",
     "ModifiedBy": "Admin"
-  }
+  };
   function toinit() {
     return {
       createData: createData,

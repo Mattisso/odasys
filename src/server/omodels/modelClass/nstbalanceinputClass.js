@@ -19,35 +19,35 @@ const nstbalanceinputClass =(function(){
     }
     set soldedebit(SoldeDebit) {
       this._SoldeDebit = SoldeDebit;
-      return this;
+     // return this;
     }
     get comptenumber() {
       return this._CompteNumber;
     }
     set comptenumber(CompteNumber) {
       this._CompteNumber = CompteNumber;
-      return this;
+     // return this;
     }
     get soldecredit() {
       return this._SoldeCredit;
     }
     set soldecredit(SoldeCredit) {
       this._SoldeCredit = SoldeCredit;
-      return this;
+     // return this;
     }
     get intitulcompte() {
       return this._IntitulCompte;
     }
     set intitulcompte(IntitulCompte) {
       this._IntitulCompte = IntitulCompte;
-      return this;
+    //  return this;
     }
     get numcompte() {
       return this._NumCompte;
     }
     set numcompte(NumCompte) {
       this._NumCompte = NumCompte;
-      return this;
+     // return this;
     }
 
 
@@ -56,7 +56,7 @@ const nstbalanceinputClass =(function(){
     }
     set CompteNumber(v)  {
       this._comptenumber =replaceString(v);
-      return this;
+     // return this;
     }
 
     /*  getData() {

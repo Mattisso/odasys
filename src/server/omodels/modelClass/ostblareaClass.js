@@ -40,11 +40,11 @@ const ostblareaClass=(function(){
    */
     set areashortname(AreaShortName) {
       this._AreaShortName = AreaShortName;
-      return this;
+   //   return this;
     }
     set arealongname(AreaLongName) {
       this._AreaLongName = AreaLongName;
-      return this;
+    //  return this;
     }
    /*  set ocompte(ocomptes) {
       this._ocomptes = ocomptes;

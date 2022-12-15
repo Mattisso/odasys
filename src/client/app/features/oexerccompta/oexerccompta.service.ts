@@ -24,8 +24,8 @@ export class OexerccomptaService {
   private handleError: HandleError;
   ExercComptas: IOexerccompta[];
   editExercCompta: IOexerccompta;
-  oexcercompteSelectedSubject = new BehaviorSubject<string>('0');
-  oexcercompteSelectedAction$ = this.oexcercompteSelectedSubject.asObservable();
+  // oexcercompteSelectedSubject = new BehaviorSubject<string>('0');
+  //oexcercompteSelectedAction$ = this.oexcercompteSelectedSubject.asObservable();
 
   constructor(private http: HttpClient,
         private messageService: MessageService,
@@ -42,16 +42,16 @@ export class OexerccomptaService {
       catchError(this.handleError)
       );
 
-      private oexerccomptaSelectedSubject= new BehaviorSubject<string>('0');
+      oexerccomptaSelectedSubject= new BehaviorSubject<string>('0');
       oexerccomptaSelectedAction$= this.oexerccomptaSelectedSubject.asObservable();
 
       selectedOexcerccomptaChanged(selectedoexerccomptaID:string):void{
-        this.oexcercompteSelectedSubject.next(selectedoexerccomptaID);
+        this.oexerccomptaSelectedSubject.next(selectedoexerccomptaID);
       }
 
       selectedoexerccompta$=combineLatest([
         this.getoexerccompta$,
-        this.oexcercompteSelectedAction$
+        this.oexerccomptaSelectedAction$
       ]).pipe(map(([oexerccomptas, selectedoexerccomptaKey])=>
       oexerccomptas.find(oexerccompta=>oexerccompta.id===selectedoexerccomptaKey)),tap(
         oexerccompta=>this.log(`selectedoexerccompta,${JSON.stringify(oexerccompta)}`)

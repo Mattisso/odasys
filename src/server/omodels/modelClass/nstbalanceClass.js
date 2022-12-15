@@ -60,35 +60,35 @@ const nstbalanceClass=(function(){
 
     set oexerccomptakey(OexercComptaKey) {
       this._OexercComptaKey = OexercComptaKey;
-      return this;
+     // return this;
     }
     set otableaupostekey(OtableauposteKey) {
       this._OtableauposteKey = OtableauposteKey;
-      return this;
+     // return this;
     }
     set oreferencekey(OreferenceKey) {
       this._OreferenceKey = OreferenceKey;
-      return this;
+     // return this;
     }
     set ocomptekey(OcompteKey) {
       this._OcompteKey = OcompteKey;
-      return this;
+    //  return this;
     }
     set intitulcompte(IntitulCompte) {
       this._IntitulCompte = IntitulCompte;
-      return this;
+     // return this;
     }
     set numcompte(NumCompte) {
       this._NumCompte = NumCompte;
-      return this;
+     // return this;
     }
     set soldedebit(SoldeDebit) {
       this._SoldeDebit = SoldeDebit;
-      return this;
+     // return this;
     }
     set soldecredit(SoldeCredit) {
       this._SoldeCredit = SoldeCredit;
-      return this;
+    //  return this;
     }
   }
 function toinit() {

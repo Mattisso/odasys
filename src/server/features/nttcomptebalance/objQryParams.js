@@ -46,13 +46,18 @@ const objQryParams = (function () {
  //   _ProvAmnt = getProvAmnt(_obj),
     _SoldeDebit = getSoldeDebit(_obj),
     _SoldeCredit = getSoldeCredit(_obj);
-    if (_SoldeDebit > _SoldeCredit) {
+    if (_SoldeDebit > _SoldeCredit) 
+    {
       _netamount = _SoldeDebit - _SoldeCredit;
-    } else if (_SoldeCredit > _SoldeDebit) {
+    }
+   /*   else if (_SoldeCredit > _SoldeDebit) 
+     {
       _netamount = _SoldeCredit - _SoldeDebit;
-    } else if (_SoldeDebit > 0 && _SoldeCredit > 0 && _SoldeDebit > _SoldeCredit) {
+    }  */
+     else if (_SoldeDebit > 0 && _SoldeCredit > 0 && _SoldeCredit>_SoldeDebit) {
       _netamount = _SoldeCredit - _SoldeDebit;
-    } else {
+    } 
+     else {
       _netamount = 0;
     }
     return replaceNullToZero(_netamount);

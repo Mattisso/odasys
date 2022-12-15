@@ -45,19 +45,19 @@ const oxerccomptaClass = (function () {
 
     set oexerccomptaid(oExercComptaId) {
       this._oExercComptaId = oExercComptaId;
-      return this;
+    //  return this;
     }
     set datedebut(DateDebut) {
       this._DateDebut = DateDebut;
-      return this;
+    //  return this;
     }
     set datefin(Datefin) {
       this._Datefin = Datefin;
-      return this;
+  //    return this;
     }
     set cloture(Cloture) {
       this._Cloture = Cloture;
-      return this;
+     // return this;
     }
 
   }

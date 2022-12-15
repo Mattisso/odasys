@@ -54,7 +54,7 @@ const comptebalancedata = (function () {
     "SoldeDebit": 65643312,
     "SoldeCredit": 0,
   } ],"fullDescription":"CA - Capital","tableauLongName":"Bilan Passif","oExercComptaId":"2006"
-}
+};
 
   const arrcomptebalanceData= [
     {

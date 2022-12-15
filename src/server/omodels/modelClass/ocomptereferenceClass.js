@@ -54,7 +54,7 @@ const ocomptereferenceClass=(function(){
     }
     set ostableaupostekey(OstableauposteKey) {
       this._OstableauposteKey = OstableauposteKey;
-      return this;
+   //   return this;
     }
 
     get ocomptekey() {
@@ -62,7 +62,7 @@ const ocomptereferenceClass=(function(){
     }
     set ocomptekey(OcompteKey) {
       this._OcompteKey = OcompteKey;
-      return this;
+   //   return this;
     }
 
     get ostblareakey() {
@@ -70,7 +70,7 @@ const ocomptereferenceClass=(function(){
     }
     set ostblareakey(OstblareaKey) {
       this._OstblareaKey = OstblareaKey;
-      return this;
+     // return this;
     }
 
     get otableaupostekey() {
@@ -78,7 +78,7 @@ const ocomptereferenceClass=(function(){
     }
     set otableaupostekey(OtableauposteKey) {
       this._OtableauposteKey = OtableauposteKey;
-      return this;
+     // return this;
     }
 
     get exception() {
@@ -86,7 +86,7 @@ const ocomptereferenceClass=(function(){
     }
     set exception(Exception) {
       this._Exception = Exception;
-      return this;
+     // return this;
     }
 
     get taux() {
@@ -94,7 +94,7 @@ const ocomptereferenceClass=(function(){
     }
     set taux(Taux) {
       this._Taux = Taux;
-      return this;
+     // return this;
     }
 
   }

@@ -1,5 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
-/*
+
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Arial", sans-serif; }
 
@@ -238,7 +240,7 @@ body { margin: 0; font-family: Roboto, "Arial", sans-serif; }
 
 
   /* Responsive Styles */
- /* @media screen and (max-width: 767px) {
+ @media screen and (max-width: 767px) {
 
     .card-container > *:not(.circle-link) ,
     .terminal {
@@ -267,10 +269,9 @@ body { margin: 0; font-family: Roboto, "Arial", sans-serif; }
     }
   }
 
-*/
 
 
-@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
 
 body {
   font-family: Roboto, Arial, sans-serif;
@@ -291,4 +292,10 @@ example-button-row button,
 }
 mat-form-field {
   margin-right: 12px;
+}
+.example-icon {
+  padding: 0 14px;
+}
+.example-spacer {
+  flex: 1 1 auto;
 }

@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "uLpoOQCtqExZp3TpMsFsEt/hx2fEw41DfO2C7SY9YcvAewP4x5KAMkSAdRP+GksbVPlHl7OchlVLkLGGIbOC5w==",
+  "success": true,
+  "projectFilePath": "C:\\Git\\odasys\\odasys.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\atmensah\\.nuget\\packages\\microsoft.aspnetcore.spaproxy\\6.0.1\\microsoft.aspnetcore.spaproxy.6.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -47,35 +47,35 @@ const userClass=(function(){
     }
     set lockuntil(lockUntil) {
       this._lockUntil = lockUntil;
-      return this;
+    //  return this;
     }
      get Username() {
       return this._username;
     }
     set Username(username) {
       this._username = username;
-      return this;
+     // return this;
     }
     get Role() {
       return this._role;
     }
     set Role(role) {
       this._role = role;
-      return this;
+   //   return this;
     }
     get Password() {
       return this._password;
     }
     set Password(password) {
       this._password = password;
-      return this;
+    //  return this;
     }
     get loginattempts() {
       return this._loginAttempts;
     }
     set loginattempts(loginAttempts) {
       this._loginAttempts = loginAttempts;
-      return this;
+     // return this;
     }
 
 

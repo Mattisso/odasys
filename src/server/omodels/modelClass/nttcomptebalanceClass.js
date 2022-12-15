@@ -61,7 +61,7 @@ class nttcomptebalanceClass {
 	}
 	set amntnet(amntNet) {
 		this._amntNet = amntNet;
-		return this;
+	//	return this;
 	}
 
 	get oreferencekey() {
@@ -69,7 +69,7 @@ class nttcomptebalanceClass {
 	}
 	set oreferencekey(OreferenceKey) {
 		this._OreferenceKey = OreferenceKey;
-		return this;
+	//	return this;
 	}
 
 	get otableaupostekey() {
@@ -77,7 +77,7 @@ class nttcomptebalanceClass {
 	}
 	set otableaupostekey(OtableauposteKey) {
 		this._OtableauposteKey = OtableauposteKey;
-		return this;
+	//	return this;
 	}
 
 	get totalsoldedebit() {
@@ -85,7 +85,7 @@ class nttcomptebalanceClass {
 	}
 	set totalsoldedebit(totalSoldeDebit) {
 		this._totalSoldeDebit = totalSoldeDebit;
-		return this;
+	//	return this;
 	}
 
 	get totalsoldecredit() {
@@ -93,7 +93,7 @@ class nttcomptebalanceClass {
 	}
 	set totalsoldecredit(totalSoldeCredit) {
 		this._totalSoldeCredit = totalSoldeCredit;
-		return this;
+	//	return this;
 	}
 
 	get oexerccomptakey() {
@@ -101,7 +101,7 @@ class nttcomptebalanceClass {
 	}
 	set oexerccomptakey(OexercComptaKey) {
 		this._OexercComptaKey = OexercComptaKey;
-		return this;
+	//	return this;
 	}
 
 	addBalanceDetail(obj) {
@@ -129,7 +129,7 @@ class nttcomptebalanceClass {
 				'OreferenceKey': this.OreferenceKey,
 				'totalSoldeDebit': getTotalSoldedebit(getdetailsData),
 				'totalSoldeCredit': getTotalSoldecredit( getdetailsData),
-					'DetailCount': getTotalCount(odaremoveDupnumcompte(getdetailsData)),
+				'DetailCount': getTotalCount(odaremoveDupnumcompte(getdetailsData)),
 				'id': this.id,
 				'nttcomptebalancedetails': odaremoveDupnumcompte(getdetailsData.slice())
 			};
@@ -140,7 +140,7 @@ get nttcomptebalancedetails() {
 	}
 	set nttcomptebalancedetails(nttcomptebalancedetails) {
 		this._nttcomptebalancedetails = nttcomptebalancedetails?0: nttcomptebalancedetails;
-		return this;
+	//	return this;
 	}
 
 

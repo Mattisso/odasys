@@ -25,12 +25,12 @@ const obj={
     "NumCompte": "102010",
     "IntitulCompte": "Dotation BENIN",
     "SoldeCredit": 44829579
-}
+};
 const obj1={
     "NumCompte1": "102020",
     "IntitulCompte1": "Dotation BURKINA",
     "SoldeCredit1": 65643312
-}
+};
 
 //console.log(addItem(obj));
 console.log(getCount(arrocomptedata));
